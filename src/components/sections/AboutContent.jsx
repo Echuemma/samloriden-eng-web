@@ -123,14 +123,36 @@ export default function AboutSection() {
             transition: 'background-color 0.3s ease',
           }}
         >
-          <h4 className="text-xl sm:text-2xl md:text-4xl font-light mb-2 md:mb-3">SAMLORIDEN ENGINEERING AND CONSULTANCY LTD</h4>
+          <h4 className="text-xl sm:text-2xl md:text-4xl font-light mb-2 md:mb-3">SAMLORIDEN ENGINEERING AND CONSULTANCY LTD</h4>
           <p className="text-blue-100 text-sm sm:text-base md:text-lg">Building Tomorrow's Infrastructure Today</p>
         </div>
 
-        <div className="flex-1 overflow-y-auto scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+        <div 
+          className="flex-1 overflow-y-auto"
+          style={{
+            WebkitOverflowScrolling: 'touch',
+            scrollbarWidth: 'thin',
+            scrollbarColor: 'rgba(0,0,0,0.2) transparent'
+          }}
+        >
           <style jsx>{`
-            .scrollbar-hide::-webkit-scrollbar {
-              display: none;
+            div::-webkit-scrollbar {
+              width: 4px;
+            }
+            div::-webkit-scrollbar-track {
+              background: transparent;
+            }
+            div::-webkit-scrollbar-thumb {
+              background-color: rgba(0,0,0,0.2);
+              border-radius: 2px;
+            }
+            div::-webkit-scrollbar-thumb:hover {
+              background-color: rgba(0,0,0,0.3);
+            }
+            @media (max-width: 768px) {
+              div::-webkit-scrollbar {
+                display: none;
+              }
             }
           `}</style>
 
@@ -147,7 +169,7 @@ export default function AboutSection() {
               Our Approach to Excellence
             </h5>
             <p className="text-gray-600 leading-relaxed mb-3 sm:mb-4 text-sm sm:text-base">
-              At SAMLORIDEN ENGINEERING AND CONSULTANCY LTD, our approach is rooted in delivering precise and practical civil engineering solutions tailored to the unique needs of each client. We focus on combining technical expertise with in-depth consultation to ensure every project is planned and executed flawlessly.
+              At SAMLORIDEN ENGINEERING AND CONSULTANCY LTD, our approach is rooted in delivering precise and practical civil engineering solutions tailored to the unique needs of each client. We focus on combining technical expertise with in-depth consultation to ensure every project is planned and executed flawlessly.
             </p>
             <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
               Whether it's urban infrastructure, site development, or structural assessments, our team is driven by a commitment to quality, innovation, and sustainability. Through collaborative planning and expert consultation, we aim to bring your vision to life—safely, efficiently, and cost-effectively.

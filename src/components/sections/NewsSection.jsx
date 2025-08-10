@@ -127,16 +127,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import newsData from '../../data/newsData';
-import useAOS from '../../hooks/useAOS'; // ✅ Import your AOS hook
+import useAOS from '../../hooks/useAOS'; 
 
 const News = () => {
-  useAOS({ duration: 1000, once: true }); // ✅ Initialize AOS
+  useAOS({ duration: 1000, once: true }); 
 
   return (
     <div className="min-h-screen bg-white pt-10 pb-16">
       <div className="max-w-6xl mx-auto px-4 py-16">
 
-        {/* Hero Section */}
         <div className="relative h-96 rounded-2xl overflow-hidden shadow-lg mb-16" data-aos="fade-up">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
