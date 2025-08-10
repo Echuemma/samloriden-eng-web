@@ -123,36 +123,38 @@ export default function AboutSection() {
             transition: 'background-color 0.3s ease',
           }}
         >
-          <h4 className="text-xl sm:text-2xl md:text-4xl font-light mb-2 md:mb-3">SAMLORIDEN ENGINEERING AND CONSULTANCY LTD</h4>
+          <h5 className="text-xl sm:text-2xl md:text-4xl font-light mb-2 md:mb-3">SAMLORIDEN ENGINEERING AND CONSULTANCY LTD</h5>
           <p className="text-blue-100 text-sm sm:text-base md:text-lg">Building Tomorrow's Infrastructure Today</p>
         </div>
 
-        <div 
-          className="flex-1 overflow-y-auto"
-          style={{
-            WebkitOverflowScrolling: 'touch',
-            scrollbarWidth: 'thin',
-            scrollbarColor: 'rgba(0,0,0,0.2) transparent'
-          }}
-        >
+        <div className="flex-1 overflow-y-auto scrollbar-custom">
           <style jsx>{`
-            div::-webkit-scrollbar {
-              width: 4px;
+            .scrollbar-custom {
+              scrollbar-width: thin;
+              scrollbar-color: rgba(59, 130, 246, 0.5) rgba(243, 244, 246, 0.3);
             }
-            div::-webkit-scrollbar-track {
-              background: transparent;
+            
+            .scrollbar-custom::-webkit-scrollbar {
+              width: 6px;
             }
-            div::-webkit-scrollbar-thumb {
-              background-color: rgba(0,0,0,0.2);
-              border-radius: 2px;
+            
+            .scrollbar-custom::-webkit-scrollbar-track {
+              background: rgba(243, 244, 246, 0.3);
+              border-radius: 3px;
             }
-            div::-webkit-scrollbar-thumb:hover {
-              background-color: rgba(0,0,0,0.3);
+            
+            .scrollbar-custom::-webkit-scrollbar-thumb {
+              background-color: rgba(59, 130, 246, 0.5);
+              border-radius: 3px;
+              transition: background-color 0.2s ease;
             }
-            @media (max-width: 768px) {
-              div::-webkit-scrollbar {
-                display: none;
-              }
+            
+            .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+              background-color: rgba(59, 130, 246, 0.7);
+            }
+            
+            .scrollbar-custom::-webkit-scrollbar-thumb:active {
+              background-color: rgba(59, 130, 246, 0.8);
             }
           `}</style>
 
