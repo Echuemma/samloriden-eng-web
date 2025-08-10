@@ -125,15 +125,13 @@ function Navigation() {
           ))}
 
           <div className="pt-4">
+         
+          <Link to="/contact">
             <Button
-              className={`w-full px-6 py-3 rounded-lg transition-all duration-200 font-medium transform ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-5 opacity-0'
-                }`}
-              style={{
-                transitionDelay: isMenuOpen ? `${navLinks.length * 100}ms` : '0ms'
-              }}
             >
-              Get Started
+              Contact Us
             </Button>
+          </Link>
           </div>
         </div>
       </div>

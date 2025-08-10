@@ -6,7 +6,7 @@ export default function ConstructionBanner() {
       style={{ backgroundColor: 'var(--color-bg-dark)' }}
     >
       <div className="max-w-6xl mx-auto">
-        <div className="mb-6">
+        <div className="mb-6 px-4">
           <h5 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-on-dark mb-4 leading-tight">
             SERVICES TO CREATE<br />
             YOUR DREAM HOME

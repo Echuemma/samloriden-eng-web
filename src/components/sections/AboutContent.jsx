@@ -95,7 +95,7 @@ export default function AboutSection() {
             </div>
           ))}
         </div>
-
+{/* 
         <button
           onClick={prevSlide}
           className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white p-2 md:p-3 rounded-full transition-all duration-300 z-10"
@@ -109,7 +109,7 @@ export default function AboutSection() {
           aria-label="Next slide"
         >
           <ChevronRight size={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
-        </button>
+        </button> */}
 
         <div className="absolute bottom-2 sm:bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 flex gap-2 md:gap-3 z-10">
           {projects.map((_, index) => (

@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight, Link } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import Button from '../common/Button';
 
 const CivilEngineeringServices = () => {
@@ -50,19 +51,22 @@ const CivilEngineeringServices = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 relative overflow-hidden">
-      {/* Decorative dots pattern - top left */}
       <div className="absolute top-4 left-4 sm:top-8 sm:left-8 w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 opacity-30">
         <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-1">
           {Array.from({ length: 64 }).map((_, i) => (
-            <div key={i} className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-blue-400 rounded-full"></div>
+            <div key={i} className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full"   style={{
+                  background: 'var(--color-primary-alt)',
+                }}></div>
           ))}
         </div>
       </div>
 
       <div className="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 w-20 h-20 sm:w-32 sm:h-32 lg:w-40 lg:h-40 opacity-30">
         <div className="grid grid-cols-5 sm:grid-cols-8 lg:grid-cols-10 gap-1">
-          {Array.from({ length: 100 }).map((_, i) => (
-            <div key={i} className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-blue-400 rounded-full"></div>
+           {Array.from({ length: 64 }).map((_, i) => (
+            <div key={i} className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full"   style={{
+                  background: 'var(--color-primary-alt)',
+                }}></div>
           ))}
         </div>
       </div>
@@ -82,16 +86,29 @@ const CivilEngineeringServices = () => {
           </div>
 
           <div className="flex-1 lg:max-w-md lg:ml-8 flex flex-col items-end">
-            <p className="text-gray-600 mb-0 sm:mb-2 leading-relaxed text-sm sm:text-base text-right">
+
+
+            <p className="text-gray-600 mb-0 sm:mb-2 leading-relaxed text-sm sm:text-base text-left sm:text-right">
               SAMLORIDEN ENGINEERING delivers comprehensive civil engineering solutions
               to build tomorrow's infrastructure with technical expertise and innovation.
             </p>
-            <a href="/services" className="mt-2">
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 rounded-full font-medium flex items-center transition-colors duration-200 text-sm sm:text-base w-full sm:w-auto justify-center sm:justify-start">
-              EXPLORE ALL SERVICES
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
-            </a>
+
+
+
+            <div className="mt-0 hidden sm:block">
+              <Link
+                to="/services"
+                className="hover:underline"
+                style={{
+                  color: 'var(--color-primary-alt)',
+                }}
+              >
+                VIEW SERVICES →
+              </Link>
+            </div>
+
+
+
           </div>
 
         </div>
@@ -121,12 +138,12 @@ const CivilEngineeringServices = () => {
                 </div>
 
                 <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6">
-                <div
-  className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-200"
-  style={{ background: 'var(--color-primary-alt)' }}
->
-  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-</div>
+                  <div
+                    className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-200"
+                    style={{ background: 'var(--color-primary-alt)' }}
+                  >
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                  </div>
 
                 </div>
               </div>
@@ -134,6 +151,18 @@ const CivilEngineeringServices = () => {
           ))}
         </div>
       </div>
+      <div className="lg:hidden text-right px-4">
+        <Link
+          to="/services"
+          className="block"
+          style={{
+            color: 'var(--color-primary-alt)',
+          }}
+        >
+                VIEW SERVICES →
+        </Link>
+      </div>
+
     </div>
   );
 };
