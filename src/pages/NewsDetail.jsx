@@ -12,9 +12,7 @@ const NewsDetail = () => {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-16 mt-10">
-      <p className="text-sm text-gray-500 mb-2">{new Date(article.date).toLocaleDateString()}</p>
-      <h5 className="text-3xl font-bold text-gray-800 mb-4">{article.title}</h5>
-
+    
       {article.image && (
         <img
           src={article.image}
@@ -22,6 +20,8 @@ const NewsDetail = () => {
           className="w-full h-80 object-cover rounded-xl mb-6"
         />
       )}
+       <p className="text-sm text-gray-500 mb-2">{new Date(article.date).toLocaleDateString()}</p>
+      <h6 className="text-3xl font-bold text-gray-800 mb-4">{article.title}</h6>
 
       <p className="text-gray-700 leading-loose whitespace-pre-line">{article.content}</p>
 

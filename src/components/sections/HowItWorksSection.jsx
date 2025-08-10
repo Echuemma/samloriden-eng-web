@@ -26,7 +26,7 @@ const steps = [
           <h2 className="text-4xl  text-on-dark md:text-5xl font-bold mb-6 tracking-wide">
             HOW IT WORKS
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed text-center">
             Our process is built on precision, collaboration, and efficiency. We begin by understanding your project needs and constraints, followed by a thorough feasibility analysis and design planning. From concept to construction, our team ensures compliance with regulations, manages resources responsibly, and delivers high-quality results on time and within budget.
           </p>
 
@@ -53,7 +53,7 @@ const steps = [
                 <h4 className="text-xl  text-on-dark font-bold mb-4 tracking-wide">
                   {step.title}
                 </h4>
-                <p className="text-gray-300 leading-relaxed text-sm">
+                <p className="text-gray-300 leading-relaxed text-sm text-justify">
                   {step.description}
                 </p>
               </div>

@@ -13,7 +13,7 @@ export default function CaspiraWebsite() {
         />
 
         <div className="relative z-10 h-full">
-          <div className="container mx-auto px-6 h-60 pt-16 lg:pt-0">
+          <div className="container mx-auto px-6 h-60 pt-16 lg:pt-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 h-full">
 
               <div className="lg:col-span-6 text-white space-y-0 flex flex-col justify-center">
@@ -84,7 +84,7 @@ export default function CaspiraWebsite() {
       </div>
 
       <div className="py-16 lg:py-4 bg-gray-50">
-        <div className="container mx-auto px-6 mt-10 lg:mt-0">
+        <div className="container mx-auto px-6 mt-0 lg:mt-0">
           <div className="max-w-4xl">
             <div className="flex items-center space-x-2 text-yellow-500 font-medium mb-2">
               <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>

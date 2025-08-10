@@ -6,11 +6,11 @@ export default function ConstructionBanner() {
       style={{ backgroundColor: 'var(--color-bg-dark)' }}
     >
       <div className="max-w-6xl mx-auto">
-        <div className="mb-12">
-          <h4 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-on-dark mb-8 leading-tight">
+        <div className="mb-6">
+          <h5 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-on-dark mb-4 leading-tight">
             SERVICES TO CREATE<br />
             YOUR DREAM HOME
-          </h4>
+          </h5>
           <p className="text-gray-300 text-lg lg:text-xl max-w-4xl leading-relaxed">
             At the forefront of innovation and infrastructure, our civil engineering team designs and delivers reliable, sustainable, and cost-effective solutions. From roadways and bridges to water systems and large-scale developments, we transform ideas into lasting structures that shape communities and drive progress.
           </p>

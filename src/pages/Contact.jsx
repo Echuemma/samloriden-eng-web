@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import Button from '../components/common/Button';  
 
-// const Button = ({ children, onClick, className }) => (
-//   <button onClick={onClick} className={className}>
-//     {children}
-//   </button>
-// );
+const Button = ({ children, onClick, className }) => (
+  <button onClick={onClick} className={className}>
+    {children}
+  </button>
+);
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -46,12 +45,12 @@ const ContactForm = () => {
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 xl:gap-20 items-start">
 
-              <div className="text-white space-y-6 lg:space-y-8 order-2 lg:order-1">
+              <div className="text-white space-y-6 lg:space-y-8 order-1 lg:order-1">
                 <div>
-                  <h2 className="text-2xl sm:text-3xl text-on-dark lg:text-4xl xl:text-5xl font-light mb-3 sm:mb-4 leading-tight">
+                  <h5 className="text-2xl sm:text-3xl text-on-dark lg:text-4xl xl:text-5xl font-light mb-3 sm:mb-4 leading-tight">
                     You Have Questions?<br />
                     We Have Answers
-                  </h2>
+                  </h5>
                   <p className="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed max-w-lg">
                     Discover experiences you won't find anywhere else — thoughtfully
                     designed to immerse you in the heart of the destination. Soulful
@@ -95,12 +94,12 @@ const ContactForm = () => {
                 </div>
               </div>
 
-              <div className="order-1 lg:order-2 w-full max-w-md mx-auto lg:max-w-lg xl:max-w-xl lg:ml-auto lg:mx-0">
+              <div className="order-2 lg:order-2 w-full max-w-md mx-auto lg:max-w-lg xl:max-w-xl lg:ml-auto lg:mx-0">
                 <div className="bg-white rounded-xl lg:rounded-2xl p-6 sm:p-8 lg:p-8 xl:p-10 shadow-2xl">
                   <div className="mb-6 lg:mb-8">
-                    <h2 className="text-xl sm:text-2xl lg:text-2xl xl:text-3xl font-semibold text-gray-800 mb-2 lg:mb-3" style={{ color: 'var(--color-primary-alt, #1f2937)' }}>
+                    <h5 className="text-xl sm:text-2xl lg:text-2xl xl:text-3xl font-semibold text-gray-800 mb-2 lg:mb-3" style={{ color: 'var(--color-primary-alt, #1f2937)' }}>
                       Tell Us What You Need
-                    </h2>
+                    </h5>
                     <p className="text-sm sm:text-base lg:text-base xl:text-lg text-gray-600">
                       Our team is ready to assist you with every detail, big or small.
                     </p>
