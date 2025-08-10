@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from './Button';
-import { Link } from 'lucide-react';
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,37 +24,37 @@ function Navigation() {
         <div className="flex justify-between items-center h-16">
 
           <div className="flex items-center">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="flex items-center"
             >
               <div className="w-8 h-8 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center mr-3">
                 <div className="w-4 h-4 bg-white rounded transform rotate-45"></div>
               </div>
               <span className="font-bold text-xl text-gray-800">SEAC</span>
-            </a>
+            </Link>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navLinks.map((link, index) => (
-                <a
+                <Link
                   key={index}
-                  href={link.href}
+                  to={link.href}
                   className="text-gray-700 hover:text-yellow-600 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
                 >
                   {link.name}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-600 group-hover:w-full transition-all duration-300"></span>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
 
-          <a href="/contact">
+          <Link to="/contact">
             <Button
             >
               Contact Us
             </Button>
-          </a>
+          </Link>
 
           <div className="md:hidden">
             <button
@@ -110,9 +110,9 @@ function Navigation() {
 
         <div className="px-4 py-6 space-y-2 " style={{ backgroundColor: 'var(--color-bg-dark)' }}>
           {navLinks.map((link, index) => (
-            <a
+            <Link
               key={index}
-              href={link.href}
+              to={link.href}
               onClick={toggleMenu}
               className={`block px-4 py-3 text-on-dark hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium transform ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-5 opacity-0'
                 }`}
@@ -121,7 +121,7 @@ function Navigation() {
               }}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
 
           <div className="pt-4">
