@@ -58,6 +58,17 @@ export default function AboutSection() {
 
   return (
     <div className="w-[90%] md:w-4/5 mx-auto h-[600px] bg-white shadow-2xl overflow-hidden flex my-8 md:my-16 md:flex-row flex-col gap-4 md:gap-0">
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .mobile-scroll-container {
+            height: calc(100% - 120px);
+            max-height: 400px;
+            overflow-y: scroll !important;
+            -webkit-overflow-scrolling: touch;
+            transform: translateZ(0);
+          }
+        }
+      `}</style>
       <div className="hidden md:block md:flex-1 h-64 sm:h-80 md:h-full relative bg-gray-900 gap-4">
         <div className="relative w-full h-full overflow-hidden">
           {projects.map((project, index) => (
@@ -116,8 +127,8 @@ export default function AboutSection() {
         </div>
       </div>
 
-      <div className="md:flex-1 flex flex-col">
-        <div className=" text-white p-4 sm:p-6 md:p-8 text-center"
+      <div className="md:flex-1 flex flex-col h-full">
+        <div className=" text-white p-4 sm:p-6 md:p-8 text-center flex-shrink-0"
           style={{
             backgroundColor: 'var(--color-primary-alt)',
             transition: 'background-color 0.3s ease',
@@ -127,8 +138,21 @@ export default function AboutSection() {
           <p className="text-blue-100 text-sm sm:text-base md:text-lg">Building Tomorrow's Infrastructure Today</p>
         </div>
 
-        <div className="flex-1 overflow-y-auto scrollbar-custom">
+        <div className="flex-1 overflow-y-auto scrollbar-custom min-h-0 mobile-scroll-container" style={{
+          WebkitOverflowScrolling: 'touch',
+          touchAction: 'pan-y'
+        }}>
           <style jsx>{`
+            @media (max-width: 768px) {
+              .mobile-scroll-container {
+                height: calc(100% - 120px);
+                max-height: 400px;
+                overflow-y: scroll !important;
+                -webkit-overflow-scrolling: touch;
+                transform: translateZ(0);
+              }
+            }
+            
             .scrollbar-custom {
               scrollbar-width: thin;
               scrollbar-color: rgba(59, 130, 246, 0.5) rgba(243, 244, 246, 0.3);
