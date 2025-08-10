@@ -84,7 +84,7 @@ export default function CaspiraWebsite() {
       </div>
 
       <div className="py-16 lg:py-4 bg-gray-50">
-        <div className="container mx-auto px-6 mt-12 lg:mt-0">
+        <div className="container mx-auto px-6 mt-16 lg:mt-0">
           <div className="max-w-4xl">
             <div className="flex items-center space-x-2 text-yellow-500 font-medium mb-2">
               <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
