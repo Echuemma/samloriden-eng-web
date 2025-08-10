@@ -8,12 +8,12 @@ export default function CaspiraWebsite() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1541976590-713941681591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
+            backgroundImage: `url('/images/about/construction-building.jpg')`
           }}
         />
 
         <div className="relative z-10 h-full">
-          <div className="container mx-auto px-6 h-60 pt-16 lg:pt-8">
+          <div className="container mx-auto px-6 h-60 pt-1 lg:pt-0">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 h-full">
 
               <div className="lg:col-span-6 text-white space-y-0 flex flex-col justify-center">
