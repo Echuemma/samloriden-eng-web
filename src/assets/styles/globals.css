@@ -1,0 +1,60 @@
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+ 
+
+/* @import url('../fonts/fonts.css'); */
+
+h1, h2, h3, h4, h5, h6,
+p,
+form, input, textarea, select, button,
+span, label, a, li, td, th {
+    font-family: 'Onest', sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+h4 { font-size: var(--font-size-h4); }
+h5 { font-size: var(--font-size-h5); }
+h6 { font-size: var(--font-size-h6); }
+
+:root {
+  --color-primary: #1c2542; 
+  --color-primary-alt: #ca8a04; 
+  --color-secondary: #f39c12;
+  --color-accent: #27ae60;
+  --color-bg: #f4f4f4;
+  --color-bg-dark: #111827; /* This is Tailwind's bg-gray-900 */
+  --color-text-light: #fff;
+  --color-text-dark: #333;
+  --color-text: var(--color-text-dark);
+  --font-family-base: 'Onest', sans-serif;
+  --font-size-base: 16px;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.75rem;
+  --font-size-h4: 1.5rem;
+  --font-size-h5: 1.25rem;
+  --font-size-h6: 1rem;
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+}
+
+
+
+/* Utility classes for text color context */
+.text-on-dark {
+  color: var(--color-text-light) !important;
+}
+.text-on-light {
+  color: var(--color-text-dark) !important;
+}
+
