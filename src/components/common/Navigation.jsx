@@ -13,7 +13,7 @@ function Navigation() {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Project', href: '/project' },
     { name: 'Blog', href: '/news' },
   ];
 

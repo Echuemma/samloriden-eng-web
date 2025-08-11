@@ -5,7 +5,7 @@ import Button from "./Button";
 export default function Footer() {
   return (
     <footer
-      className="text-white py-12 px-6 font-sans"
+      className="text-white py-4 px-6 font-sans"
       style={{ backgroundColor: "var(--color-bg-dark)" }}
     >
       <div className="max-w-6xl mx-auto">
@@ -54,14 +54,6 @@ export default function Footer() {
                   Services
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/projects"
-                  className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm"
-                >
-                  Project's
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -73,14 +65,14 @@ export default function Footer() {
               Links
             </h5>
             <ul className="space-y-2">
-              <li>
+              {/* <li>
                 <Link
                   to="/team"
                   className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm"
                 >
                   Team
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="/blog"
@@ -97,12 +89,20 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="/404"
                   className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm"
                 >
                   404 Page
+                </Link>
+              </li> */}
+                 <li>
+                <Link
+                  to="/projects"
+                  className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm"
+                >
+                  Project's
                 </Link>
               </li>
             </ul>
@@ -133,13 +133,13 @@ export default function Footer() {
               </div>
             </div>
 
-            <h4
+            {/* <h4
               className="text-lg font-semibold mb-4"
               style={{ color: "var(--color-primary-alt)" }}
             >
               Newsletter
-            </h4>
-            <div className="flex">
+            </h4> */}
+            {/* <div className="flex">
               <input
                 type="email"
                 placeholder="Enter Email address"
@@ -148,11 +148,11 @@ export default function Footer() {
               <Button className="bg-[var(--color-secondary)] hover:bg-[var(--color-accent)] px-4 py-2 rounded-r-full transition-colors">
                 <Send className="w-4 h-4 text-white" />
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
 
-        <div className="flex justify-end mt-8 mb-8">
+        <div className="flex justify-end mt-0 mb-4">
           <div className="flex space-x-3">
             <a
               href="#"
@@ -184,7 +184,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="border-t border-[var(--color-text)] pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-[var(--color-text-light)]">
-            <p>© Templateorbit.com</p>
+            <p>© Samloriden</p>
             <div className="flex space-x-4 mt-2 md:mt-0">
               <Link
                 to="/privacy-policy"
