@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Send, Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import Button from "./Button";
 
@@ -9,23 +9,19 @@ export default function Footer() {
       style={{ backgroundColor: "var(--color-bg-dark)" }}
     >
       <div className="max-w-6xl mx-auto">
-        {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Logo & About */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
               <div className="w-8 h-8 bg-[var(--color-primary-alt)] rounded-lg flex items-center justify-center mr-3">
                 <div className="w-4 h-4 bg-white rounded transform rotate-45"></div>
               </div>
-              <h2 className="text-xl font-bold text-on-dark">CASPIRA</h2>
-            </div>
+              <span className="font-bold text-xl text-to-dark">SEAC</span>            </div>
             <p className="text-[var(--color-text-light)] text-sm leading-relaxed">
               Lorem ipsum dolor sit amet conse ctetur adipiscing elit amet conse
               ctetur adipiscing elit elit tellus elit tellus luctus nec ullam.
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h5
               className="text-sm font-semibold mb-4"
@@ -69,7 +65,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* More Links */}
           <div>
             <h5
               className="text-sm font-semibold mb-4"
@@ -113,7 +108,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h5
               className="text-sm font-semibold mb-4"
@@ -122,15 +116,21 @@ export default function Footer() {
               Contact info
             </h5>
             <div className="space-y-3 mb-6">
-              <p className="text-[var(--color-text-light)] text-sm">
-                (566) 456-7890
-              </p>
-              <p className="text-[var(--color-text-light)] text-sm">
-                help@email.com
-              </p>
-              <p className="text-[var(--color-text-light)] text-sm">
-                66 Broklyn Gold Street. USA
-              </p>
+              <div className="flex items-center text-[var(--color-text-light)] text-sm">
+                <Phone className="w-4 h-4 mr-2" style={{ color: "var(--color-primary-alt)" }} />
+                <div>
+                  +234 803 954 1382 <br />
+                  +234 803 954 1382
+                </div>
+              </div>
+              <div className="flex items-center text-[var(--color-text-light)] text-xs">
+                <Mail className="w-4 h-4 mr-2" style={{ color: "var(--color-primary-alt)" }} />
+                <span>samlorig@email.com</span>
+              </div>
+              <div className="flex items-start text-[var(--color-text-light)] text-xs">
+                <MapPin className="w-4 h-4 mr-2 mt-0.5" style={{ color: "var(--color-primary-alt)" }} />
+                <span> Central Business District, Abuja</span>
+              </div>
             </div>
 
             <h4
@@ -139,8 +139,7 @@ export default function Footer() {
             >
               Newsletter
             </h4>
-            {/* Newsletter Form (optional) */}
-            {/* <div className="flex">
+            <div className="flex">
               <input
                 type="email"
                 placeholder="Enter Email address"
@@ -149,11 +148,10 @@ export default function Footer() {
               <Button className="bg-[var(--color-secondary)] hover:bg-[var(--color-accent)] px-4 py-2 rounded-r-full transition-colors">
                 <Send className="w-4 h-4 text-white" />
               </Button>
-            </div> */}
+            </div>
           </div>
         </div>
 
-        {/* Social Media */}
         <div className="flex justify-end mt-8 mb-8">
           <div className="flex space-x-3">
             <a

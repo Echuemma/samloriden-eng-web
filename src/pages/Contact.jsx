@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Facebook, Twitter, Instagram, Linkedin, Send, Phone, Mail, MapPin } from "lucide-react";
 
 const Button = ({ children, onClick, className }) => (
   <button onClick={onClick} className={className}>
@@ -84,13 +85,20 @@ const ContactForm = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8">
                   <div>
                     <h5 className="text-base sm:text-lg font-semibold text-on-dark mb-2 sm:mb-3">Email</h5>
-                    <p className="text-gray-200 text-xs sm:text-sm break-all">stay@anantararesort.com</p>
-                  </div>
+ <div className="flex items-center text-[var(--color-text-light)] text-xs">
+                <Mail className="w-4 h-4 mr-2" style={{ color: "var(--color-primary-alt)" }} />
+                <span>samlorig@email.com</span>
+              </div>                  </div>
 
                   <div>
                     <h5 className="text-base sm:text-lg font-semibold mb-2 text-on-dark sm:mb-3">Contact</h5>
-                    <p className="text-gray-200 text-xs sm:text-sm">+66 77 123 456</p>
-                  </div>
+  <div className="flex items-center text-[var(--color-text-light)] text-sm">
+                <Phone className="w-4 h-4 mr-2" style={{ color: "var(--color-primary-alt)" }} />
+                <div>
+                  +234 803 954 1382 <br />
+                  +234 803 954 1382
+                </div>
+              </div>                  </div>
                 </div>
               </div>
 
