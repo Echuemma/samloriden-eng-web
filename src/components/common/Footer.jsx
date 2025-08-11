@@ -1,14 +1,17 @@
 import { Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react";
-import Button from './Button';
+import { Link } from "react-router-dom";
+import Button from "./Button";
 
 export default function Footer() {
   return (
-    <footer className="text-white py-12 px-6 font-sans"
-      style={{ backgroundColor: 'var(--color-bg-dark)' }}
-
+    <footer
+      className="text-white py-12 px-6 font-sans"
+      style={{ backgroundColor: "var(--color-bg-dark)" }}
     >
       <div className="max-w-6xl mx-auto">
+        {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Logo & About */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
               <div className="w-8 h-8 bg-[var(--color-primary-alt)] rounded-lg flex items-center justify-center mr-3">
@@ -17,46 +20,130 @@ export default function Footer() {
               <h2 className="text-xl font-bold text-on-dark">CASPIRA</h2>
             </div>
             <p className="text-[var(--color-text-light)] text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet conse ctetur adipiscing elit amet conse ctetur adipiscing elit elit tellus elit tellus luctus nec ullam.
+              Lorem ipsum dolor sit amet conse ctetur adipiscing elit amet conse
+              ctetur adipiscing elit elit tellus elit tellus luctus nec ullam.
             </p>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <h5 className="text-sm font-semibold mb-4"
-              style={{ color: 'var(--color-primary-alt)' }}
-            >Quick Link</h5>
+            <h5
+              className="text-sm font-semibold mb-4"
+              style={{ color: "var(--color-primary-alt)" }}
+            >
+              Quick Link
+            </h5>
             <ul className="space-y-2">
-              <li><a href="#" className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm">Home</a></li>
-              <li><a href="#" className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm">About</a></li>
-              <li><a href="#" className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm">Services</a></li>
-              <li><a href="#" className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm">Project's</a></li>
+              <li>
+                <Link
+                  to="/"
+                  className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/projects"
+                  className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm"
+                >
+                  Project's
+                </Link>
+              </li>
             </ul>
           </div>
 
+          {/* More Links */}
           <div>
-            <h5 className="text-sm font-semibold mb-4" style={{ color: 'var(--color-primary-alt)' }}>Links</h5>
+            <h5
+              className="text-sm font-semibold mb-4"
+              style={{ color: "var(--color-primary-alt)" }}
+            >
+              Links
+            </h5>
             <ul className="space-y-2">
-              <li><a href="#" className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm">Team</a></li>
-              <li><a href="#" className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm">Blog</a></li>
-              <li><a href="#" className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm">Contact</a></li>
-              <li><a href="#" className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm">404 Page</a></li>
+              <li>
+                <Link
+                  to="/team"
+                  className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm"
+                >
+                  Team
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/blog"
+                  className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/404"
+                  className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm"
+                >
+                  404 Page
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Contact Info and Newsletter */}
+          {/* Contact Info */}
           <div>
-            <h5 className="text-sm font-semibold mb-4 " style={{ color: 'var(--color-primary-alt)' }}>Contact info</h5>
+            <h5
+              className="text-sm font-semibold mb-4"
+              style={{ color: "var(--color-primary-alt)" }}
+            >
+              Contact info
+            </h5>
             <div className="space-y-3 mb-6">
-              <p className="text-[var(--color-text-light)] text-sm">(566) 456-7890</p>
-              <p className="text-[var(--color-text-light)] text-sm">help@email.com</p>
-              <p className="text-[var(--color-text-light)] text-sm">66 Broklyn Gold Street. USA</p>
+              <p className="text-[var(--color-text-light)] text-sm">
+                (566) 456-7890
+              </p>
+              <p className="text-[var(--color-text-light)] text-sm">
+                help@email.com
+              </p>
+              <p className="text-[var(--color-text-light)] text-sm">
+                66 Broklyn Gold Street. USA
+              </p>
             </div>
 
-            <h4 className="text-lg font-semibold mb-4 " style={{ color: 'var(--color-primary-alt)' }}>Newsletter</h4>
+            <h4
+              className="text-lg font-semibold mb-4"
+              style={{ color: "var(--color-primary-alt)" }}
+            >
+              Newsletter
+            </h4>
+            {/* Newsletter Form (optional) */}
             {/* <div className="flex">
-              <input 
-                type="email" 
-                placeholder="Enter Email address" 
+              <input
+                type="email"
+                placeholder="Enter Email address"
                 className="flex-1 px-4 py-2 rounded-l-full bg-white text-[var(--color-text)] text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-secondary)]"
               />
               <Button className="bg-[var(--color-secondary)] hover:bg-[var(--color-accent)] px-4 py-2 rounded-r-full transition-colors">
@@ -66,32 +153,54 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Social Media Icons */}
+        {/* Social Media */}
         <div className="flex justify-end mt-8 mb-8">
           <div className="flex space-x-3">
-            <a href="#" className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors">
+            <a
+              href="#"
+              className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors"
+            >
               <Facebook className="w-5 h-5 text-[var(--color-secondary)]" />
             </a>
-            <a href="#" className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors">
+            <a
+              href="#"
+              className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors"
+            >
               <Twitter className="w-5 h-5 text-[var(--color-secondary)]" />
             </a>
-            <a href="#" className="w-10 h-10 bg-[var(--color-text)] text-[var(--color-primary-alt)] hover:bg-[var(--color-secondary)] hover:text-white rounded-full flex items-center justify-center transition-colors">
+            <a
+              href="#"
+              className="w-10 h-10 bg-[var(--color-text)] text-[var(--color-primary-alt)] hover:bg-[var(--color-secondary)] hover:text-white rounded-full flex items-center justify-center transition-colors"
+            >
               <Instagram className="w-5 h-5 text-[var(--color-secondary)]" />
             </a>
-            <a href="#" className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors">
+            <a
+              href="#"
+              className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors"
+            >
               <Linkedin className="w-5 h-5 text-[var(--color-secondary)]" />
             </a>
           </div>
         </div>
 
-        {/* Bottom Border and Copyright */}
+        {/* Footer Bottom */}
         <div className="border-t border-[var(--color-text)] pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-[var(--color-text-light)]">
             <p>© Templateorbit.com</p>
             <div className="flex space-x-4 mt-2 md:mt-0">
-              <a href="#" className="hover:text-[var(--color-secondary)] transition-colors">Privacy Policy</a>
+              <Link
+                to="/privacy-policy"
+                className="hover:text-[var(--color-secondary)] transition-colors"
+              >
+                Privacy Policy
+              </Link>
               <span>|</span>
-              <a href="#" className="hover:text-[var(--color-secondary)] transition-colors">Terms & Conditions</a>
+              <Link
+                to="/terms"
+                className="hover:text-[var(--color-secondary)] transition-colors"
+              >
+                Terms & Conditions
+              </Link>
             </div>
           </div>
         </div>

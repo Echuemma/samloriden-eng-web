@@ -2,19 +2,21 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/common/Navigation';
 import Footer from './components/common/Footer';
+import ScrollToTop from './components/common/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
 import Careers from './pages/Careers';
 import NewsSection from './components/sections/NewsSection';
-import NewsDetail from './pages/NewsDetail';  // Add this line
+import NewsDetail from './pages/NewsDetail';  
 import Contact from './pages/Contact';
 import './App.css';
 
 function App() {
   return (
     <Router>
+            <ScrollToTop />
       <div className="App ">
         <Navigation />
         <main>
