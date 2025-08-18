@@ -6,15 +6,15 @@ import React from 'react';
  import WhyChooseUs from '../components/sections/whyChooseUs'
 
 
- function Services() {
+function Services() {
   return (
-    <div className="service-page">
+    <div className="service-page overflow-y-hidden overflow-x-hidden">
       <ServicesBanner />
       <ServicesContent />
       <HowItWorksSection />
       <WhyChooseUs />
     </div>
   );
- }
+}
 
- export default Services;
+export default Services;

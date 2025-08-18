@@ -1,19 +1,22 @@
 import React from 'react';
+import useAOS from '../../hooks/useAOS'; 
 
-const Button = ({ children, className = "", ...props }) => (
-  <button className={`px-6 py-3 rounded-lg font-semibold transition-colors ${className}`} {...props}>
-    {children}
-  </button>
-);
+// const Button = ({ children, className = "", ...props }) => (
+//   <button className={`px-6 py-3 rounded-lg font-semibold transition-colors ${className}`} {...props}>
+//     {children}
+//   </button>
+// );
 
 const CaspiraAboutSection = () => {
+useAOS({ duration: 1000, once: true }); 
+  
   return (
     <div className="bg-gray-50 py-16 lg:py-14">
       <div className="w-[100%] md:w-[80%] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           
           <div className="relative">
-            <div className="rounded-3xl overflow-hidden shadow-2xl">
+            <div className="rounded-3xl overflow-hidden shadow-2xl" data-aos="fade-right">
               <img 
                 src="/images/about/construction-building.jpg" 
                 alt="Engineers reviewing blueprints" 
@@ -46,7 +49,7 @@ const CaspiraAboutSection = () => {
               </p>
             </div>
 
-            <div className=" text-white p-6 rounded-2xl shadow-xl my-4 relative md:absolute md:-left-24 xl:-left-32 md:w-[calc(100%+6rem)] xl:w-[calc(100%+8rem)] md:top-65 md:mt-10 z-20" style={{ background: 'var(--color-primary-alt)' }}>
+            <div className=" text-white p-6 rounded-2xl shadow-xl my-4 relative md:absolute md:-left-24 xl:-left-32 md:w-[calc(100%+6rem)] xl:w-[calc(100%+8rem)] md:top-65 md:mt-10 z-20" data-aos="fade-up" style={{ background: 'var(--color-primary-alt)' }}>
               <h6 className="text-lg lg:text-xl font-bold mb-3 text-white">
                 Building Timeless Structures with Innovation & Excellence.
               </h6>

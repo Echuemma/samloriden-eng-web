@@ -9,7 +9,7 @@ const Button = ({ children, className = '', ...props }) => {
         transition: 'background-color 0.3s ease',
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.backgroundColor = '#a16203'; // darker hover shade
+        e.currentTarget.style.backgroundColor = '#a16203'; de
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.backgroundColor = 'var(--color-primary-alt)';

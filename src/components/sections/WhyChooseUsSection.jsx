@@ -1,11 +1,14 @@
 import React from 'react';
 import { Wrench, ShoppingCart, Layers } from 'lucide-react';
+import useAOS from '../../hooks/useAOS'; 
 
 function WhyChooseUsSection() {
+      useAOS({ duration: 1000, once: true }); 
+  
   return (
     <section className="py-16 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" data-aos="fade-down">
           <div className="flex items-center justify-center gap-2 mb-4">
             <div className="w-8 h-0.5"
              style={{ background: 'var(--color-primary-alt)' }}
@@ -23,10 +26,10 @@ function WhyChooseUsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" >
           <div className="bg-white border-1 l p-6 shadow-lg hover:shadow-xl transition-shadow duration-400 flex flex-col justify-between"
             style={{ borderColor: 'var(--color-primary-alt)', borderRadius: '0.5rem' }}
-
+           data-aos="fade-left"
           >
             <div>
               <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
@@ -45,8 +48,8 @@ function WhyChooseUsSection() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
-            <div className="h-80 bg-gradient-to-br from-blue-400 to-blue-600 relative">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up">
+            <div className="h-80 bg-gradient-to-br from-blue-400 to-blue-600 relative" >
               <img
                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&h=600&fit=crop"
                 alt="Modern apartment buildings"
@@ -57,7 +60,7 @@ function WhyChooseUsSection() {
 
           <div className="bg-white border-1 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between"
             style={{ borderColor: 'var(--color-primary-alt)', borderRadius: '0.5rem' }}
-
+            data-aos="fade-right"
           >
             <div>
               <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
@@ -76,7 +79,7 @@ function WhyChooseUsSection() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg" data-aos="fade-left"> 
             <div className="h-80">
               <img
                 src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=500&h=400&fit=crop"
@@ -88,7 +91,7 @@ function WhyChooseUsSection() {
 
           <div className="bg-white border-1 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between"
            style={{ borderColor: 'var(--color-primary-alt)', borderRadius: '0.5rem' }}
-
+            data-aos="fade-up"
           >            <div>
               <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
                 <Layers className="w-6 h-6 text-gray-700" />
@@ -106,7 +109,7 @@ function WhyChooseUsSection() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg" data-aos="fade-right">
             <div className="h-80">
               <img
                 src="https://images.unsplash.com/photo-1567496898669-ee935f5317be?w=500&h=400&fit=crop"

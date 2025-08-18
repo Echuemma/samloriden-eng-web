@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import useAOS from '../../hooks/useAOS';
+
 
 const carouselImages = [
   {
@@ -32,6 +34,7 @@ const carouselImages = [
 ];
 
 export default function AboutUsBanner() {
+    useAOS({ duration: 1000, once: true });
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -55,7 +58,7 @@ export default function AboutUsBanner() {
 
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center px-6">
-            <h1 className="text-on-dark text-6xl md:text-7xl lg:text-8xl font-light text-white tracking-wide">
+            <h1 className="text-on-dark text-6xl md:text-7xl lg:text-8xl font-light text-white tracking-wide" data-aos="fade-right">
               About Us
             </h1>
             <div className="mt-4 w-24 h-0.5 bg-white mx-auto opacity-60"></div>
@@ -67,10 +70,7 @@ export default function AboutUsBanner() {
 
       <div className="bg-primary text-white py-16 px-6 md:px-12 lg:px-16">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-5">
-
-
-
+          <div className="mb-5" data-aos="fade-down">
             <h4 className="text-4xl md:text-5xl lg:text-6xl font-light text-on-dark leading-tight">
               Building the future with precision and integrity. <br />
               Engineering excellence since 2001.
@@ -78,7 +78,7 @@ export default function AboutUsBanner() {
 
           </div>
 
-          <div className="mb-16">
+          <div className="mb-16" data-aos="fade-up">
             <p className="text-[var(--color-text-light)] text-sm leading-relaxed text-lg leading-relaxed max-w-3xl text-justify">
               At SAMLORIDEN ENGINEERING AND CONSULTANCY LTD, we bring over two decades of trusted experience in civil engineering, construction, and strategic consultancy. Since 2001, our passion has been transforming ideas into infrastructure delivering innovative and sustainable solutions across residential, commercial, and industrial projects. From foundational design to final execution, we combine technical expertise, quality materials, and a commitment to excellence to exceed expectations. Our consultancy services empower clients with data-driven guidance, helping them navigate complex projects with clarity and confidence. At Samloriden, we don't just build we shape environments, empower communities, and create lasting value.
             </p>
@@ -92,16 +92,16 @@ export default function AboutUsBanner() {
             <div className="hidden md:block"></div>
 
             <div>
-              <h3 className="text-2xl font-semibold text-on-dark mb-3">Mission</h3>
-              <p className="text-[var(--color-text-light)] text-sm leading-relaxed text-lg leading-relaxed text-justify">
+              <h3 className="text-2xl font-semibold text-on-dark mb-3" data-aos="fade-down">Mission</h3>
+              <p className="text-[var(--color-text-light)] text-sm leading-relaxed text-lg leading-relaxed text-justify" data-aos="fade-up"> 
                 Our mission is to simplify property ownership through trust, transparency,
                 expertise, care, commitment, and innovation.
               </p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold text-on-dark mb-3">Vision</h3>
-              <p className="text-[var(--color-text-light)] text-sm leading-relaxed text-lg leading-relaxed text-justify">
+              <h3 className="text-2xl font-semibold text-on-dark mb-3" data-aos="fade-down">Vision</h3>
+              <p className="text-[var(--color-text-light)] text-sm leading-relaxed text-lg leading-relaxed text-justify" data-aos="fade-up">
                 Our vision is to redefine real estate experiences through innovation,
                 excellence, accessibility, trust, technology, and lasting value.
               </p>

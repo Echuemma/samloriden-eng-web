@@ -5,3 +5,11 @@
 /* * {
   outline: 1px solid red;
 }  */
+
+.article-content h3 {
+  margin-bottom: 0.5rem; }
+
+html, body {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}

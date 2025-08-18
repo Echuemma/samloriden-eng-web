@@ -12,7 +12,7 @@ const NewsDetail = () => {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-16 mt-10">
-    
+
       {article.image && (
         <img
           src={article.image}
@@ -20,16 +20,33 @@ const NewsDetail = () => {
           className="w-full h-80 object-cover rounded-xl mb-6"
         />
       )}
-       <p className="text-sm text-gray-500 mb-2">{new Date(article.date).toLocaleDateString()}</p>
-      <h6 className="text-3xl font-bold text-gray-800 mb-4">{article.title}</h6>
+      {/* <p className="text-sm text-gray-500 mb-2">{new Date(article.date).toLocaleDateString()}</p> */}
+      <h6 className="text-3xl font-bold text-gray-800 mb-1">{article.title}</h6>
 
-      <p className="text-gray-700 leading-loose whitespace-pre-line">{article.content}</p>
+    <div
+  className="pt-0 mt-0 text-gray-700 leading-loose whitespace-pre-line prose prose-lg max-w-none prose-h3:mb-2"
+  dangerouslySetInnerHTML={{ __html: article.content }}
+/>
+
+      
+      <div className="flex justify-end gap-2 text-sm px-6 text-gray-600 mb-3">
+        <span>
+          by: <span className="text-[var(--color-primary-alt)] font-semibold">{article.author},</span>
+        </span>
+        <span>
+          {new Date(article.date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })}
+        </span>
+      </div>
 
       <div className="mt-10">
         <Link to="/news" className=" hover:underline"
-           style={{
-                  color: 'var(--color-primary-alt)',
-                }}
+          style={{
+            color: 'var(--color-primary-alt)',
+          }}
         >&larr; Back to News</Link>
       </div>
     </div>

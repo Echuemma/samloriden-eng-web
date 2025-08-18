@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, Send, Phone, Mail, MapPin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Send, Phone, Mail, MapPin, Clock } from "lucide-react";
+import useAOS from '../hooks/useAOS';
 
 const Button = ({ children, onClick, className }) => (
   <button onClick={onClick} className={className}>
@@ -8,6 +9,7 @@ const Button = ({ children, onClick, className }) => (
 );
 
 const ContactForm = () => {
+  useAOS({ duration: 1000, once: true });
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -32,7 +34,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="min-h-screen relative">
+      <div className="relative">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -41,12 +43,12 @@ const ContactForm = () => {
         >
         </div>
         <div className="absolute inset-0 bg-black/40"></div>
-        
-        <div className="relative z-10 min-h-screen flex items-center pt-16">
+
+        <div className="relative z-10 py-16 md:py-20 lg:py-24 h-[100%]">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 xl:gap-20 items-start">
 
-              <div className="text-white space-y-6 lg:space-y-8 order-1 lg:order-1">
+              <div className="text-white space-y-6 lg:space-y-8 order-1 lg:order-1" data-aos="fade-right">
                 <div>
                   <h5 className="text-2xl sm:text-3xl text-on-dark lg:text-4xl xl:text-5xl font-light mb-3 sm:mb-4 leading-tight">
                     You Have Questions?<br />
@@ -63,21 +65,48 @@ const ContactForm = () => {
                   <div>
                     <h5 className="text-base sm:text-lg font-semibold text-on-dark mb-2 sm:mb-3">Location</h5>
                     <div className="text-gray-200 space-y-1 text-xs sm:text-sm">
-                      <p>Anantara Oceanfront Resort</p>
-                      <p>123 Serenity Bay Road</p>
-                      <p>Koh Samui, Thailand 84320</p>
-                      <p className="mt-2 sm:mt-3">Monday - Sunday | 08:00 - 22:00</p>
-                      <p className="text-xs opacity-80">(local time)</p>
+
+                      {/* Location */}
+                      <div className="flex items-start gap-2">
+                        <MapPin className="w-4 h-4 mt-0.5" style={{ color: "var(--color-primary-alt)" }} />
+                        <div>
+                          <p>Central Business District</p>
+                          <p>FCT</p>
+                          <p>Abuja</p>
+                        </div>
+                      </div>
+
+                      {/* Time */}
+                      <div className="flex items-start gap-2 mt-2 sm:mt-3">
+                        <Clock className="w-4 h-4 mt-0.5" style={{ color: "var(--color-primary-alt)" }} />
+                        <div>
+                          <p>Monday - Sunday | 08:00 - 22:00</p>
+                          <p className="text-xs opacity-80">(local time)</p>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
 
                   <div>
                     <h5 className="text-base sm:text-lg font-semibold text-on-dark mb-2 sm:mb-3">Social Media</h5>
                     <div className="space-y-1 sm:space-y-2">
-                      <div><a href="#" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">Instagram</a></div>
-                      <div><a href="#" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">LinkedIn</a></div>
-                      <div><a href="#" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">Facebook</a></div>
-                      <div><a href="#" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">TikTok</a></div>
+                      <div className="flex items-center gap-2">
+                        <Instagram className="w-4 h-4" style={{ color: "var(--color-primary-alt)" }} />
+                        <a href="#" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">Instagram</a>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Linkedin className="w-4 h-4" style={{ color: "var(--color-primary-alt)" }} />
+                        <a href="#" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">LinkedIn</a>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Facebook className="w-4 h-4" style={{ color: "var(--color-primary-alt)" }} />
+                        <a href="#" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">Facebook</a>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Send className="w-4 h-4" style={{ color: "var(--color-primary-alt)" }} />
+                        <a href="#" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">TikTok</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -85,24 +114,26 @@ const ContactForm = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8">
                   <div>
                     <h5 className="text-base sm:text-lg font-semibold text-on-dark mb-2 sm:mb-3">Email</h5>
- <div className="flex items-center text-[var(--color-text-light)] text-xs">
-                <Mail className="w-4 h-4 mr-2" style={{ color: "var(--color-primary-alt)" }} />
-                <span>samlorig@email.com</span>
-              </div>                  </div>
+                    <div className="flex items-center text-[var(--color-text-light)] text-xs">
+                      <Mail className="w-4 h-4 mr-2" style={{ color: "var(--color-primary-alt)" }} />
+                      <span>samlorig@email.com</span>
+                    </div>
+                  </div>
 
                   <div>
                     <h5 className="text-base sm:text-lg font-semibold mb-2 text-on-dark sm:mb-3">Contact</h5>
-  <div className="flex items-center text-[var(--color-text-light)] text-sm">
-                <Phone className="w-4 h-4 mr-2" style={{ color: "var(--color-primary-alt)" }} />
-                <div>
-                  +234 803 954 1382 <br />
-                  +234 803 954 1382
-                </div>
-              </div>                  </div>
+                    <div className="flex items-center text-[var(--color-text-light)] text-sm">
+                      <Phone className="w-4 h-4 mr-2" style={{ color: "var(--color-primary-alt)" }} />
+                      <div>
+                        +234 803 954 1382 <br />
+                        +234 803 954 1382
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="order-2 lg:order-2 w-full max-w-md mx-auto lg:max-w-lg xl:max-w-xl lg:ml-auto lg:mx-0">
+              <div className="order-2 lg:order-2 w-full max-w-md mx-auto lg:max-w-lg xl:max-w-xl lg:ml-auto lg:mx-0" data-aos="fade-left">
                 <div className="bg-white rounded-xl lg:rounded-2xl p-6 sm:p-8 lg:p-8 xl:p-10 shadow-2xl">
                   <div className="mb-6 lg:mb-8">
                     <h5 className="text-xl sm:text-2xl lg:text-2xl xl:text-3xl font-semibold text-gray-800 mb-2 lg:mb-3" style={{ color: 'var(--color-primary-alt, #1f2937)' }}>
@@ -122,7 +153,7 @@ const ContactForm = () => {
                           placeholder="First Name"
                           value={formData.firstName}
                           onChange={handleInputChange}
-                          className="w-full px-3 sm:px-4 md:px-5 lg:px-4 xl:px-5 py-2.5 sm:py-3 md:py-4 lg:py-3 xl:py-1 text-sm sm:text-base md:text-lg lg:text-base xl:text-lg border border-gray-300 rounded-lg md:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+                          className="w-full px-3 sm:px-4 md:px-5 lg:px-4 xl:px-5 py-2.5 sm:py-3 md:py-4 lg:py-3 xl:py-1.5 text-sm sm:text-base md:text-lg lg:text-base xl:text-lg border border-gray-300 rounded-lg md:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
                         />
                       </div>
                       <div>
@@ -132,7 +163,7 @@ const ContactForm = () => {
                           placeholder="Last Name"
                           value={formData.lastName}
                           onChange={handleInputChange}
-                          className="w-full px-3 sm:px-4 md:px-5 lg:px-4 xl:px-5 py-2.5 sm:py-3 md:py-4 lg:py-3 xl:py-1 text-sm sm:text-base md:text-lg lg:text-base xl:text-lg border border-gray-300 rounded-lg md:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+                          className="w-full px-3 sm:px-4 md:px-5 lg:px-4 xl:px-5 py-2.5 sm:py-3 md:py-4 lg:py-3 xl:py-1.5 text-sm sm:text-base md:text-lg lg:text-base xl:text-lg border border-gray-300 rounded-lg md:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
                         />
                       </div>
                     </div>
@@ -144,7 +175,7 @@ const ContactForm = () => {
                         placeholder="Email Address"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-3 sm:px-4 md:px-5 lg:px-4 xl:px-5 py-2.5 sm:py-3 md:py-4 lg:py-3 xl:py-1 text-sm sm:text-base md:text-lg lg:text-base xl:text-lg border border-gray-300 rounded-lg md:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+                        className="w-full px-3 sm:px-4 md:px-5 lg:px-4 xl:px-5 py-2.5 sm:py-3 md:py-4 lg:py-3 xl:py-1.5 text-sm sm:text-base md:text-lg lg:text-base xl:text-lg border border-gray-300 rounded-lg md:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
                       />
                     </div>
 
@@ -155,7 +186,7 @@ const ContactForm = () => {
                         placeholder="Phone Number"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-3 sm:px-4 md:px-5 lg:px-4 xl:px-5 py-2.5 sm:py-3 md:py-4 lg:py-3 xl:py-1 text-sm sm:text-base md:text-lg lg:text-base xl:text-lg border border-gray-300 rounded-lg md:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+                        className="w-full px-3 sm:px-4 md:px-5 lg:px-4 xl:px-5 py-2.5 sm:py-3 md:py-4 lg:py-3 xl:py-1.5 text-sm sm:text-base md:text-lg lg:text-base xl:text-lg border border-gray-300 rounded-lg md:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
                       />
                     </div>
 
@@ -163,7 +194,7 @@ const ContactForm = () => {
                       <textarea
                         name="message"
                         placeholder="Message"
-                        rows="3"
+                        rows="4"
                         value={formData.message}
                         onChange={handleInputChange}
                         className="w-full px-3 sm:px-4 md:px-5 lg:px-4 xl:px-5 py-2.5 sm:py-3 md:py-4 lg:py-3 xl:py-4 text-sm sm:text-base md:text-lg lg:text-base xl:text-lg border border-gray-300 rounded-lg md:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200 resize-vertical min-h-[100px] md:min-h-[120px] lg:min-h-[100px] xl:min-h-[120px]"
@@ -187,7 +218,7 @@ const ContactForm = () => {
                     <div className="pt-2 md:pt-4">
                       <Button
                         onClick={handleSubmit}
-                        className="w-full bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 sm:py-3.5 md:py-4 lg:py-3 xl:py-4 px-4 sm:px-6 md:px-8 text-sm sm:text-base md:text-lg lg:text-base xl:text-lg rounded-lg md:rounded-xl transition-all duration-200 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 outline-none hover:shadow-lg transform hover:-translate-y-0.5"
+                        className="w-full bg-yellow-600 hover:bg-gray-900 text-white font-semibold py-3 sm:py-3.5 md:py-4 lg:py-3 xl:py-1.5 px-4 sm:px-6 md:px-8 text-sm sm:text-base md:text-lg lg:text-base xl:text-lg rounded-lg md:rounded-xl transition-all duration-200 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 outline-none hover:shadow-lg transform hover:-translate-y-0.5"
                       >
                         Submit
                       </Button>
@@ -201,15 +232,16 @@ const ContactForm = () => {
         </div>
       </div>
 
-      <section id="location" className="py-8 sm:py-12 md:py-16 lg:py-10 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4">
-          <h5 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 md:mb-10 lg:mb-6 text-center lg:text-left"
+      <section id="location" className="py-4 sm:py-6 md:py-16 lg:py-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
+        data-aos="fade-up">
+          <h5 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-0 sm:mb-8 md:mb-10 lg:mb-4 text-center lg:text-left"
             style={{
               color: 'var(--color-primary-alt, #1f2937)',
             }}
           >Our Location</h5>
 
-          <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[450px] xl:h-[500px] overflow-hidden rounded-xl md:rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[450px] xl:h-[500px] rounded-xl md:rounded-2xl lg:rounded-3xl overflow-hidden">
             <iframe
               title="Our Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13133.215496491668!2d135.4601301!3d34.6937398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0df8e9b1c91%3A0x984a5d0b781c0c82!2sOsaka%2C%20Japan!5e0!3m2!1sen!2sng!4v1698844697817!5m2!1sen!2sng"
@@ -219,7 +251,7 @@ const ContactForm = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full rounded-xl md:rounded-2xl lg:rounded-3xl"
+              className="w-full h-full"
             ></iframe>
           </div>
         </div>

@@ -5,7 +5,7 @@ import Button from "./Button";
 export default function Footer() {
   return (
     <footer
-      className="text-white py-4 px-6 font-sans"
+      className="text-white py-8 px-6 font-sans"
       style={{ backgroundColor: "var(--color-bg-dark)" }}
     >
       <div className="max-w-6xl mx-auto">
@@ -17,8 +17,7 @@ export default function Footer() {
               </div>
               <span className="font-bold text-xl text-to-dark">SEAC</span>            </div>
             <p className="text-[var(--color-text-light)] text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet conse ctetur adipiscing elit amet conse
-              ctetur adipiscing elit elit tellus elit tellus luctus nec ullam.
+             Our mission is to simplify property ownership through trust, transparency, expertise, care, commitment, and innovation.
             </p>
           </div>
 
@@ -75,7 +74,7 @@ export default function Footer() {
               </li> */}
               <li>
                 <Link
-                  to="/blog"
+                  to="/news"
                   className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm"
                 >
                   Blog

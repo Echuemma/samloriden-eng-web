@@ -1,11 +1,12 @@
 import React from 'react';
-
+ import ConstructionBanner from '../components/sections/ConstructionBanner'
 const Projects = () => {
   return (
-    <div>
-      <h1>Projects</h1>
-      <p>This is the Projects page.</p>
-    </div>
+     <div className="project-page">
+     
+         <ConstructionBanner />
+         
+       </div>
   );
 };
 
