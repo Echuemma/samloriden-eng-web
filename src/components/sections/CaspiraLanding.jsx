@@ -39,7 +39,7 @@ export default function CaspiraWebsite() {
               </div>
 
               <div className="lg:col-span-5 flex items-end lg:items-center " data-aos="fade-right">
-                <div className="bg-white rounded-2xl p-6 lg:p-8 max-w-sm w-[100%] ml-auto transform lg:translate-y-16">
+                <div className="bg-white rounded-2xl p-6 lg:p-8 max-w-sm w-[100%] ml-auto transform lg:translate-y-6">
                   <h4 className="text-2xl font-bold text-gray-800 mb-6">Engineering Excellence</h4>
 
                   <div className="space-y-6">
@@ -86,18 +86,18 @@ export default function CaspiraWebsite() {
         </div>
       </div>
 
-      <div className="py-16 lg:py-4 bg-gray-50">
-        <div className="container mx-auto px-6 mt-16 lg:mt-0">
+      <div className="py-8 lg:py-4 bg-gray-50">
+        <div className="container mx-auto px-6 mt-0 lg:mt-0">
           <div className="max-w-4xl" data-aos="fade-up">
             <div className="flex items-center space-x-2 text-yellow-500 font-medium mb-2">
               <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-              <span>Our Mission</span>
+              <span>Our Goal</span>
             </div>
             <h4 className="text-3xl lg:text-5xl font-bold text-gray-800 mb-2">
               Building Solutions That Last
             </h4>
             <p className="text-lg lg:text-xl text-gray-600 leading-relaxed mb-4 max-w-2xl">
-              At Caspira, we are committed to delivering innovative, reliable, and sustainable
+              At SAMLORIDEN, we are committed to delivering innovative, reliable, and sustainable
               solutions tailored to our clients’ unique needs. Our focus is on combining creativity
               with technical expertise to transform challenges into opportunities.
             </p>

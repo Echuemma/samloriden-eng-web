@@ -17,7 +17,7 @@ export default function Footer() {
               </div>
               <span className="font-bold text-xl text-to-dark">SEAC</span>            </div>
             <p className="text-[var(--color-text-light)] text-sm leading-relaxed">
-             Our mission is to simplify property ownership through trust, transparency, expertise, care, commitment, and innovation.
+              Our mission is to simplify property ownership through trust, transparency, expertise, care, commitment, and innovation.
             </p>
           </div>
 
@@ -96,7 +96,7 @@ export default function Footer() {
                   404 Page
                 </Link>
               </li> */}
-                 <li>
+              <li>
                 <Link
                   to="/projects"
                   className="text-[var(--color-text-light)] hover:text-[var(--color-secondary)] transition-colors text-sm"
@@ -157,25 +157,25 @@ export default function Footer() {
               href="#"
               className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors"
             >
-              <Facebook className="w-5 h-5 text-[var(--color-secondary)]" />
+              <Facebook className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
             </a>
             <a
               href="#"
               className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors"
             >
-              <Twitter className="w-5 h-5 text-[var(--color-secondary)]" />
+              <Twitter className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
             </a>
             <a
               href="#"
               className="w-10 h-10 bg-[var(--color-text)] text-[var(--color-primary-alt)] hover:bg-[var(--color-secondary)] hover:text-white rounded-full flex items-center justify-center transition-colors"
             >
-              <Instagram className="w-5 h-5 text-[var(--color-secondary)]" />
+              <Instagram className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
             </a>
             <a
               href="#"
               className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors"
             >
-              <Linkedin className="w-5 h-5 text-[var(--color-secondary)]" />
+              <Linkedin className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
             </a>
           </div>
         </div>

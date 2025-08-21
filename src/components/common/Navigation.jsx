@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { X } from 'lucide-react';
+import { AlignRight } from 'lucide-react';
 import Button from './Button';
 
 function Navigation() {
@@ -9,7 +11,7 @@ function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 50); 
+      setIsScrolled(scrollTop > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -29,9 +31,8 @@ function Navigation() {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full backdrop-blur-md z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-primary' : 'bg-white/95'
-    }`}>
+    <nav className={`fixed top-0 left-0 w-full backdrop-blur-md z-50 transition-all duration-300 ${isScrolled ? 'bg-primary' : 'bg-white/95'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
 
@@ -43,7 +44,7 @@ function Navigation() {
               <div className="w-8 h-8 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center mr-3">
                 <div className="w-4 h-4 bg-white rounded transform rotate-45"></div>
               </div>
-              <span 
+              <span
                 className="font-bold text-xl"
                 style={{ color: isScrolled ? 'var(--color-text-light)' : 'var(--color-text-dark)' }}
               >
@@ -51,7 +52,7 @@ function Navigation() {
               </span>
             </Link>
           </div>
-          
+
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navLinks.map((link, index) => (
@@ -62,7 +63,9 @@ function Navigation() {
                   style={{ color: isScrolled ? 'var(--color-text-light)' : 'var(--color-text-dark)' }}
                 >
                   {link.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-600 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
+                    style={{ backgroundColor: "var(--color-primary-alt)" }}
+                  ></span>
                 </Link>
               ))}
             </div>
@@ -81,23 +84,10 @@ function Navigation() {
               className="relative w-10 h-10 flex items-center justify-center focus:outline-none"
               aria-label="Toggle menu"
             >
-              <div className="w-6 h-5 relative">
-                <span
-                  className={`absolute top-0 left-0 w-full h-0.5 transform transition-all duration-300 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-2' : ''
-                    }`}
-                  style={{ backgroundColor: isScrolled ? 'var(--color-text-light)' : 'var(--color-text-dark)' }}
-                ></span>
-                <span
-                  className={`absolute top-2 left-0 w-full h-0.5 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-0' : ''
-                    }`}
-                  style={{ backgroundColor: isScrolled ? 'var(--color-text-light)' : 'var(--color-text-dark)' }}
-                ></span>
-                <span
-                  className={`absolute top-4 left-0 w-full h-0.5 transform transition-all duration-300 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''
-                    }`}
-                  style={{ backgroundColor: isScrolled ? 'var(--color-text-light)' : 'var(--color-text-dark)' }}
-                ></span>
-              </div>
+              <AlignRight
+                className="w-6 h-6"
+                style={{ color: isScrolled ? 'var(--color-text-light)' : 'var(--color-text-dark)' }}
+              />
             </button>
           </div>
         </div>
@@ -116,12 +106,12 @@ function Navigation() {
       >
         <div className="flex items-center justify-between p-4 border-b">
           <div className="flex items-center">
-            <div className="w-8 h-8 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center mr-3">
+            <div className="w-8 h-8 bg-[var(--color-secondary)] text-to-dark rounded-lg flex items-center justify-center mr-3">
               <div className="w-4 h-4 bg-white rounded transform rotate-45"></div>
             </div>
-            <span 
+            <span
               className="font-bold text-xl"
-              style={{ color: 'var(--color-text-dark)' }}
+              style={{ color: 'var(--color-text-light)' }}
             >
               SLEEK
             </span>
@@ -133,9 +123,10 @@ function Navigation() {
             onMouseEnter={(e) => e.target.style.color = 'var(--color-text-dark)'}
             onMouseLeave={(e) => e.target.style.color = 'var(--color-text-muted)'}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
+            <X className="w-6 h-6"
+              style={{ color: 'var(--color-text-light)', }}
+
+            />
           </button>
         </div>
 

@@ -18,12 +18,11 @@ const MainLayout = () => {
       </div>
     );
   }
-
   return (
     <>
       <ScrollToTop />
       <Navigation />
-      <main className="w-full mx-auto h-[100%] max-w-[1920px] overflow-x-hidden overflow-y-hidden">        <Outlet />
+      <main className="w-full mx-auto h-[100%] max-w-[1920px] overflow-x-hidden overflow-y-hidden"><Outlet />
       </main>
       <Footer />
       <ScrollProgress />

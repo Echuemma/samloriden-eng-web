@@ -31,7 +31,7 @@ h6 { font-size: var(--font-size-h6); }
   --color-primary-alt: #ca8a04; 
   --color-secondary: #f39c12;
   --color-accent: #27ae60;
-    --color-text-light: #ffffff; 
+  --color-text-light: #ffffff; 
   --color-bg: #f4f4f4;
   --color-bg-dark: #111827; /* This is Tailwind's bg-gray-900 */
   --color-text-light: #fff;
