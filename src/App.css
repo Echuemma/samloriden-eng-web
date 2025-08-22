@@ -6,6 +6,23 @@
   outline: 1px solid red;
 }  */
 
+
+
+.btn {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 .article-content h3 {
   margin-bottom: 0.5rem; }
 

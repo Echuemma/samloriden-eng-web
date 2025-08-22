@@ -9,7 +9,7 @@ import Careers from './pages/Careers';
 import NewsSection from './components/sections/NewsSection';
 import NewsDetail from './pages/NewsDetail';
 import ProjectDetail from './pages/ProjectDetail';
-import Contact from './pages/Contact';
+import ContactPage from './pages/ContactPage';
 import './App.css';
 
 const router = createBrowserRouter([
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       },
       {
         path: "contact",
-        element: <Contact />
+        element: <ContactPage />
       },
        { path:"/project/:id", 
         element:<ProjectDetail />} 

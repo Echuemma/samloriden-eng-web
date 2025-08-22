@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import { Phone, Mail, User, MessageSquare, Award, Users, Clock } from 'lucide-react';
-import useAOS from '../../hooks/useAOS'; 
-
 
 export default function CaspiraWebsite() {
-    useAOS({ duration: 1000, once: true }); 
   return (
-    <div className="min-h-screen bg-white mb-0">
-      <div className="relative h-screen overflow-visible">
+    <div className="min-h-screen bg-white">
+      <div className="relative min-h-screen overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -15,11 +12,11 @@ export default function CaspiraWebsite() {
           }}
         />
 
-        <div className="relative z-10 h-full">
-          <div className="container mx-auto px-6 h-60 pt-1 lg:pt-0">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 h-full">
+        <div className="relative z-10 min-h-screen">
+          <div className="container mx-auto px-6 py-8 lg:py-16">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[80vh] lg:min-h-[70vh]">
 
-              <div className="lg:col-span-6 text-white space-y-0 flex flex-col justify-center" data-aos="fade-left">
+              <div className="lg:col-span-6 text-white space-y-6 flex flex-col justify-center" data-aos="fade-left">
                 <div className="flex items-center space-x-2 text-yellow-400 font-medium">
                   <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                   <span>Get started today</span>
@@ -38,13 +35,13 @@ export default function CaspiraWebsite() {
                 </p>
               </div>
 
-              <div className="lg:col-span-5 flex items-end lg:items-center " data-aos="fade-right">
-                <div className="bg-white rounded-2xl p-6 lg:p-8 max-w-sm w-[100%] ml-auto transform lg:translate-y-6">
+              <div className="lg:col-span-5 flex items-center justify-center lg:justify-end" data-aos="fade-right">
+                <div className="bg-white rounded-2xl p-6 lg:p-8 w-full max-w-sm shadow-xl">
                   <h4 className="text-2xl font-bold text-gray-800 mb-6">Engineering Excellence</h4>
 
                   <div className="space-y-6">
                     <div className="flex items-start space-x-3">
-                      <div className="bg-yellow-100 p-2 rounded-lg">
+                      <div className="bg-yellow-100 p-2 rounded-lg flex-shrink-0">
                         <Award className="w-5 h-5 text-yellow-600" />
                       </div>
                       <div>
@@ -56,7 +53,7 @@ export default function CaspiraWebsite() {
                     </div>
 
                     <div className="flex items-start space-x-3">
-                      <div className="bg-blue-100 p-2 rounded-lg">
+                      <div className="bg-blue-100 p-2 rounded-lg flex-shrink-0">
                         <Users className="w-5 h-5 text-blue-600" />
                       </div>
                       <div>
@@ -68,7 +65,7 @@ export default function CaspiraWebsite() {
                     </div>
 
                     <div className="flex items-start space-x-3">
-                      <div className="bg-green-100 p-2 rounded-lg">
+                      <div className="bg-green-100 p-2 rounded-lg flex-shrink-0">
                         <Clock className="w-5 h-5 text-green-600" />
                       </div>
                       <div>
@@ -86,26 +83,24 @@ export default function CaspiraWebsite() {
         </div>
       </div>
 
-      <div className="py-8 lg:py-4 bg-gray-50">
-        <div className="container mx-auto px-6 mt-0 lg:mt-0">
+      <div className="py-12 lg:py-16 bg-gray-50">
+        <div className="container mx-auto px-6">
           <div className="max-w-4xl" data-aos="fade-up">
-            <div className="flex items-center space-x-2 text-yellow-500 font-medium mb-2">
+            <div className="flex items-center space-x-2 text-yellow-500 font-medium mb-4">
               <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
               <span>Our Goal</span>
             </div>
-            <h4 className="text-3xl lg:text-5xl font-bold text-gray-800 mb-2">
+            <h4 className="text-3xl lg:text-5xl font-bold text-gray-800 mb-6">
               Building Solutions That Last
             </h4>
-            <p className="text-lg lg:text-xl text-gray-600 leading-relaxed mb-4 max-w-2xl">
+            <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl">
               At SAMLORIDEN, we are committed to delivering innovative, reliable, and sustainable
-              solutions tailored to our clients’ unique needs. Our focus is on combining creativity
+              solutions tailored to our clients' unique needs. Our focus is on combining creativity
               with technical expertise to transform challenges into opportunities.
             </p>
           </div>
-
         </div>
       </div>
-
     </div>
   );
 }
