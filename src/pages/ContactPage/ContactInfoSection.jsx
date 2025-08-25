@@ -76,8 +76,7 @@ const ContactInfoSection = () => {
           <div className="flex items-center text-[var(--color-text-light)] text-sm">
             <Phone className="w-4 h-4 mr-2" style={{ color: "var(--color-primary-alt)" }} />
             <div>
-              +234 803 954 1382 <br />
-              +234 803 954 1382
+              +234 7019115831 <br />
             </div>
           </div>
         </div>

@@ -38,8 +38,9 @@ export default function CivilEngineeringServices() {
             <h5 className="text-3xl font-bold text-gray-900 mb-4">STRUCTURAL ENGINEERING</h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Do you envision infrastructure that stands the test of time and perfectly serves your
-              community's needs? Our structural engineering services at Apex transform your concepts
-              into robust, safe, and efficient structures that exceed industry standards.
+              community's needs? Our structural engineering services at SAMLORIDEN transform your concepts
+              into robust, safe, and efficient structures that exceed industry standards while conducting 
+              comprehensive feasibility studies and environmental impact assessments for all structural projects.
             </p>
 
             <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
@@ -66,7 +67,7 @@ export default function CivilEngineeringServices() {
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Construction Documentation</span>
+                  <span className="text-gray-700">Environmental Impact Assessment</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
@@ -102,8 +103,9 @@ export default function CivilEngineeringServices() {
             <h5 className="text-3xl font-bold text-gray-900 mb-4">TRANSPORTATION ENGINEERING</h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Your community deserves efficient, safe transportation networks. Our comprehensive
-              transportation engineering services at Apex create seamless mobility solutions,
-              transforming how people and goods move through your area with optimized traffic flow and safety.
+              transportation engineering services create seamless mobility solutions for road construction, 
+              railway construction, and aviation infrastructure, transforming how people and goods move through 
+              your area with optimized traffic flow, safety, and comprehensive feasibility studies.
             </p>
 
             <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
@@ -112,25 +114,25 @@ export default function CivilEngineeringServices() {
               <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Highway & Road Design</span>
+                  <span className="text-gray-700">Highway & Road Construction Design</span>
                 </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Railway Infrastructure Planning</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Aviation Infrastructure Development</span>
+                </div>
+              </div>
+              <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
                   <span className="text-gray-700">Traffic Engineering & Analysis</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Intersection Design & Optimization</span>
-                </div>
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Signal Design & Timing</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Pavement Design & Assessment</span>
+                  <span className="text-gray-700">Social Impact Assessment</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
@@ -166,8 +168,9 @@ export default function CivilEngineeringServices() {
             <h5 className="text-3xl font-bold text-gray-900 mb-4">WATER & ENVIRONMENTAL ENGINEERING</h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Clean water and environmental protection are fundamental to thriving communities. Our water and
-              environmental engineering services at Apex design sustainable systems that safeguard public health
-              and preserve natural resources for future generations.
+              environmental engineering services design sustainable systems that safeguard public health
+              and preserve natural resources for future generations, with comprehensive environmental and 
+              social impact assessments for all water infrastructure projects.
             </p>
 
             <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
@@ -194,7 +197,7 @@ export default function CivilEngineeringServices() {
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Flood Control & Drainage</span>
+                  <span className="text-gray-700">Maritime Infrastructure Consulting</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
@@ -227,11 +230,12 @@ export default function CivilEngineeringServices() {
           </div>
 
           <div className="lg:order-first order-last" data-aos="fade-down">
-            <h5 className="text-3xl font-bold text-gray-900 mb-4">GEOTECHNICAL ENGINEERING</h5>
+            <h5 className="text-3xl font-bold text-gray-900 mb-4">POWER & SECURITY INFRASTRUCTURE</h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              The foundation of every successful project lies beneath the surface. Our geotechnical
-              engineering services at Apex provide essential ground investigation and analysis, ensuring
-              your structures are built on solid foundations with comprehensive soil and rock mechanics expertise.
+              Modern communities require reliable power and security systems. Our specialized engineering
+              services provide comprehensive consulting and feasibility studies for power infrastructure 
+              and security systems, ensuring robust and sustainable solutions with thorough environmental 
+              and social impact assessments for all installations.
             </p>
 
             <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
@@ -240,29 +244,29 @@ export default function CivilEngineeringServices() {
               <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Soil Investigation & Testing</span>
+                  <span className="text-gray-700">Power Infrastructure Design</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Foundation Design & Analysis</span>
+                  <span className="text-gray-700">Security System Planning</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Slope Stability Analysis</span>
+                  <span className="text-gray-700">Feasibility Studies</span>
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Retaining Wall Design</span>
+                  <span className="text-gray-700">Environmental Impact Assessment</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Ground Improvement Solutions</span>
+                  <span className="text-gray-700">Social Impact Assessment</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Earthquake Risk Assessment</span>
+                  <span className="text-gray-700">Risk Assessment & Mitigation</span>
                 </div>
               </div>
             </div>
@@ -291,11 +295,12 @@ export default function CivilEngineeringServices() {
           </div>
 
           <div className="order-last" data-aos="fade-down">
-            <h5 className="text-3xl font-bold text-gray-900 mb-4">SITE DEVELOPMENT & PLANNING</h5>
+            <h5 className="text-3xl font-bold text-gray-900 mb-4">SITE DEVELOPMENT & CONSULTANCY</h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Transform raw land into thriving developments with strategic vision and technical precision.
-              Our site development and planning services at Apex guide projects from initial concept through
-              final construction, ensuring optimal land use and seamless integration with existing infrastructure.
+              Our comprehensive site development and consultancy services guide projects from initial concept through
+              final construction, providing feasibility studies and environmental and social impact assessments 
+              across all infrastructure sectors to ensure optimal land use and community benefit.
             </p>
 
             <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
@@ -308,7 +313,7 @@ export default function CivilEngineeringServices() {
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Grading & Earthwork Design</span>
+                  <span className="text-gray-700">Multi-Sector Feasibility Studies</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
@@ -318,7 +323,7 @@ export default function CivilEngineeringServices() {
               <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Zoning & Permit Assistance</span>
+                  <span className="text-gray-700">Environmental Site Assessment</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
@@ -326,7 +331,7 @@ export default function CivilEngineeringServices() {
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Environmental Site Assessment</span>
+                  <span className="text-gray-700">Regulatory Compliance Support</span>
                 </div>
               </div>
             </div>

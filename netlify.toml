@@ -1,0 +1,27 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Form notifications
+[[forms]]
+  name = "contact"
+  
+  # Email notifications to admin
+  [forms.notifications]
+    [forms.notifications.email]
+      to = "your-admin-email@example.com"
+      subject = "New Contact Form Submission"
+      body = """
+      New message from: {{email}}
+      
+      Name: {{firstName}} {{lastName}}
+      Email: {{email}}
+      Phone: {{phone}}
+      Newsletter: {{newsletter}}
+      
+      Message:
+      {{message}}
+      
+      ---
+      Reply directly to: {{email}}
+      """

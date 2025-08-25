@@ -24,7 +24,6 @@ const FormComponent = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  // Create form handlers using the utility
   const { handleInputChange, handleSubmit } = createFormHandlers(
     formData,
     setFormData,
@@ -34,8 +33,6 @@ const FormComponent = () => {
     setSubmitStatus
   );
 
-  // Toasts are already handled in the createFormHandlers utility
-  // Remove the useEffect for toasts since they're now in the handlers
 
   return (
     <div
