@@ -33,7 +33,7 @@ h6 { font-size: var(--font-size-h6); }
   --color-accent: #27ae60;
   --color-text-light: #ffffff; 
   --color-bg: #f4f4f4;
-  --color-bg-dark: #111827; /* This is Tailwind's bg-gray-900 */
+  --color-bg-dark: #111827; 
   --color-text-light: #fff;
   --color-text-dark: #333;
   --color-text: var(--color-text-dark);

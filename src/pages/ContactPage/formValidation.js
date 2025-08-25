@@ -4,10 +4,11 @@ export const formValidation = {
     return emailRegex.test(email);
   },
 
-  validatePhone: (phone) => {
-    const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-    return phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''));
-  },
+validatePhone: (phone) => {
+  const phoneRegex = /^(\+?\d{11})$/;
+  return phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''));
+},
+
 
   validateName: (name) => {
     return name.trim().length >= 2 && /^[a-zA-Z\s]+$/.test(name.trim());

@@ -1,6 +1,4 @@
-// formHandlers.js
 import { formValidation } from './formValidation';
-
 export const createFormHandlers = (
   formData,
   setFormData,
@@ -18,7 +16,6 @@ export const createFormHandlers = (
       [name]: newValue
     }));
 
-    // Clear error for this field when user starts typing
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -32,7 +29,6 @@ export const createFormHandlers = (
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Validate form
     const validation = formValidation.validateForm(formData);
     
     if (!validation.isValid) {
@@ -42,7 +38,6 @@ export const createFormHandlers = (
     }
 
     try {
-      // Create form data for FormSubmit
       const submitData = new FormData();
       submitData.append('name', `${formData.firstName} ${formData.lastName}`);
       submitData.append('email', formData.email);
@@ -50,7 +45,6 @@ export const createFormHandlers = (
       submitData.append('message', formData.message);
       submitData.append('newsletter', formData.newsletter ? 'Yes' : 'No');
       
-      // Add hidden fields for FormSubmit configuration
       submitData.append('_subject', 'New Contact Form Submission');
       submitData.append('_captcha', 'false');
       submitData.append('_template', 'table');

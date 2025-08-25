@@ -124,11 +124,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center text-[var(--color-text-light)] text-xs">
                 <Mail className="w-4 h-4 mr-2" style={{ color: "var(--color-primary-alt)" }} />
-                <span>samlorig@email.com</span>
+                <span>info.samloriden@gmail.com</span>
               </div>
-              <div className="flex items-start text-[var(--color-text-light)] text-xs">
+              <div className="flex items-start text-sm text-[var(--color-text-light)] text-xs">
                 <MapPin className="w-4 h-4 mr-2 mt-0.5" style={{ color: "var(--color-primary-alt)" }} />
-                <span> Central Business District, Abuja</span>
+                <span> Block C'2 24 Central market Kubwa Abuja</span>
               </div>
             </div>
 

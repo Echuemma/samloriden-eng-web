@@ -30,3 +30,13 @@ html, body {
   overflow-x: hidden !important;
   overflow-y: auto !important;
 }
+
+
+.similar-blog {
+  overflow-x: auto;   /* or overflow-y: auto depending on direction */
+  scrollbar-width: none; /* Firefox */
+}
+
+.similar-blog::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Edge */
+}

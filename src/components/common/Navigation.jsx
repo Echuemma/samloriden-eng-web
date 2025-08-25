@@ -31,8 +31,11 @@ function Navigation() {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full backdrop-blur-md z-50 transition-all duration-300 ${isScrolled ? 'bg-primary' : 'bg-white/95'
-      }`}>
+ <nav
+  className={`fixed top-0 left-0 w-full backdrop-blur-md z-50 transition-all duration-300 ${
+    isScrolled ? 'bg-[var(--color-bg-dark)]' : 'bg-white/95'
+  }`}
+>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
 
