@@ -10,6 +10,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
   </head>
   <body>
+
+    <!-- Add this to your existing public/index.html -->
+<form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="firstName" />
+    <input type="text" name="lastName" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <textarea name="message"></textarea>
+    <input type="checkbox" name="newsletter" />
+</form>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { getInputClassName, getSubmitButtonClassName } from "./formStyles";
+import { formValidation } from './formValidation';
+import { createFormHandlers } from './createFormHandlers';
 
 const Button = ({ children, onClick, className, disabled, type = "button" }) => (
   <button onClick={onClick} className={className} disabled={disabled} type={type}>
@@ -22,71 +24,18 @@ const FormComponent = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  // helper to encode for Netlify
-  const encode = (data) =>
-    Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
+  // Create form handlers using the utility
+  const { handleInputChange, handleSubmit } = createFormHandlers(
+    formData,
+    setFormData,
+    errors,
+    setErrors,
+    setIsSubmitting,
+    setSubmitStatus
+  );
 
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: "" }));
-    }
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-
-    try {
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "contact",
-          ...formData,
-        }),
-      });
-
-      if (response.ok) {
-        setSubmitStatus("success");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: "",
-          newsletter: false,
-        });
-        setErrors({});
-      } else {
-        setSubmitStatus("error");
-      }
-    } catch (error) {
-      console.error("Form submission error:", error);
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  // Toasts
-  useEffect(() => {
-    if (submitStatus === "success") {
-      toast.success("Thank you! Your message has been sent successfully.");
-    } else if (submitStatus === "error") {
-      toast.error("Sorry, there was an error sending your message. Please try again.");
-    }
-  }, [submitStatus]);
+  // Toasts are already handled in the createFormHandlers utility
+  // Remove the useEffect for toasts since they're now in the handlers
 
   return (
     <div
