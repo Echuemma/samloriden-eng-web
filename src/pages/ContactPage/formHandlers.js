@@ -1,4 +1,6 @@
 import { formValidation } from './formValidation';
+import { toast } from 'react-toastify';
+
 export const createFormHandlers = (
   formData,
   setFormData,
@@ -24,6 +26,12 @@ export const createFormHandlers = (
     }
   };
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -34,24 +42,25 @@ export const createFormHandlers = (
     if (!validation.isValid) {
       setErrors(validation.errors);
       setIsSubmitting(false);
+      toast.error('Please fix the form errors before submitting.');
       return;
     }
 
     try {
-      const submitData = new FormData();
-      submitData.append('name', `${formData.firstName} ${formData.lastName}`);
-      submitData.append('email', formData.email);
-      submitData.append('phone', formData.phone);
-      submitData.append('message', formData.message);
-      submitData.append('newsletter', formData.newsletter ? 'Yes' : 'No');
-      
-      submitData.append('_subject', 'New Contact Form Submission');
-      submitData.append('_captcha', 'false');
-      submitData.append('_template', 'table');
+      const submitData = {
+        "form-name": "contact",
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        newsletter: formData.newsletter ? 'Yes' : 'No'
+      };
 
-      const response = await fetch('https://formsubmit.co/info.samloriden@gmail.com', {
-        method: 'POST',
-        body: submitData
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(submitData)
       });
 
       if (response.ok) {
@@ -65,12 +74,17 @@ export const createFormHandlers = (
           newsletter: false
         });
         setErrors({});
+        toast.success('Thank you! Your message has been sent successfully.');
       } else {
+        const errorText = await response.text();
+        console.error('Form submission failed:', errorText);
         setSubmitStatus('error');
+        toast.error('Sorry, there was an error sending your message. Please try again.');
       }
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
+      toast.error('Sorry, there was an error sending your message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }

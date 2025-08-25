@@ -24,9 +24,9 @@ const ContactInfoSection = () => {
             <div className="flex items-start gap-2">
               <MapPin className="w-4 h-4 mt-0.5" style={{ color: "var(--color-primary-alt)" }} />
               <div>
-                <p>Block C'2 24 Central market</p>
-                <p>Kubwa</p>
-                <p>Abuja</p>
+                <p>Block C'2 24 Central market.</p>
+                <p>Kubwa, FCT,</p>
+                <p>Abuja.</p>
               </div>
             </div>
             <div className="flex items-start gap-2 mt-2 sm:mt-3">

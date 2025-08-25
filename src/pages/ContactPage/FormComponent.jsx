@@ -1,5 +1,5 @@
-// FormComponent.jsx
 import React from 'react';
+import { toast } from 'react-toastify';
 import { getInputClassName, getSubmitButtonClassName } from './formStyles';
 
 const Button = ({ children, onClick, className, disabled, type = "button" }) => (
@@ -16,10 +16,19 @@ const FormComponent = ({
     handleInputChange,
     handleSubmit
 }) => {
+    // Handle toast notifications based on submitStatus
+    React.useEffect(() => {
+        if (submitStatus === 'success') {
+            toast.success('Thank you! Your message has been sent successfully.');
+        } else if (submitStatus === 'error') {
+            toast.error('Sorry, there was an error sending your message. Please try again.');
+        }
+    }, [submitStatus]);
+
     return (
         <div className="order-2 lg:order-2 w-full max-w-md mx-auto lg:max-w-lg xl:max-w-xl lg:ml-auto lg:mx-0" data-aos="fade-left">
             <div className="bg-white rounded-xl lg:rounded-2xl p-6 sm:p-8 lg:p-8 xl:p-10 shadow-2xl">
-                <div className="mb-6 lg:mb-8">
+                <div className="mb-6 lg:mb-4">
                     <h5 className="text-xl sm:text-2xl lg:text-2xl xl:text-3xl font-semibold text-gray-800 mb-2 lg:mb-3" style={{ color: 'var(--color-primary-alt, #1f2937)' }}>
                         Tell Us What You Need
                     </h5>
@@ -28,19 +37,28 @@ const FormComponent = ({
                     </p>
                 </div>
 
-                {submitStatus === 'success' && (
-                    <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                        <p className="text-green-800 text-sm">Thank you! Your message has been sent successfully.</p>
-                    </div>
-                )}
+                {/* Hidden form for Netlify bot detection */}
+                <form name="contact" netlify="true" hidden>
+                    <input type="text" name="firstName" />
+                    <input type="text" name="lastName" />
+                    <input type="email" name="email" />
+                    <input type="tel" name="phone" />
+                    <textarea name="message"></textarea>
+                    <input type="checkbox" name="newsletter" />
+                </form>
 
-                {submitStatus === 'error' && (
-                    <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-                        <p className="text-red-800 text-sm">Sorry, there was an error sending your message. Please try again.</p>
-                    </div>
-                )}
+                <form 
+                    onSubmit={handleSubmit} 
+                    className="space-y-4 lg:space-y-4 xl:space-y-5"
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                >
+                    {/* Hidden inputs for Netlify */}
+                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="hidden" name="bot-field" />
 
-                <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-4 xl:space-y-5">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                         <div>
                             <input
@@ -140,7 +158,6 @@ const FormComponent = ({
                         >
                             {isSubmitting ? 'Sending...' : 'Submit'}
                         </Button>
-
                     </div>
                 </form>
             </div>

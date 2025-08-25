@@ -1,5 +1,6 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import MainLayout from './Layout/MainLayout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -11,6 +12,7 @@ import NewsDetail from './pages/NewsDetail';
 import ProjectDetail from './pages/ProjectDetail';
 import ContactPage from './pages/ContactPage';
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
   {
@@ -59,6 +61,18 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router} />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 }
