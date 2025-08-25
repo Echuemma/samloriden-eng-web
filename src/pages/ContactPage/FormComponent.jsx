@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { getInputClassName, getSubmitButtonClassName } from "./formStyles";
 import { formValidation } from './formValidation';
-import { createFormHandlers } from './createFormHandlers';
+import { createFormHandlers } from './formHandlers';
 
 const Button = ({ children, onClick, className, disabled, type = "button" }) => (
   <button onClick={onClick} className={className} disabled={disabled} type={type}>
