@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import { useParams, useNavigate } from 'react-router-dom';
 import { MapPin, Calendar, ArrowLeft, CheckCircle, User, Square, ArrowRight } from 'lucide-react';
 import Button from '../components/common/Button';
-import { getProjectById, getRelatedProjects } from '../data/projects-data';
+import { getProjectBySlug, getRelatedProjects } from '../data/projects-data';
 import useAOS from '../hooks/useAOS';
 
 export default function ProjectDetail() {
     useAOS({ duration: 1000, once: true });
-    const { id } = useParams();
+    const { slug } = useParams();
     const navigate = useNavigate();
     const [project, setProject] = useState(null);
     const [relatedProjects, setRelatedProjects] = useState([]);
@@ -21,8 +21,8 @@ export default function ProjectDetail() {
             try {
                 await new Promise(resolve => setTimeout(resolve, 300));
 
-                const projectData = getProjectById(id);
-                const related = getRelatedProjects(id, 3);
+                const projectData = getProjectBySlug(slug);
+                const related = getRelatedProjects(projectData?.id, 3);
 
                 if (!projectData) {
                     navigate('/404');
@@ -41,14 +41,14 @@ export default function ProjectDetail() {
         };
 
         fetchProjectData();
-    }, [id, navigate]);
+    }, [slug, navigate]);
 
     const handleBackToProjects = () => {
         navigate('/projects');
     };
 
-    const handleRelatedProjectClick = (projectId) => {
-        navigate(`/project/${projectId}`);
+    const handleRelatedProjectClick = (projectSlug) => {
+        navigate(`/project/${projectSlug}`);
     };
 
     if (loading) {
@@ -88,7 +88,7 @@ export default function ProjectDetail() {
                     <span className="text-gray-400 text-sm mx-2">/</span>
                     <span className="text-gray-400 text-sm whitespace-nowrap">Projects</span>
                     <span className="text-gray-400 text-sm mx-2">/</span>
-                   <span className="text-black font-semibold text-sm ml-2 sm:ml-0 truncate">{project.title}</span>
+                    <span className="text-black font-semibold text-sm ml-2 sm:ml-0 truncate">{project.title}</span>
                 </div>
 
                 <Link
@@ -182,10 +182,6 @@ export default function ProjectDetail() {
                     </div>
                 </div>
             </div>
-
-
-
-
             <div className="bg-white py-6 lg:py-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
                     <div className="grid lg:grid-cols-3 gap-8 lg:gap-16">
@@ -244,7 +240,7 @@ export default function ProjectDetail() {
                                             Status
                                         </span>
                                         <span className={`font-semibold px-2 lg:px-3 py-1 rounded-full text-xs lg:text-sm 
-                            ${project.status === 'Completed' ? 'bg-green-100 text-green-800' :
+                                         ${project.status === 'Completed' ? 'bg-green-100 text-green-800' :
                                                 project.status === 'In Progress' ? 'bg-blue-100 text-blue-800' :
                                                     project.status === 'Under Construction' ? 'bg-orange-100 text-orange-800' :
                                                         'bg-gray-100 text-gray-800'
@@ -322,7 +318,7 @@ export default function ProjectDetail() {
                                         </div>
 
                                         <button
-                                            onClick={() => handleRelatedProjectClick(relatedProject.id)}
+                                            onClick={() => handleRelatedProjectClick(relatedProject.slug)}
                                             className="flex items-center font-medium text-sm transition-colors duration-300 group/btn cursor-pointer ml-auto"
                                             style={{
                                                 color: 'var(--color-primary-alt)',

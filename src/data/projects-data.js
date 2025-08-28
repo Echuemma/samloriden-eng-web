@@ -3,6 +3,7 @@ export const projects = [
     {
         id: 1,
         title: "Modern Urban Housing Project",
+        slug: "Modern-Urban-Housing-Project",
         description: "A sleek residential development featuring sustainable design, smart layouts.",
         fullDescription: "This modern urban housing project represents the pinnacle of contemporary residential design. Featuring sustainable building materials, smart home technology integration, and efficient space planning, this development sets new standards for urban living. The project incorporates energy-efficient systems, green building practices, and community-focused amenities that enhance the quality of life for residents.",
         location: "Lekki, Lagos State, Nigeria",
@@ -29,6 +30,7 @@ export const projects = [
     {
         id: 2,
         title: "Structural Assessment & Retrofitting Consultation",
+        slug: 'Structural-Assessment-&-Retrofitting-Consultation',
         description: "Comprehensive structural evaluation and strengthening recommendations for aging commercial buildings.",
         fullDescription: "Our expert team conducted an in-depth structural assessment of a 40-year-old commercial complex, identifying critical areas requiring reinforcement and providing detailed retrofitting solutions. This consultation project involved advanced structural analysis, seismic vulnerability assessment, and cost-effective strengthening strategies that extended the building's operational life by 30 years while ensuring compliance with current building codes.",
         location: "Garki, Abuja, Nigeria",
@@ -55,6 +57,7 @@ export const projects = [
     {
         id: 3,
         title: "Downtown Office Tower Build",
+        slug: 'Downtown-Office-Tower-Build',
         description: "A high-rise commercial tower designed for modern businesses, with efficient space planning.",
         fullDescription: "Our downtown office tower project showcases cutting-edge commercial architecture designed to meet the evolving needs of modern businesses. This high-rise development features flexible floor plans, advanced building systems, and premium finishes that create an inspiring work environment. The tower incorporates state-of-the-art technology infrastructure and sustainable design principles.",
         location: "Victoria Island, Lagos State, Nigeria",
@@ -81,6 +84,7 @@ export const projects = [
     {
         id: 4,
         title: "Geotechnical Investigation & Foundation Design Consultation",
+        slug: 'Geotechnical-Investigation-&-Foundation-Design-Consultation',
         description: "Comprehensive soil analysis and foundation engineering for industrial facility development.",
         fullDescription: "This specialized consultation project involved extensive geotechnical investigation for a major industrial facility. Our team conducted detailed soil borings, laboratory testing, and foundation design analysis to ensure optimal structural performance. The project included slope stability analysis, settlement predictions, and customized foundation solutions that addressed challenging soil conditions while optimizing construction costs.",
         location: "Port Harcourt, Rivers State, Nigeria",
@@ -107,6 +111,7 @@ export const projects = [
     {
         id: 5,
         title: "Coastal Bridge Expansion Project",
+        slug: 'Coastal-Bridge-Expansion-Project',
         description: "An advanced infrastructure project focused on enhancing regional connectivity through durable engineering.",
         fullDescription: "This coastal bridge expansion project represents a significant infrastructure investment designed to improve regional connectivity and economic growth. The project involves extending existing bridge infrastructure while incorporating advanced engineering solutions to withstand coastal environmental conditions. Our team utilizes cutting-edge construction techniques and durable materials to ensure long-term structural integrity.",
         location: "Bonny, Rivers State, Nigeria",
@@ -133,6 +138,7 @@ export const projects = [
     {
         id: 6,
         title: "Water Resources Management Consultation",
+        slug: 'Water-Resources-Management-Consultation',
         description: "Strategic planning and design consultation for sustainable water infrastructure systems.",
         fullDescription: "Our comprehensive water resources consultation project focused on developing sustainable water management solutions for a rapidly growing urban area. The project encompassed hydrological analysis, drainage system design, flood risk assessment, and water quality management strategies. Our expert team provided innovative solutions that balance environmental protection with urban development needs.",
         location: "Makurdi, Benue State, Nigeria",
@@ -159,6 +165,7 @@ export const projects = [
     {
         id: 7,
         title: "Modern Urban Housing Project - Phase 2",
+        slug: 'Modern-Urban-Housing-Project-Phase-2',
         description: "Second phase residential development with enhanced sustainable features and community amenities.",
         fullDescription: "This second phase of our modern urban housing initiative continues our commitment to innovative residential solutions. Building on the success of our first phase, this project expands sustainable living options with enhanced smart home features and community amenities. The development focuses on creating vibrant neighborhoods that promote both individual comfort and community interaction.",
         location: "Enugu, Enugu State, Nigeria",
@@ -185,6 +192,7 @@ export const projects = [
     {
         id: 8,
         title: "Transportation Infrastructure Feasibility Study",
+        slug: 'Transportation-Infrastructure-Feasibility-Study',
         description: "Comprehensive feasibility analysis for multi-modal transportation hub development.",
         fullDescription: "Our team conducted an extensive feasibility study for a proposed multi-modal transportation hub that would integrate bus, rail, and pedestrian facilities. This consultation project involved traffic flow analysis, economic impact assessment, environmental considerations, and stakeholder engagement. The study provided critical insights for decision-makers regarding the viability and optimal design of this major infrastructure investment.",
         location: "Kano, Kano State, Nigeria",
@@ -211,6 +219,7 @@ export const projects = [
     {
         id: 9,
         title: "Downtown Office Tower - Phase 2",
+        slug: 'Downtown-Office-Tower-Phase-2',
         description: "Second high-rise commercial tower with premium amenities and sustainable design features.",
         fullDescription: "This second downtown office tower project expands our commercial development portfolio with an even more ambitious high-rise structure. Designed to complement our first tower while offering unique architectural features, this building will serve as a landmark in the city's business district. The project emphasizes sustainability, technology integration, and flexible workspace solutions.",
         location: "Abuja Central Business District, Nigeria",
@@ -237,6 +246,7 @@ export const projects = [
     {
         id: 10,
         title: "Building Performance Audit & Energy Efficiency Consultation",
+        slug: 'Building-Performance-Audit-&-Energy-Efficiency-Consultation',
         description: "Comprehensive energy audit and optimization recommendations for commercial building operations.",
         fullDescription: "This specialized consultation focused on improving energy efficiency and operational performance of a large commercial facility. Our team conducted detailed energy audits, identified inefficiencies in building systems, and provided comprehensive recommendations for reducing energy consumption while maintaining optimal comfort levels. The project included HVAC optimization, lighting system upgrades, and building envelope improvements.",
         location: "Onitsha, Anambra State, Nigeria",
@@ -263,6 +273,7 @@ export const projects = [
     {
         id: 11,
         title: "Coastal Bridge Expansion - Phase 2",
+        slug: 'Coastal-Bridge-Expansion-Phase-2',
         description: "Second phase infrastructure expansion with enhanced capacity and advanced monitoring systems.",
         fullDescription: "Phase two of our coastal bridge expansion continues our commitment to improving regional infrastructure. This project focuses on additional span construction and infrastructure improvements that will further enhance transportation efficiency and regional economic development. Advanced engineering techniques ensure optimal performance in challenging coastal conditions.",
         location: "Calabar, Cross River State, Nigeria",
@@ -289,6 +300,7 @@ export const projects = [
     {
         id: 12,
         title: "Disaster Resilience Planning Consultation",
+        slug: 'Disaster-Resilience-Planning-Consultation',
         description: "Strategic disaster risk assessment and resilience planning for critical infrastructure systems.",
         fullDescription: "Our disaster resilience consultation project provided comprehensive risk assessment and mitigation strategies for critical infrastructure in a seismically active region. The project involved vulnerability assessments, emergency response planning, and the development of resilient design standards. Our team worked closely with local authorities to create actionable plans that enhance community safety and infrastructure durability.",
         location: "Jos, Plateau State, Nigeria",
@@ -314,8 +326,8 @@ export const projects = [
     }
 ];
 
-export const getProjectById = (id) => {
-    return projects.find(project => project.id === parseInt(id));
+export const getProjectBySlug = (slug) => {
+    return projects.find(project => project.slug === slug);
 };
 
 export const getRelatedProjects = (currentId, limit = 3) => {

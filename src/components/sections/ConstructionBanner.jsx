@@ -31,8 +31,8 @@ export default function ConstructionBanner() {
         fetchProjects();
     }, []);
 
-    const handleViewMore = (projectId) => {
-        navigate(`/project/${projectId}`);
+    const handleViewMore = (project) => {
+        navigate(`/project/${project.slug}`);
     };
 
     if (loading) {
@@ -184,8 +184,7 @@ export default function ConstructionBanner() {
 
 
                                 <button
-                                    onClick={() => handleViewMore(project.id)}
-                                    className="flex items-center font-medium text-sm transition-colors duration-300 group/btn cursor-pointer  ml-auto"
+                                    onClick={() => handleViewMore(project)} className="flex items-center font-medium text-sm transition-colors duration-300 group/btn cursor-pointer  ml-auto"
                                     style={{
                                         color: 'var(--color-primary-alt)',
                                     }}

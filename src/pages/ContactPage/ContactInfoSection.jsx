@@ -44,7 +44,7 @@ const ContactInfoSection = () => {
           <div className="space-y-1 sm:space-y-2">
             <div className="flex items-center gap-2">
               <Instagram className="w-4 h-4" style={{ color: "var(--color-primary-alt)" }} />
-              <a href="#" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">Instagram</a>
+              <a href="https://www.instagram.com/samloridenec?utm_source=qr&igsh=ZHQ1YjlkYndyYXJ4" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">Instagram</a>
             </div>
             <div className="flex items-center gap-2">
               <Linkedin className="w-4 h-4" style={{ color: "var(--color-primary-alt)" }} />

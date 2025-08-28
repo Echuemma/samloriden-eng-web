@@ -51,8 +51,9 @@ const router = createBrowserRouter([
         path: "contact",
         element: <ContactPage />
       },
-       { path:"/project/:id", 
-        element:<ProjectDetail />} 
+       { path:"project/:slug", 
+        element:<ProjectDetail />
+      } 
     ]
   }
 ]);
