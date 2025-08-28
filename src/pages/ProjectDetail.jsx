@@ -87,7 +87,8 @@ export default function ProjectDetail() {
                     <span className="text-gray-400 text-sm whitespace-nowrap">Home</span>
                     <span className="text-gray-400 text-sm mx-2">/</span>
                     <span className="text-gray-400 text-sm whitespace-nowrap">Projects</span>
-                    <span className="text-black font-semibold text-sm ml-2 sm:ml-6 truncate">{project.title}</span>
+                    <span className="text-gray-400 text-sm mx-2">/</span>
+                   <span className="text-black font-semibold text-sm ml-2 sm:ml-0 truncate">{project.title}</span>
                 </div>
 
                 <Link

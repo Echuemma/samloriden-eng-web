@@ -52,7 +52,8 @@ export default function ConstructionBanner() {
                 <div className="flex items-center space-x-2">
                     <span className="w-2 h-2 rounded-full border border-gray-400"></span>
                     <span className="text-gray-400 text-sm">Home</span>
-                    <span className="text-black font-semibold text-sm ml-6">Project</span>
+                    <span className="text-gray-400 text-sm mx-2">/</span>
+                    <span className="text-black font-semibold text-sm ml-1">Project</span>
                 </div>
             </nav>
             <div className="px-4 sm:px-6 lg:px-12 pb-8">
@@ -204,9 +205,9 @@ export default function ConstructionBanner() {
                 description="From residential homes to large-scale infrastructure, we combine innovation, precision, and engineering excellence to deliver lasting results. Partner with us to turn your vision into a structure built to stand the test of time."
             >
                 <Link to="/contact">
-                <Button className="bg-orange-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-orange-600 transition">
-                    Contact Us
-                </Button>
+                    <Button className="bg-orange-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-orange-600 transition">
+                        Contact Us
+                    </Button>
                 </Link>
             </CallToActionSection>
 

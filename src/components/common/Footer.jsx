@@ -165,7 +165,7 @@ export default function Footer() {
               <Twitter className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/samloridenec?utm_source=qr&igsh=ZHQ1YjlkYndyYXJ4"
               className="w-10 h-10 bg-[var(--color-text)] text-[var(--color-primary-alt)] hover:bg-[var(--color-secondary)] hover:text-white rounded-full flex items-center justify-center transition-colors"
             >
               <Instagram className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
