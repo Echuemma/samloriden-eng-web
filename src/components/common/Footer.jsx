@@ -125,7 +125,7 @@ export default function Footer() {
                 <Mail className="w-4 h-4 mr-2" style={{ color: "var(--color-primary-alt)" }} />
                 <span>info.samloriden@gmail.com</span>
               </div>
-              <div className="flex items-start text-sm text-[var(--color-text-light)] text-xs">
+              <div className="flex items-start text-sm text-[var(--color-text-light)]">
                 <MapPin className="w-4 h-4 mr-2 mt-0.5" style={{ color: "var(--color-primary-alt)" }} />
                 <span> Block C'2 24 Central market Kubwa Abuja</span>
               </div>
@@ -153,13 +153,13 @@ export default function Footer() {
         <div className="flex justify-end mt-0 mb-4">
           <div className="flex space-x-3">
             <a
-              href="#"
+              href="https://www.facebook.com/share/1624mgo9Am/"
               className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors"
             >
               <Facebook className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
             </a>
             <a
-              href="#"
+              href="https://x.com/samloridenEC?t=4WyJO__CvVz2_9u5YgZlzw&s=09"
               className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors"
             >
               <Twitter className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
@@ -171,15 +171,13 @@ export default function Footer() {
               <Instagram className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/samloriden-engineering-and-consultancy-ltd-271181381?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors"
             >
               <Linkedin className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
             </a>
           </div>
         </div>
-
-        {/* Footer Bottom */}
         <div className="border-t border-[var(--color-text)] pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-[var(--color-text-light)]">
             <p>© Samloriden</p>

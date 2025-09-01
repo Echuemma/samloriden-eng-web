@@ -1,17 +1,17 @@
 import React from 'react';
 import useAOS from '../../hooks/useAOS';
 
-
-export default function CivilEngineeringServices() {
+export default function RealEstateDevelopmentServices() {
   useAOS({ duration: 1000, once: true });
   return (
     <div className="max-w-6xl mx-auto px-6 py-16 bg-white">
       <div className="text-center mb-16">
-        <h3 className="text-4xl font-bold text-gray-900 mb-6" data-aos="fade-down" >OUR SERVICES</h3>
+        <h3 className="text-4xl font-bold text-gray-900 mb-6" data-aos="fade-down">OUR SERVICES</h3>
         <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed" data-aos="fade-up">
-          SAMLORIDEN ENGINEERING AND CONSULTANCY LTD delivers comprehensive civil engineering solutions to build tomorrow's infrastructure.
-          We combine technical expertise with innovative approaches, creating structures that serve
-          communities for generations while meeting the highest safety and sustainability standards.
+          SAMLORIDEN ENGINEERING AND CONSULTANCY LTD delivers comprehensive real estate development solutions 
+          to create tomorrow's communities. We combine market expertise with innovative design approaches, 
+          developing properties that serve communities for generations while meeting the highest quality and 
+          sustainability standards.
         </p>
       </div>
 
@@ -20,27 +20,27 @@ export default function CivilEngineeringServices() {
           <div className="grid grid-cols-2 gap-4 lg:order-first order-first" data-aos="fade-up">
             <div className="space-y-4">
               <img
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Modern bridge construction"
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Land survey and analysis"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div className="space-y-4 pt-8">
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Steel structure framework"
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Market research and planning"
                 className="w-full h-56 object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
 
           <div className="order-last" data-aos="fade-down">
-            <h5 className="text-3xl font-bold text-gray-900 mb-4">STRUCTURAL ENGINEERING</h5>
+            <h5 className="text-3xl font-bold text-gray-900 mb-4">LAND ACQUISITION & FEASIBILITY STUDIES</h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Do you envision infrastructure that stands the test of time and perfectly serves your
-              community's needs? Our structural engineering services at SAMLORIDEN transform your concepts
-              into robust, safe, and efficient structures that exceed industry standards while conducting 
-              comprehensive feasibility studies and environmental impact assessments for all structural projects.
+              We identify and secure prime locations with high growth potential, supported by in-depth 
+              market research and feasibility analysis. Our strategic approach ensures every acquisition 
+              represents optimal investment opportunities with comprehensive risk assessment and return 
+              projections.
             </p>
 
             <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
@@ -49,29 +49,29 @@ export default function CivilEngineeringServices() {
               <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Structural Analysis & Design</span>
+                  <span className="text-gray-700">Location Identification & Analysis</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Foundation Engineering</span>
+                  <span className="text-gray-700">Market Research & Trends Analysis</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Seismic & Wind Load Analysis</span>
+                  <span className="text-gray-700">Financial Feasibility Assessment</span>
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Bridge & Infrastructure Design</span>
+                  <span className="text-gray-700">Due Diligence & Risk Analysis</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Environmental Impact Assessment</span>
+                  <span className="text-gray-700">Growth Potential Evaluation</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Code Compliance & Permitting</span>
+                  <span className="text-gray-700">Investment Return Projections</span>
                 </div>
               </div>
             </div>
@@ -81,31 +81,29 @@ export default function CivilEngineeringServices() {
 
       <div className="mb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Images - show first on mobile, last on desktop */}
           <div className="grid grid-cols-2 gap-4 lg:order-last order-first" data-aos="fade-up">
             <div className="space-y-4">
               <img
-                src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Highway interchange"
+                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Architectural design planning"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div className="space-y-4 pt-8">
               <img
-                src="https://images.unsplash.com/photo-1486718448742-163d73305c64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Urban road planning"
+                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Sustainable building design"
                 className="w-full h-56 object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
 
           <div className="lg:order-first order-last" data-aos="fade-down">
-            <h5 className="text-3xl font-bold text-gray-900 mb-4">TRANSPORTATION ENGINEERING</h5>
+            <h5 className="text-3xl font-bold text-gray-900 mb-4">ARCHITECTURAL DESIGN & PLANNING</h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Your community deserves efficient, safe transportation networks. Our comprehensive
-              transportation engineering services create seamless mobility solutions for road construction, 
-              railway construction, and aviation infrastructure, transforming how people and goods move through 
-              your area with optimized traffic flow, safety, and comprehensive feasibility studies.
+              Our team collaborates with top architects and planners to design functional, aesthetic, and 
+              sustainable spaces that meet market demand and regulatory standards. We create innovative 
+              designs that maximize value while ensuring environmental responsibility and community integration.
             </p>
 
             <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
@@ -114,29 +112,29 @@ export default function CivilEngineeringServices() {
               <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Highway & Road Construction Design</span>
+                  <span className="text-gray-700">Concept Development & Design</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Railway Infrastructure Planning</span>
+                  <span className="text-gray-700">Sustainable Building Solutions</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Aviation Infrastructure Development</span>
+                  <span className="text-gray-700">Space Optimization & Functionality</span>
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Traffic Engineering & Analysis</span>
+                  <span className="text-gray-700">Regulatory Compliance Planning</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Social Impact Assessment</span>
+                  <span className="text-gray-700">Market-Driven Design Strategy</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Safety Studies & Improvements</span>
+                  <span className="text-gray-700">Community Integration Planning</span>
                 </div>
               </div>
             </div>
@@ -146,31 +144,30 @@ export default function CivilEngineeringServices() {
 
       <div className="mb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Images - show first on mobile */}
-          <div className="grid grid-cols-2 gap-4 lg:order-last order-first" data-aos="fade-up">
+          <div className="grid grid-cols-2 gap-4 lg:order-first order-first" data-aos="fade-up">
             <div className="space-y-4">
               <img
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Water treatment facility"
+                src="https://images.unsplash.com/photo-1541976590-713941681591?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Construction project management"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div className="space-y-4 pt-8">
               <img
-                src="https://images.unsplash.com/photo-1589722717808-9cdda1e85193?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Water pipeline construction"
+                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Quality construction materials"
                 className="w-full h-56 object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
 
           <div className="order-last" data-aos="fade-down">
-            <h5 className="text-3xl font-bold text-gray-900 mb-4">WATER & ENVIRONMENTAL ENGINEERING</h5>
+            <h5 className="text-3xl font-bold text-gray-900 mb-4">CONSTRUCTION & PROJECT MANAGEMENT</h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Clean water and environmental protection are fundamental to thriving communities. Our water and
-              environmental engineering services design sustainable systems that safeguard public health
-              and preserve natural resources for future generations, with comprehensive environmental and 
-              social impact assessments for all water infrastructure projects.
+              We handle all aspects of construction, leveraging skilled professionals, high-quality materials, 
+              and strict project timelines to ensure exceptional build quality. Our comprehensive project 
+              management approach delivers projects on time, within budget, and to the highest standards of 
+              craftsmanship and safety.
             </p>
 
             <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
@@ -179,29 +176,29 @@ export default function CivilEngineeringServices() {
               <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Water Treatment System Design</span>
+                  <span className="text-gray-700">Full-Scale Construction Management</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Stormwater Management</span>
+                  <span className="text-gray-700">Quality Control & Assurance</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Wastewater Treatment Design</span>
+                  <span className="text-gray-700">Timeline & Budget Management</span>
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Environmental Impact Assessments</span>
+                  <span className="text-gray-700">Skilled Professional Coordination</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Maritime Infrastructure Consulting</span>
+                  <span className="text-gray-700">Material Sourcing & Procurement</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Water Resources Planning</span>
+                  <span className="text-gray-700">Safety & Compliance Management</span>
                 </div>
               </div>
             </div>
@@ -211,31 +208,29 @@ export default function CivilEngineeringServices() {
 
       <div className="mb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Images - show first on mobile, last on desktop */}
-          <div className="grid grid-cols-2 gap-4 lg:order-first order-first" data-aos="fade-up">
+          <div className="grid grid-cols-2 gap-4 lg:order-last order-first" data-aos="fade-up">
             <div className="space-y-4">
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Soil testing equipment"
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Digital marketing strategy"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div className="space-y-4 pt-8">
               <img
-                src="https://images.unsplash.com/photo-1553866126-e6e3b0c2b5c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Foundation construction"
+                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Property branding and promotion"
                 className="w-full h-56 object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
 
           <div className="lg:order-first order-last" data-aos="fade-down">
-            <h5 className="text-3xl font-bold text-gray-900 mb-4">POWER & SECURITY INFRASTRUCTURE</h5>
+            <h5 className="text-3xl font-bold text-gray-900 mb-4">PROPERTY MARKETING & BRANDING</h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Modern communities require reliable power and security systems. Our specialized engineering
-              services provide comprehensive consulting and feasibility studies for power infrastructure 
-              and security systems, ensuring robust and sustainable solutions with thorough environmental 
-              and social impact assessments for all installations.
+              Our in-house marketing team creates compelling branding and promotional campaigns that generate 
+              demand and drive visibility across digital and traditional channels. We develop targeted marketing 
+              strategies that showcase your property's unique value proposition and attract qualified buyers.
             </p>
 
             <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
@@ -244,29 +239,93 @@ export default function CivilEngineeringServices() {
               <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Power Infrastructure Design</span>
+                  <span className="text-gray-700">Brand Development & Strategy</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Security System Planning</span>
+                  <span className="text-gray-700">Digital Marketing Campaigns</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Feasibility Studies</span>
+                  <span className="text-gray-700">Traditional Media Advertising</span>
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Environmental Impact Assessment</span>
+                  <span className="text-gray-700">Content Creation & Photography</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Social Impact Assessment</span>
+                  <span className="text-gray-700">Lead Generation & Analytics</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Risk Assessment & Mitigation</span>
+                  <span className="text-gray-700">Market Positioning Strategy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-2 gap-4 lg:order-first order-first" data-aos="fade-up">
+            <div className="space-y-4">
+              <img
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Sales consultation meeting"
+                className="w-full h-48 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="space-y-4 pt-8">
+              <img
+                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Client engagement and support"
+                className="w-full h-56 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+
+          <div className="order-last" data-aos="fade-down">
+            <h5 className="text-3xl font-bold text-gray-900 mb-4">SALES & CLIENT ENGAGEMENT</h5>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              With a dedicated sales team and seamless customer experience strategy, we guide clients from 
+              inquiry to ownership, ensuring transparency, trust, and satisfaction. Our client-centered approach 
+              builds lasting relationships through personalized service and expert guidance throughout the 
+              entire purchase journey.
+            </p>
+
+            <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
+
+            <div className="grid md:grid-cols-2 gap-x-8 gap-y-2">
+              <div className="space-y-2">
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Dedicated Sales Team Support</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Customer Experience Strategy</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Personalized Client Consultations</span>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Transparent Transaction Process</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Purchase Journey Management</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Trust Building & Relationship Management</span>
                 </div>
               </div>
             </div>
@@ -276,31 +335,30 @@ export default function CivilEngineeringServices() {
 
       <div>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Images - show first on mobile */}
-          <div className="grid grid-cols-2 gap-4 lg:order-first order-first" data-aos="fade-up">
+          <div className="grid grid-cols-2 gap-4 lg:order-last order-first" data-aos="fade-up">
             <div className="space-y-4">
               <img
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Urban planning model"
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="After-sales support services"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div className="space-y-4 pt-8">
               <img
-                src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Site development planning"
+                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Client relationship management"
                 className="w-full h-56 object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
 
-          <div className="order-last" data-aos="fade-down">
-            <h5 className="text-3xl font-bold text-gray-900 mb-4">SITE DEVELOPMENT & CONSULTANCY</h5>
+          <div className="lg:order-first order-last" data-aos="fade-down">
+            <h5 className="text-3xl font-bold text-gray-900 mb-4">AFTER-SALES SUPPORT</h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Transform raw land into thriving developments with strategic vision and technical precision.
-              Our comprehensive site development and consultancy services guide projects from initial concept through
-              final construction, providing feasibility studies and environmental and social impact assessments 
-              across all infrastructure sectors to ensure optimal land use and community benefit.
+              We go beyond the sale with post-completion services, maintenance guidance, and support, 
+              reinforcing long-term relationships with our clients. Our commitment extends well beyond 
+              project delivery, ensuring your investment continues to meet your expectations through 
+              ongoing support and maintenance services.
             </p>
 
             <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
@@ -309,29 +367,29 @@ export default function CivilEngineeringServices() {
               <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Master Planning & Layout Design</span>
+                  <span className="text-gray-700">Post-Completion Support Services</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Multi-Sector Feasibility Studies</span>
+                  <span className="text-gray-700">Maintenance Guidance & Planning</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Utility Infrastructure Planning</span>
+                  <span className="text-gray-700">Warranty & Defect Resolution</span>
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Environmental Site Assessment</span>
+                  <span className="text-gray-700">Long-term Relationship Management</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Construction Administration</span>
+                  <span className="text-gray-700">Property Care Consultation</span>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Regulatory Compliance Support</span>
+                  <span className="text-gray-700">Ongoing Technical Support</span>
                 </div>
               </div>
             </div>

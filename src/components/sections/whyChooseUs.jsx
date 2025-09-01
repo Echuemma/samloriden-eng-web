@@ -8,18 +8,18 @@ const WhyChooseUs = () => {
   const benefits = [
     {
       icon: <Users className="w-6 h-6 text-white" />,
-      title: 'EXPERTISE & COLLABORATION',
-      description: 'Our team of seasoned designers, contractors, and renovation specialists brings a wealth of knowledge and expertise to every project.'
+      title: 'End-to-End Control',
+      description: 'Full in-house management means we deliver consistency, cost-efficiency, and speed throughout the development process.'
     },
     {
       icon: <Star className="w-6 h-6 text-white" />,
-      title: 'SEAMLESS EXPERIENCE & QUALITY',
-      description: 'We use only the finest materials and employ meticulous craftsmanship to ensure your project is completed to the highest standards, exceeding expectations.'
+      title: 'Proven Expertise',
+      description: 'With a portfolio of successful residential, commercial, and mixed-use projects, we bring a track record of quality and reliability'
     },
     {
       icon: <Home className="w-6 h-6 text-white" />,
-      title: 'FUNCTION YOU LIVE IN',
-      description: 'A beautiful space should also be functional. We\'ll optimize your layout and incorporate smart solutions to ensure your home works as well as it looks.'
+      title: 'Customer-Centric Approach',
+      description: 'Our commitment is not just to build structures, but to create communities and deliver value to every stakeholder.'
     }
   ];
 

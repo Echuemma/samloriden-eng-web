@@ -1,6 +1,6 @@
 // ContactInfoSection.jsx
 import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, Send, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const ContactInfoSection = () => {
   return (
@@ -48,15 +48,15 @@ const ContactInfoSection = () => {
             </div>
             <div className="flex items-center gap-2">
               <Linkedin className="w-4 h-4" style={{ color: "var(--color-primary-alt)" }} />
-              <a href="#" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/samloriden-engineering-and-consultancy-ltd-271181381?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">LinkedIn</a>
             </div>
             <div className="flex items-center gap-2">
               <Facebook className="w-4 h-4" style={{ color: "var(--color-primary-alt)" }} />
-              <a href="#" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">Facebook</a>
+              <a href="https://www.facebook.com/share/1624mgo9Am/" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">Facebook</a>
             </div>
             <div className="flex items-center gap-2">
-              <Send className="w-4 h-4" style={{ color: "var(--color-primary-alt)" }} />
-              <a href="#" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">TikTok</a>
+              <Twitter className="w-4 h-4" style={{ color: "var(--color-primary-alt)" }} />
+              <a href="https://x.com/samloridenEC?t=4WyJO__CvVz2_9u5YgZlzw&s=09" className="text-gray-200 hover:text-white transition-colors text-xs sm:text-sm hover:underline">Twitter</a>
             </div>
           </div>
         </div>
@@ -77,6 +77,7 @@ const ContactInfoSection = () => {
             <Phone className="w-4 h-4 mr-2" style={{ color: "var(--color-primary-alt)" }} />
             <div>
               +234 7019115831 <br />
+              +234 9078301342
             </div>
           </div>
         </div>
