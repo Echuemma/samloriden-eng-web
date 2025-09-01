@@ -38,7 +38,7 @@ export default function AboutUsBanner() {
           </div>
 
           <div className="mb-16" data-aos="fade-up">
-            <p className="text-[var(--color-text-light)] text-sm leading-relaxed text-lg leading-relaxed max-w-3xl text-justify">
+            <p className="text-[var(--color-text-light)] leading-relaxed text-lg max-w-3xl text-justify">
               At SAMLORIDEN ENGINEERING AND CONSULTANCY LTD, we bring over two decades of trusted experience in civil engineering, construction, and strategic consultancy. Since 2001, our passion has been transforming ideas into infrastructure delivering innovative and sustainable solutions across residential, commercial, and industrial projects. From foundational design to final execution, we combine technical expertise, quality materials, and a commitment to excellence to exceed expectations. Our consultancy services empower clients with data-driven guidance, helping them navigate complex projects with clarity and confidence. At Samloriden, we don't just build we shape environments, empower communities, and create lasting value.
             </p>
           </div>
@@ -48,14 +48,14 @@ export default function AboutUsBanner() {
 
             <div>
               <h3 className="text-2xl font-semibold text-on-dark mb-3" data-aos="fade-down">Mission</h3>
-              <p className="text-[var(--color-text-light)] text-sm leading-relaxed text-lg leading-relaxed text-justify" data-aos="fade-up">
+              <p className="text-[var(--color-text-light)] text-sm leading-relaxed text-justify" data-aos="fade-up">
                 To deliver high-quality, thoughtfully designed, and efficiently executed properties that meet the evolving needs of modern living and business.
               </p>
             </div>
 
             <div>
               <h3 className="text-2xl font-semibold text-on-dark mb-3" data-aos="fade-down">Vision</h3>
-              <p className="text-[var(--color-text-light)] text-sm leading-relaxed text-lg leading-relaxed text-justify" data-aos="fade-up">
+              <p className="text-[var(--color-text-light)] text-sm  leading-relaxed text-justify" data-aos="fade-up">
                 To be a leading force in real estate development by building spaces that inspire, endure, and elevate lifestyles.
               </p>
             </div>
@@ -63,8 +63,7 @@ export default function AboutUsBanner() {
         </div>
       </div>
 
-      {/* Video Section */}
-<div className="relative w-[95%] h-54 md:h-[450px] bg-primary overflow-hidden mx-auto mt-8 md:mt-16 mb-8 md:px-0 rounded-xl">
+      <div className="relative w-[95%] h-54 md:h-[450px] bg-primary overflow-hidden mx-auto mt-8 md:mt-16 mb-8 md:px-0 rounded-xl">
         <div className="h-full">
           <video
             className="w-full h-full object-cover rounded-xl"
@@ -74,17 +73,20 @@ export default function AboutUsBanner() {
             controls
             data-aos="fade-up"
           >
-          <source src="/videos/about/COMPANY.mp4" type="video/mp4" />
-          <source src="/videos/about/company-showcase.webm" type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
-          
-          <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent text-white py-6 px-6 z-10">
-            <h3 className="text-xl md:text-2xl font-semibold mb-2 text-on-dark">Our Projects in Action</h3>
+            <source src="/videos/about/COMPANY.mp4" type="video/mp4" />
+            <source src="/videos/about/company-showcase.webm" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+
+          <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent text-white py-6 px-6 z-10 hidden md:block">
+            <h3 className="text-xl md:text-2xl font-semibold mb-2 text-on-dark">
+              Our Projects in Action
+            </h3>
             <p className="text-sm md:text-base opacity-90">
               Experience our commitment to engineering excellence and innovative construction solutions.
             </p>
           </div>
+
         </div>
       </div>
     </>
