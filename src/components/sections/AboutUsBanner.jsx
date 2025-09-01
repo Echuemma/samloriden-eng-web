@@ -38,8 +38,13 @@ export default function AboutUsBanner() {
           </div>
 
           <div className="mb-16" data-aos="fade-up">
-            <p className="text-[var(--color-text-light)] leading-relaxed text-lg max-w-3xl text-justify">
+            {/* <p className="text-[var(--color-text-light)] leading-relaxed text-lg max-w-3xl text-justify">
               At SAMLORIDEN ENGINEERING AND CONSULTANCY LTD, we bring over two decades of trusted experience in civil engineering, construction, and strategic consultancy. Since 2001, our passion has been transforming ideas into infrastructure delivering innovative and sustainable solutions across residential, commercial, and industrial projects. From foundational design to final execution, we combine technical expertise, quality materials, and a commitment to excellence to exceed expectations. Our consultancy services empower clients with data-driven guidance, helping them navigate complex projects with clarity and confidence. At Samloriden, we don't just build we shape environments, empower communities, and create lasting value.
+            </p> */}
+
+            <p>
+              SAMLORIDEN Engineering is a full-service real estate development firm dedicated to transforming visions into lasting value. From the initial concept to handing over the keys, we manage the entire property development cycle with precision, innovation, and integrity. Our business model integrates every phase of the property journey — land acquisition, design and planning, construction, marketing, and sales — ensuring quality, efficiency, and client satisfaction at every step.
+
             </p>
           </div>
 
