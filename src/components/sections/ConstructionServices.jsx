@@ -6,7 +6,6 @@ import useAOS from '../../hooks/useAOS';
 import { projects } from '../../data/projects-data';
 import { Building2 } from "lucide-react"; 
 
-
 const ProjectsLandingSection = () => {
   useAOS({ duration: 1000, once: true });
 
@@ -19,6 +18,11 @@ const ProjectsLandingSection = () => {
       setLoading(true);
       try {
         await new Promise(resolve => setTimeout(resolve, 300));
+        
+        // Debug: Log the imported projects data
+        console.log('Imported projects:', projects);
+        console.log('Projects slice(0,6):', projects.slice(0, 6));
+        
         setProjectsData(projects.slice(0, 6));
       } catch (error) {
         console.error('Error fetching projects:', error);
@@ -30,16 +34,33 @@ const ProjectsLandingSection = () => {
     fetchProjects();
   }, []);
 
-  const handleProjectClick = (projectId) => {
-    navigate(`/project/${projectId}`);
+  const handleProjectClick = (project) => {
+    console.log('Clicking project:', project); 
+    navigate(`/project/${project.slug}`); 
   };
+
+  // Debug: Log current state
+  console.log('Current projectsData:', projectsData);
+  console.log('Loading state:', loading);
 
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 relative overflow-hidden flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-600 mx-auto"></div>
           <p className="mt-4 text-gray-600">Loading projects...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Debug: Check if projectsData is empty
+  if (!projectsData || projectsData.length === 0) {
+    return (
+      <div className="min-h-screen bg-gray-50 relative overflow-hidden flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-red-600">No projects data available</p>
+          <p className="text-sm text-gray-500 mt-2">Check console for debugging info</p>
         </div>
       </div>
     );
@@ -88,7 +109,7 @@ const ProjectsLandingSection = () => {
 
           <div className="flex-1 lg:max-w-md lg:ml-8 flex flex-col items-end" data-aos="fade-down">
             <p className="text-gray-600 mb-0 sm:mb-2 leading-relaxed text-sm sm:text-base text-left sm:text-right">
-              MASON delivers exceptional construction projects that transform communities
+              SAMLORIDEN delivers exceptional construction projects and consultation that transform communities
               with innovative design, quality craftsmanship, and sustainable building practices.
             </p>
 
@@ -106,70 +127,81 @@ const ProjectsLandingSection = () => {
           </div>
         </div>
 
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {projectsData.map((project, index) => (
-            <div
-              key={project.id}
-              className="col-span-1 relative group cursor-pointer"
-              onClick={() => handleProjectClick(project.id)}
-            >
-              <div className="relative h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden shadow-lg">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+          {projectsData.map((project, index) => {
+            return (
+              <div
+                key={project.id || index} 
+                className="col-span-1 relative group cursor-pointer"
+                onClick={() => handleProjectClick(project)} 
+              >
+                <div className="relative h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src={project.image || '/placeholder.jpg'} 
+                    alt={project.title || 'Project'}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    onError={(e) => {
+                      console.log('Image failed to load:', project.image);
+                      e.target.src = '/placeholder.jpg'; 
+                    }}
+                  />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+{/* 
+                  {project.category && (
+                    <div className="absolute top-4 left-4">
+                      <span className="inline-flex items-center bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                        {project.category}
+                      </span>
+                    </div>
+                  )} */}
 
-                {/* Project Category Badge */}
-                {/* <div className="absolute top-4 left-4">
-                  <span className="inline-flex items-center bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-medium">
-                    {project.category}
-                  </span>
-                </div> */}
+                  {/* {project.status && (
+                    <div className="absolute top-4 right-4">
+                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
+                        project.status === 'Completed' ? 'bg-green-500 text-white' :
+                        project.status === 'In Progress' ? 'bg-blue-500 text-white' :
+                        project.status === 'Under Construction' ? 'bg-orange-500 text-white' :
+                        'bg-gray-500 text-white'
+                      }`}>
+                        {project.status}
+                      </span>
+                    </div>
+                  )} */}
 
-                {/* Project Status Badge */}
-                {/* <div className="absolute top-4 right-4">
-                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
-                    project.status === 'Completed' ? 'bg-green-500 text-white' :
-                    project.status === 'In Progress' ? 'bg-blue-500 text-white' :
-                    project.status === 'Under Construction' ? 'bg-orange-500 text-white' :
-                    'bg-gray-500 text-white'
-                  }`}>
-                    {project.status}
-                  </span>
-                </div> */}
+                  <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 text-white">
+                    <h5 className="text-lg sm:text-xl font-semibold mb-2 text-on-dark" data-aos="fade-up">
+                      {project.title || project.name || 'Untitled Project'}
+                    </h5>
+                    {project.description && (
+                      <p className="text-gray-200 text-xs sm:text-sm mb-4 opacity-90 line-clamp-2" data-aos="fade-up">
+                        {project.description}
+                      </p>
+                    )}
 
-                <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 text-white">
-                  <h5 className="text-lg sm:text-xl font-semibold mb-2 text-on-dark" data-aos="fade-up">
-                    {project.title}
-                  </h5>
-                  {project.description && (
-                    <p className="text-gray-200 text-xs sm:text-sm mb-4 opacity-90 line-clamp-2" data-aos="fade-up">
-                      {project.description}
-                    </p>
-                  )}
-
-                  <div className="flex items-center text-gray-300 text-xs mb-2">
-                    <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                    </svg>
-                    {project.location}
+                    {project.location && (
+                      <div className="flex items-center text-gray-300 text-xs mb-2">
+                        <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                        </svg>
+                        {project.location}
+                      </div>
+                    )}
                   </div>
-                </div>
 
-                <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6">
-                  <div
-                    className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-200"
-                    style={{ background: 'var(--color-primary-alt)' }}
-                  >
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                  <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6">
+                    <div
+                      className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-200"
+                      style={{ background: 'var(--color-primary-alt)' }}
+                    >
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

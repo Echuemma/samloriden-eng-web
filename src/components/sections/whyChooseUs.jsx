@@ -14,7 +14,7 @@ const WhyChooseUs = () => {
     {
       icon: <Star className="w-6 h-6 text-white" />,
       title: 'Proven Expertise',
-      description: 'With a portfolio of successful residential, commercial, and mixed-use projects, we bring a track record of quality and reliability'
+      description: 'With a portfolio of successful residential, commercial, and mixed-use projects, we bring a track record of quality and reliability.'
     },
     {
       icon: <Home className="w-6 h-6 text-white" />,

@@ -76,8 +76,14 @@ const ContactInfoSection = () => {
           <div className="flex items-center text-[var(--color-text-light)] text-sm">
             <Phone className="w-4 h-4 mr-2" style={{ color: "var(--color-primary-alt)" }} />
             <div>
-              +234 7019115831 <br />
-              +234 9078301342
+
+              <p>
+                +234 7019115831
+              </p>
+              <p>
+                +234 9078301342
+
+              </p>
             </div>
           </div>
         </div>

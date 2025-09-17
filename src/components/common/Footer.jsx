@@ -5,7 +5,7 @@ import Button from "./Button";
 export default function Footer() {
   return (
     <footer
-      className="text-white py-8 px-6 font-sans"
+      className="text-white pt-12 pb-5 px-6 font-sans"
       style={{ backgroundColor: "var(--color-bg-dark)" }}
     >
       <div className="max-w-6xl mx-auto">
@@ -118,7 +118,14 @@ export default function Footer() {
               <div className="flex items-center text-[var(--color-text-light)] text-sm">
                 <Phone className="w-4 h-4 mr-2" style={{ color: "var(--color-primary-alt)" }} />
                 <div>
-                  +234 7019115831 <br />
+
+                  <p>
+                    +234 7019115831
+                  </p>
+                  <p>
+                    +234 9078301342
+
+                  </p>
                 </div>
               </div>
               <div className="flex items-center text-[var(--color-text-light)] text-xs">
@@ -147,57 +154,48 @@ export default function Footer() {
                 <Send className="w-4 h-4 text-white" />
               </Button>
             </div> */}
-          </div>
-        </div>
-
-        <div className="flex justify-end mt-0 mb-4">
-          <div className="flex space-x-3">
-            <a
-              href="https://www.facebook.com/share/1624mgo9Am/"
-              className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors"
-            >
-              <Facebook className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
-            </a>
-            <a
-              href="https://x.com/samloridenEC?t=4WyJO__CvVz2_9u5YgZlzw&s=09"
-              className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors"
-            >
-              <Twitter className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
-            </a>
-            <a
-              href="https://www.instagram.com/samloridenec?utm_source=qr&igsh=ZHQ1YjlkYndyYXJ4"
-              className="w-10 h-10 bg-[var(--color-text)] text-[var(--color-primary-alt)] hover:bg-[var(--color-secondary)] hover:text-white rounded-full flex items-center justify-center transition-colors"
-            >
-              <Instagram className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/samloriden-engineering-and-consultancy-ltd-271181381?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors"
-            >
-              <Linkedin className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
-            </a>
-          </div>
-        </div>
-        <div className="border-t border-[var(--color-text)] pt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-[var(--color-text-light)]">
-            <p>© Samloriden</p>
-            <div className="flex space-x-4 mt-2 md:mt-0">
-              <Link
-                to="/privacy-policy"
-                className="hover:text-[var(--color-secondary)] transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <span>|</span>
-              <Link
-                to="/terms"
-                className="hover:text-[var(--color-secondary)] transition-colors"
-              >
-                Terms & Conditions
-              </Link>
+            <div className="flex justify mt-0 mb-4">
+              <div className="flex space-x-3">
+                <a
+                  href="https://www.facebook.com/share/1624mgo9Am/"
+                  className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors"
+                >
+                  <Facebook className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
+                </a>
+                <a
+                  href="https://x.com/samloridenEC?t=4WyJO__CvVz2_9u5YgZlzw&s=09"
+                  className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors"
+                >
+                  <Twitter className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
+                </a>
+                <a
+                  href="https://www.instagram.com/samloridenec?utm_source=qr&igsh=ZHQ1YjlkYndyYXJ4"
+                  className="w-10 h-10 bg-[var(--color-text)] text-[var(--color-primary-alt)] hover:bg-[var(--color-secondary)] hover:text-white rounded-full flex items-center justify-center transition-colors"
+                >
+                  <Instagram className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/samloriden-engineering-and-consultancy-ltd-271181381?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  className="w-10 h-10 bg-[var(--color-text)] hover:bg-[var(--color-secondary)] rounded-full flex items-center justify-center transition-colors"
+                >
+                  <Linkedin className="w-5 h-5 text-[var(--color-secondary)] hover:text-[var(--color-text-light)] transition-colors" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
+
+
+        <div className="border-t border-[var(--color-text)] pt-6">
+  <div className="flex flex-col md:flex-row justify-between items-center text-sm text-[var(--color-text-light)]">
+    <p>© {new Date().getFullYear()} Samloriden</p>
+    <div className="flex space-x-4 mt-2 md:mt-0">
+      <span>Made with passion</span>
+      <span>|</span>
+      <span>Built for the future</span>
+    </div>
+  </div>
+</div>
       </div>
     </footer>
   );

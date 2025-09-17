@@ -4,22 +4,44 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SEAC</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Samloridenec - SEAC | [Your Business Description]</title>
+    <meta name="description" content="Samloridenec - SEAC offers [brief description of what you offer]. Professional [your services] in Nigeria." />
+    <meta name="keywords" content="samloridenec, SEAC, [your services], [your industry], Nigeria" />
+    <meta name="author" content="Samloridenec" />
+    
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="Samloridenec - SEAC | [Your Business Description]" />
+    <meta property="og:description" content="Samloridenec - SEAC offers [brief description of what you offer]" />
+    <meta property="og:url" content="https://samloridenec.com.ng" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Samloridenec" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Samloridenec - SEAC | [Your Business Description]" />
+    <meta name="twitter:description" content="Samloridenec - SEAC offers [brief description of what you offer]" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://samloridenec.com.ng" />
+    
+    <!-- Font Preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-
-    <!-- Add this to your existing public/index.html -->
-<form name="contact" netlify netlify-honeypot="bot-field" hidden>
-    <input type="text" name="firstName" />
-    <input type="text" name="lastName" />
-    <input type="email" name="email" />
-    <input type="tel" name="phone" />
-    <textarea name="message"></textarea>
-    <input type="checkbox" name="newsletter" />
-</form>
+    <!-- Netlify Contact Form (hidden) -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="firstName" />
+        <input type="text" name="lastName" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <textarea name="message"></textarea>
+        <input type="checkbox" name="newsletter" />
+    </form>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -21,8 +21,11 @@ function WhyChooseUsSection() {
             Why We're Your Best Choice
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit tellus,
-            luctus nec ultrices cuique mattis pulvinar dapibus leo.
+              Choosing the right partner is the foundation of every successful project.
+            With our expertise in civil engineering and construction consultancy, we
+            deliver innovative solutions, cost-effective designs, and quality
+            workmanship that stand the test of time. Your vision is our blueprint for
+            excellence.
           </p>
         </div>
 
@@ -43,7 +46,7 @@ function WhyChooseUsSection() {
               </p>
             </div>
             <div className="border-t pt-4">
-              <div className="text-3xl font-bold text-gray-900">800+</div>
+              <div className="text-3xl font-bold text-gray-900">30+</div>
               <div className="text-sm text-gray-500 font-medium">Complete Project</div>
             </div>
           </div>
@@ -74,7 +77,7 @@ function WhyChooseUsSection() {
               </p>
             </div>
             <div className="border-t pt-4">
-              <div className="text-3xl font-bold text-gray-900">950+</div>
+              <div className="text-3xl font-bold text-gray-900">17+</div>
               <div className="text-sm text-gray-500 font-medium">Incoming Project</div>
             </div>
           </div>
@@ -104,7 +107,7 @@ function WhyChooseUsSection() {
               </p>
             </div>
             <div className="border-t pt-4">
-              <div className="text-3xl font-bold text-gray-900">600+</div>
+              <div className="text-3xl font-bold text-gray-900">10+</div>
               <div className="text-sm text-gray-500 font-medium">Expert Team</div>
             </div>
           </div>

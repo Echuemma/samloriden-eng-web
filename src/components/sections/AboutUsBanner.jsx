@@ -28,7 +28,10 @@ export default function AboutUsBanner() {
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/20 to-transparent"></div>
       </div>
 
-      <div className="bg-primary text-white py-16 px-6 md:px-12 lg:px-16">
+      <div className="text-white py-16 px-6 md:px-12 lg:px-16"
+            style={{ backgroundColor: "var(--color-bg-dark)" }}
+
+      >
         <div className="max-w-6xl mx-auto">
           <div className="mb-5" data-aos="fade-down">
             <h4 className="text-4xl md:text-5xl lg:text-6xl font-light text-on-dark leading-tight">
