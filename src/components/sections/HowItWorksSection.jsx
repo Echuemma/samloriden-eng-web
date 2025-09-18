@@ -7,18 +7,18 @@ const HowItWorksSection = () => {
   const steps = [
     {
       number: '01',
-      title: 'CREATIVE IDEATION',
-      description: 'We begin by understanding your goals and brainstorming innovative concepts. This phase involves gathering insights, evaluating possibilities, and laying the foundation for a unique and impactful solution.'
+      title: 'ENGINEERING ASSESSMENT',
+      description: 'We begin with comprehensive site investigation, geotechnical analysis, and structural feasibility studies. Our engineers conduct soil testing, topographical surveys, and regulatory compliance reviews to establish solid technical foundations for your project in Nigerian conditions.'
     },
     {
       number: '02',
-      title: 'DESIGN & PRESENTATION',
-      description: 'Our team transforms ideas into structured plans and visual concepts. We craft detailed designs, refine them based on feedback, and present clear solutions that align with your vision and objectives.'
+      title: 'DESIGN & ENGINEERING',
+      description: 'Our multidisciplinary team creates detailed structural designs, architectural plans, and construction specifications using BIM technology. We integrate sustainable engineering solutions, optimize material selection, and ensure compliance with Nigerian building codes and international standards.'
     },
     {
       number: '03',
-      title: 'EXECUTION',
-      description: 'With the approved designs in hand, we bring the project to life through precise execution. From planning to implementation, we ensure high standards, quality control, and timely delivery.'
+      title: 'CONSTRUCTION & DELIVERY',
+      description: 'Through expert project management, we coordinate construction activities, quality control, and safety protocols. Our engineers supervise every phase from foundation to completion, ensuring structural integrity, timeline adherence, and successful property handover with ongoing technical support.'
     }
   ];
 
@@ -27,10 +27,10 @@ const HowItWorksSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl  text-on-dark md:text-5xl font-bold mb-6 tracking-wide" data-aos="fade-up" >
-            HOW IT WORKS
+            OUR ENGINEERING PROCESS
           </h2>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed text-center" data-aos="fade-down">
-            Our process is built on precision, collaboration, and efficiency. We begin by understanding your project needs and constraints, followed by a thorough feasibility analysis and design planning. From concept to construction, our team ensures compliance with regulations, manages resources responsibly, and delivers high-quality results on time and within budget.
+            Our integrated engineering and real estate process combines rigorous technical analysis with market-driven solutions. We begin with comprehensive site assessment and engineering feasibility studies, followed by detailed structural design and sustainable construction planning. From geotechnical investigation to final property delivery, our qualified engineers ensure every project meets the highest standards of safety, quality, and performance in Nigeria's demanding construction environment.
           </p>
 
         </div>
@@ -53,9 +53,9 @@ const HowItWorksSection = () => {
               </div>
 
               <div className="text-center">
-                <h4 className="text-xl  text-on-dark font-bold mb-4 tracking-wide">
+                <h3 className="text-xl  text-on-dark font-bold mb-4 tracking-wide">
                   {step.title}
-                </h4>
+                </h3>
                 <p className="text-gray-300 leading-relaxed text-sm text-justify">
                   {step.description}
                 </p>

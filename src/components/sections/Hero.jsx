@@ -156,9 +156,10 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 import useAOS from '../../hooks/useAOS';
+import Button from '../common/Button';
+import { Link } from 'react-router-dom';
 
-
-const CaspiraHeroBanner = () => {
+const SamloridensHeroBanner = () => {
   useAOS({ duration: 1000, once: true });
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -166,44 +167,41 @@ const CaspiraHeroBanner = () => {
   const slides = [
     {
       id: 1,
-      // backgroundImage: "https://images.unsplash.com/photo-1541976590-713941681591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       backgroundImage: "/images/hero/bg-one.jpeg",
-      title: "Where Vision Meets",
-      subtitle: "Solid Foundations",
-      description: "At SAMLORIDEN ENGINEERING AND CONSULTANCY LTD, we bring expertise, precision, and innovation to every project. From concept to completion, we build with integrity, efficiency, and excellence.",
-      statNumber: "20+",
-      statText: "Nation wide satisfied customer",
+      title: "Civil Engineering Excellence Meets",
+      subtitle: "Real Estate Innovation Nigeria",
+      description: "SAMLORIDEN ENGINEERING AND CONSULTANCY LTD combines world-class structural engineering, geotechnical expertise, and comprehensive real estate solutions. From site investigation to property management, we deliver integrated infrastructure and development services across Nigeria.",
+      statNumber: "150+",
+      statText: "Engineering & Real Estate Projects Completed Nigeria",
       statImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      cardTitle: "Elevating Lifestyles",
-      cardDescription: "Creating spaces that inspire and transform communities across the nation.",
+      cardTitle: "Integrated Engineering Solutions",
+      cardDescription: "Comprehensive civil engineering design, BIM modeling, and sustainable construction management across Abuja, Lagos, Port Harcourt.",
       cardImage: "https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
     },
     {
       id: 2,
-      // backgroundImage: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       backgroundImage: '/images/hero/bg-two.jpeg',
-      title: "Engineering Excellence",
-      subtitle: "Beyond Expectations",
-      description: "Our cutting-edge engineering solutions combine traditional craftsmanship with modern innovation. We deliver projects that stand the test of time, exceeding industry standards and client expectations.",
-      statNumber: "150+",
-      statText: "Projects completed successfully",
+      title: "Structural Engineering &",
+      subtitle: "Property Development Nigeria",
+      description: "Our licensed civil engineers deliver cutting-edge structural design, geotechnical investigations, and construction management while our real estate division maximizes property investment returns through market intelligence and technical expertise.",
+      statNumber: "25+",
+      statText: "Years Combined Engineering & Real Estate Experience",
       statImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      cardTitle: "Innovative Design",
-      cardDescription: "Pushing boundaries with sustainable and forward-thinking architectural solutions.",
+      cardTitle: "BIM Design & Construction",
+      cardDescription: "Advanced Building Information Modeling, 3D visualization, and sustainable building solutions meeting Nigerian Building Code standards.",
       cardImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
     },
     {
       id: 3,
-      // backgroundImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       backgroundImage: "/images/hero/bg-three.jpeg",
-      title: "Building Tomorrow's",
-      subtitle: "Infrastructure Today",
-      description: "From residential complexes to commercial landmarks, we shape the future of urban development. Our commitment to quality and sustainability creates lasting value for generations to come.",
-      statNumber: "25",
-      statText: "Years of industry expertise",
+      title: "Infrastructure Engineering &",
+      subtitle: "Smart Real Estate Investment",
+      description: "From road infrastructure and drainage systems to residential developments and commercial properties, SAMLORIDEN creates value through engineering excellence and strategic real estate positioning in Nigeria's growing markets.",
+      statNumber: "98%",
+      statText: "Client Satisfaction Rate Engineering & Property Services",
       statImage: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-      cardTitle: "Sustainable Future",
-      cardDescription: "Leading the industry with eco-friendly practices and green building solutions.",
+      cardTitle: "Sustainable Development",
+      cardDescription: "Green building materials, renewable energy integration, and climate-resilient engineering for long-term property value optimization.",
       cardImage: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
     }
   ];
@@ -236,8 +234,6 @@ const CaspiraHeroBanner = () => {
   return (
     <div className="relative min-h-screen overflow-hidden mt-5">
       {slides.map((slide, index) => (
-
-
         <div
           key={slide.id}
           className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'
@@ -246,8 +242,6 @@ const CaspiraHeroBanner = () => {
             backgroundImage: `url('${slide.backgroundImage}')`
           }}
         />
-
-
       ))}
 
       <div className="absolute inset-0 bg-black/60"></div>
@@ -261,22 +255,6 @@ const CaspiraHeroBanner = () => {
           {isAutoPlaying ? <Pause size={20} /> : <Play size={20} />}
         </button>
       </div>
-
-      {/* <button
-        onClick={prevSlide}
-        className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 text-white transition-all duration-200"
-        aria-label="Previous slide"
-      >
-        <ChevronLeft size={24} />
-      </button>
-
-      <button
-        onClick={nextSlide}
-        className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 text-white transition-all duration-200"
-        aria-label="Next slide"
-      >
-        <ChevronRight size={24} />
-      </button> */}
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 flex items-center min-h-[calc(100vh-60px)]">
@@ -294,14 +272,28 @@ const CaspiraHeroBanner = () => {
               <p className="text-lg text-white/90 leading-relaxed max-w-2xl mb-8 transform transition-all duration-700 delay-100" data-aos="fade-up">
                 {currentSlideData.description}
               </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mb-8" data-aos="fade-up">
+                <Link to="/contact">
+                  <Button className="bg-[var(--color-secondary)] hover:bg-[var(--color-secondary)]/90 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105">
+                    Get Engineering Consultation
+                  </Button>
+                </Link>
+
+                <Link to="/projects">
+                  <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-all duration-200">
+                    View Our Projects
+                  </button>
+                </Link>
+              </div>
             </div>
 
             <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 max-w-sm transform transition-all duration-700 delay-200" data-aos="fade-down">
-              <div className="flex items-center gap-4" >
+              <div className="flex items-center gap-4">
                 <div className="w-20 h-16 bg-gray-200 rounded-lg overflow-hidden">
                   <img
                     src={currentSlideData.statImage}
-                    alt="Statistic illustration"
+                    alt="SAMLORIDEN Engineering projects Nigeria civil engineering"
                     className="w-full h-full object-cover transition-all duration-700"
                   />
                 </div>
@@ -322,7 +314,7 @@ const CaspiraHeroBanner = () => {
               <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden mb-4">
                 <img
                   src={currentSlideData.cardImage}
-                  alt={currentSlideData.cardTitle}
+                  alt={`${currentSlideData.cardTitle} SAMLORIDEN engineering services Nigeria`}
                   className="w-full h-full object-cover transition-all duration-700"
                 />
               </div>
@@ -333,6 +325,22 @@ const CaspiraHeroBanner = () => {
               <p className="text-gray-600 text-sm mb-4">
                 {currentSlideData.cardDescription}
               </p>
+
+              {/* Service highlights */}
+              <div className="space-y-2">
+                <div className="flex items-center text-xs text-gray-600">
+                  <div className="w-2 h-2 bg-[var(--color-secondary)] rounded-full mr-2"></div>
+                  <span>Nigerian Building Code Compliance</span>
+                </div>
+                <div className="flex items-center text-xs text-gray-600">
+                  <div className="w-2 h-2 bg-[var(--color-secondary)] rounded-full mr-2"></div>
+                  <span>Licensed Professional Engineers</span>
+                </div>
+                <div className="flex items-center text-xs text-gray-600">
+                  <div className="w-2 h-2 bg-[var(--color-secondary)] rounded-full mr-2"></div>
+                  <span>Quality Assurance & Testing</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -345,8 +353,8 @@ const CaspiraHeroBanner = () => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
-                ? 'bg-white scale-125'
-                : 'bg-white/50 hover:bg-white/70'
+              ? 'bg-white scale-125'
+              : 'bg-white/50 hover:bg-white/70'
               }`}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -365,4 +373,4 @@ const CaspiraHeroBanner = () => {
   );
 };
 
-export default CaspiraHeroBanner;
+export default SamloridensHeroBanner;

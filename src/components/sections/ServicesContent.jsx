@@ -1,77 +1,83 @@
 import React from 'react';
 import useAOS from '../../hooks/useAOS';
+import { Link } from 'react-router-dom';
 
-export default function RealEstateDevelopmentServices() {
+export default function EngineeringRealEstateServices() {
   useAOS({ duration: 1000, once: true });
+  
   return (
     <div className="max-w-6xl mx-auto px-6 py-16 bg-white">
       <div className="text-center mb-16">
-        <h3 className="text-4xl font-bold text-gray-900 mb-6" data-aos="fade-down">OUR SERVICES</h3>
+        <h4 className="text-4xl font-bold text-gray-900 mb-6" data-aos="fade-down">
+          Civil Engineering & Real Estate Services 
+        </h4>
         <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed" data-aos="fade-up">
-          SAMLORIDEN ENGINEERING AND CONSULTANCY LTD delivers comprehensive real estate development solutions 
-          to create tomorrow's communities. We combine market expertise with innovative design approaches, 
-          developing properties that serve communities for generations while meeting the highest quality and 
-          sustainability standards.
+          SAMLORIDEN ENGINEERING AND CONSULTANCY LTD combines world-class civil engineering expertise 
+          with comprehensive real estate solutions. Our integrated approach ensures every project is 
+          built on solid engineering foundations while maximizing property investment potential across Nigeria.
         </p>
       </div>
 
+      {/* Site Assessment & Development Planning */}
       <div className="mb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="grid grid-cols-2 gap-4 lg:order-first order-first" data-aos="fade-up">
             <div className="space-y-4">
               <img
                 src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Land survey and analysis"
+                alt="Geotechnical site investigation Nigeria"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div className="space-y-4 pt-8">
               <img
                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Market research and planning"
+                alt="Site planning and feasibility analysis Nigeria"
                 className="w-full h-56 object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
 
           <div className="order-last" data-aos="fade-down">
-            <h5 className="text-3xl font-bold text-gray-900 mb-4">LAND ACQUISITION & FEASIBILITY STUDIES</h5>
+            <h5 className="text-3xl font-bold text-gray-900 mb-4">
+              Site Assessment & Development Planning Nigeria
+            </h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              We identify and secure prime locations with high growth potential, supported by in-depth 
-              market research and feasibility analysis. Our strategic approach ensures every acquisition 
-              represents optimal investment opportunities with comprehensive risk assessment and return 
-              projections.
+              Our civil engineers conduct comprehensive site investigations combining geotechnical analysis, 
+              topographical surveys, and market feasibility studies. This engineering-first approach ensures 
+              optimal land acquisition decisions with complete understanding of soil conditions, drainage 
+              requirements, and development potential for Nigerian conditions.
             </p>
 
-            <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
+            <h6 className="text-lg font-bold text-gray-900 mb-4">Engineering & Development Services:</h6>
 
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-2">
               <div className="space-y-2">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Location Identification & Analysis</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Geotechnical Site Investigation</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Market Research & Trends Analysis</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Topographical & Boundary Surveys</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Financial Feasibility Assessment</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Environmental Impact Assessment</span>
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Due Diligence & Risk Analysis</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Market Feasibility & ROI Analysis</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Growth Potential Evaluation</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Infrastructure Connectivity Assessment</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Investment Return Projections</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Regulatory Compliance Planning</span>
                 </div>
               </div>
             </div>
@@ -79,62 +85,66 @@ export default function RealEstateDevelopmentServices() {
         </div>
       </div>
 
+      {/* Structural Design & Architecture */}
       <div className="mb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="grid grid-cols-2 gap-4 lg:order-last order-first" data-aos="fade-up">
             <div className="space-y-4">
               <img
                 src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Architectural design planning"
+                alt="Structural engineering design Nigeria"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div className="space-y-4 pt-8">
               <img
                 src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Sustainable building design"
+                alt="Sustainable building design Nigeria"
                 className="w-full h-56 object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
 
           <div className="lg:order-first order-last" data-aos="fade-down">
-            <h5 className="text-3xl font-bold text-gray-900 mb-4">ARCHITECTURAL DESIGN & PLANNING</h5>
+            <h5 className="text-3xl font-bold text-gray-900 mb-4">
+              Structural Engineering Design & Architecture Nigeria
+            </h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Our team collaborates with top architects and planners to design functional, aesthetic, and 
-              sustainable spaces that meet market demand and regulatory standards. We create innovative 
-              designs that maximize value while ensuring environmental responsibility and community integration.
+              Our structural engineers collaborate with architects to create buildings optimized for Nigerian 
+              climate conditions, seismic requirements, and market demands. We integrate Building Information 
+              Modeling (BIM) with sustainable design principles to deliver structures that maximize both 
+              safety and real estate value.
             </p>
 
-            <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
+            <h6 className="text-lg font-bold text-gray-900 mb-4">Design & Engineering Services:</h6>
 
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-2">
               <div className="space-y-2">
                 <div className="flex items-start">
                   <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Concept Development & Design</span>
+                  <span className="text-gray-700">Structural Analysis & Design</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Sustainable Building Solutions</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">BIM Modeling & 3D Visualization</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Space Optimization & Functionality</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Sustainable Building Systems</span>
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Regulatory Compliance Planning</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Nigerian Building Code Compliance</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Market-Driven Design Strategy</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Value Engineering & Cost Optimization</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Community Integration Planning</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Climate-Responsive Design Solutions</span>
                 </div>
               </div>
             </div>
@@ -142,63 +152,66 @@ export default function RealEstateDevelopmentServices() {
         </div>
       </div>
 
+      {/* Construction Management & Quality Control */}
       <div className="mb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="grid grid-cols-2 gap-4 lg:order-first order-first" data-aos="fade-up">
             <div className="space-y-4">
               <img
                 src="https://images.unsplash.com/photo-1541976590-713941681591?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Construction project management"
+                alt="Construction management Nigeria"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div className="space-y-4 pt-8">
               <img
                 src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Quality construction materials"
+                alt="Quality construction materials Nigeria"
                 className="w-full h-56 object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
 
           <div className="order-last" data-aos="fade-down">
-            <h5 className="text-3xl font-bold text-gray-900 mb-4">CONSTRUCTION & PROJECT MANAGEMENT</h5>
+            <h5 className="text-3xl font-bold text-gray-900 mb-4">
+              Construction Management & Quality Control Nigeria
+            </h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              We handle all aspects of construction, leveraging skilled professionals, high-quality materials, 
-              and strict project timelines to ensure exceptional build quality. Our comprehensive project 
-              management approach delivers projects on time, within budget, and to the highest standards of 
-              craftsmanship and safety.
+              Our experienced construction managers oversee every aspect of building delivery, ensuring 
+              adherence to engineering specifications, safety protocols, and quality standards. We coordinate 
+              skilled professionals, manage material procurement, and maintain strict timeline and budget 
+              control for optimal project outcomes and long-term property performance.
             </p>
 
-            <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
+            <h6 className="text-lg font-bold text-gray-900 mb-4">Project Management Services:</h6>
 
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-2">
               <div className="space-y-2">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Full-Scale Construction Management</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Engineering-Led Project Management</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Quality Control & Assurance</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Quality Assurance & Testing</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Timeline & Budget Management</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Schedule & Budget Control</span>
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Skilled Professional Coordination</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Safety & Regulatory Compliance</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Material Sourcing & Procurement</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Material Specification & Procurement</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Safety & Compliance Management</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Contractor Coordination & Supervision</span>
                 </div>
               </div>
             </div>
@@ -206,62 +219,66 @@ export default function RealEstateDevelopmentServices() {
         </div>
       </div>
 
+      {/* Property Development Marketing */}
       <div className="mb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="grid grid-cols-2 gap-4 lg:order-last order-first" data-aos="fade-up">
             <div className="space-y-4">
               <img
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Digital marketing strategy"
+                alt="Property marketing strategy Nigeria"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div className="space-y-4 pt-8">
               <img
                 src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Property branding and promotion"
+                alt="Engineering-backed property promotion Nigeria"
                 className="w-full h-56 object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
 
           <div className="lg:order-first order-last" data-aos="fade-down">
-            <h5 className="text-3xl font-bold text-gray-900 mb-4">PROPERTY MARKETING & BRANDING</h5>
+            <h5 className="text-3xl font-bold text-gray-900 mb-4">
+              Engineering-Backed Property Marketing Nigeria
+            </h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Our in-house marketing team creates compelling branding and promotional campaigns that generate 
-              demand and drive visibility across digital and traditional channels. We develop targeted marketing 
-              strategies that showcase your property's unique value proposition and attract qualified buyers.
+              Our marketing approach leverages our engineering credibility to showcase technical superiority 
+              and build buyer confidence. We create compelling campaigns that highlight structural quality, 
+              sustainable features, and engineering innovations that differentiate properties in the Nigerian 
+              real estate market.
             </p>
 
-            <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
+            <h6 className="text-lg font-bold text-gray-900 mb-4">Marketing & Positioning Services:</h6>
 
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-2">
               <div className="space-y-2">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Brand Development & Strategy</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Technical Feature Highlighting</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Digital Marketing Campaigns</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Engineering Credibility Marketing</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Traditional Media Advertising</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Digital Platform Development</span>
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Content Creation & Photography</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Professional Property Photography</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Lead Generation & Analytics</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Market Analysis & Positioning</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Market Positioning Strategy</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Lead Generation & Conversion</span>
                 </div>
               </div>
             </div>
@@ -269,63 +286,66 @@ export default function RealEstateDevelopmentServices() {
         </div>
       </div>
 
+      {/* Sales & Technical Consultation */}
       <div className="mb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="grid grid-cols-2 gap-4 lg:order-first order-first" data-aos="fade-up">
             <div className="space-y-4">
               <img
                 src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Sales consultation meeting"
+                alt="Technical property consultation Nigeria"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div className="space-y-4 pt-8">
               <img
                 src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Client engagement and support"
+                alt="Engineering-informed client support Nigeria"
                 className="w-full h-56 object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
 
           <div className="order-last" data-aos="fade-down">
-            <h5 className="text-3xl font-bold text-gray-900 mb-4">SALES & CLIENT ENGAGEMENT</h5>
+            <h5 className="text-3xl font-bold text-gray-900 mb-4">
+              Sales & Technical Consultation Nigeria
+            </h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              With a dedicated sales team and seamless customer experience strategy, we guide clients from 
-              inquiry to ownership, ensuring transparency, trust, and satisfaction. Our client-centered approach 
-              builds lasting relationships through personalized service and expert guidance throughout the 
-              entire purchase journey.
+              Our sales team includes qualified engineers who provide technical expertise throughout the 
+              sales process. Clients receive detailed explanations of structural systems, material quality, 
+              and long-term performance expectations, building confidence through engineering transparency 
+              and professional expertise.
             </p>
 
-            <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
+            <h6 className="text-lg font-bold text-gray-900 mb-4">Sales & Consultation Services:</h6>
 
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-2">
               <div className="space-y-2">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Dedicated Sales Team Support</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Engineer-Led Sales Consultations</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Customer Experience Strategy</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Technical Specification Explanations</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Personalized Client Consultations</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Investment Performance Analysis</span>
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Transparent Transaction Process</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Transparent Process Management</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Purchase Journey Management</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Documentation & Legal Coordination</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Trust Building & Relationship Management</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Long-term Relationship Building</span>
                 </div>
               </div>
             </div>
@@ -333,67 +353,93 @@ export default function RealEstateDevelopmentServices() {
         </div>
       </div>
 
-      <div>
+      {/* Engineering Support & Property Management */}
+      <div className="mb-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="grid grid-cols-2 gap-4 lg:order-last order-first" data-aos="fade-up">
             <div className="space-y-4">
               <img
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="After-sales support services"
+                alt="Engineering property maintenance Nigeria"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div className="space-y-4 pt-8">
               <img
                 src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Client relationship management"
+                alt="Technical property support Nigeria"
                 className="w-full h-56 object-cover rounded-lg shadow-lg"
               />
             </div>
           </div>
 
           <div className="lg:order-first order-last" data-aos="fade-down">
-            <h5 className="text-3xl font-bold text-gray-900 mb-4">AFTER-SALES SUPPORT</h5>
+            <h5 className="text-3xl font-bold text-gray-900 mb-4">
+              Engineering Support & Property Management Nigeria
+            </h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              We go beyond the sale with post-completion services, maintenance guidance, and support, 
-              reinforcing long-term relationships with our clients. Our commitment extends well beyond 
-              project delivery, ensuring your investment continues to meet your expectations through 
-              ongoing support and maintenance services.
+              Our post-completion services leverage engineering expertise to maintain optimal property 
+              performance. We provide technical maintenance guidance, structural monitoring, and engineering 
+              support that protects your investment while ensuring long-term structural integrity and 
+              operational efficiency.
             </p>
 
-            <h6 className="text-lg font-bold text-gray-900 mb-4">Our services include:</h6>
+            <h6 className="text-lg font-bold text-gray-900 mb-4">Post-Completion Engineering Services:</h6>
 
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-2">
               <div className="space-y-2">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Post-Completion Support Services</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Structural Health Monitoring</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Maintenance Guidance & Planning</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Preventive Maintenance Planning</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Warranty & Defect Resolution</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Engineering Warranty Support</span>
                 </div>
               </div>
               <div className="space-y-2">
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Long-term Relationship Management</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Property Performance Optimization</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Property Care Consultation</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">Technical Upgrade Consulting</span>
                 </div>
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
-                  <span className="text-gray-700">Ongoing Technical Support</span>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-3 flex-shrink-0" style={{ background: 'var(--color-primary-alt)' }}></div>
+                  <span className="text-gray-700">24/7 Engineering Support</span>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Call-to-Action Section */}
+      <div className="bg-gray-50 p-8 rounded-lg text-center" data-aos="fade-up">
+        <h5 className="text-2xl font-bold text-gray-900 mb-4">
+          Ready to Start Your Engineering-Backed Real Estate Project?
+        </h5>
+        <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
+          Contact SAMLORIDEN ENGINEERING for comprehensive civil engineering and real estate solutions 
+          that combine technical excellence with market insight across Nigeria.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link to="/contact">
+          <button className=" text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition" style={{ background: 'var(--color-primary-alt)' }}>
+            Get Engineering Consultation
+          </button>
+          </Link>
+          <Link to="/projects">
+          <button className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
+            View Our Projects
+          </button>
+          </Link>
         </div>
       </div>
     </div>

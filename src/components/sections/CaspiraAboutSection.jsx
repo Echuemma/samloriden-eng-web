@@ -1,12 +1,6 @@
 import React from 'react';
 import useAOS from '../../hooks/useAOS'; 
 
-// const Button = ({ children, className = "", ...props }) => (
-//   <button className={`px-6 py-3 rounded-lg font-semibold transition-colors ${className}`} {...props}>
-//     {children}
-//   </button>
-// );
-
 const CaspiraAboutSection = () => {
 useAOS({ duration: 1000, once: true }); 
   
@@ -19,7 +13,7 @@ useAOS({ duration: 1000, once: true });
             <div className="rounded-3xl overflow-hidden shadow-2xl" data-aos="fade-right">
               <img 
                 src="/images/about/construction-building.jpg" 
-                alt="Engineers reviewing blueprints" 
+                alt="Civil engineers and architects reviewing structural blueprints Nigeria" 
                 className="w-full h-[500px] object-cover"
               />
             </div>
@@ -30,41 +24,42 @@ useAOS({ duration: 1000, once: true });
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-1 bg-yellow-500 rounded-full"></div>
                 <span className="text-yellow-600 font-semibold text-sm uppercase tracking-wide">
-                  About SAMLORIDEN
+                  About SAMLORIDEN Engineering
                 </span>
               </div>
               
-              <h4 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-2">
-                Crafting Tomorrow's
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-2">
+                Engineering Excellence
                 <br />
-                <h4 className="text-gray-800">Landmarks Today</h4>
-              </h4>
+                <h3 className="text-gray-800">Building Nigeria's Future</h3>
+              </h2>
               
               <p className="text-lg text-gray-600 leading-relaxed">
-                At SAMLORIDEN, we are dedicated to building excellence with precision, 
-                innovation, and integrity. With years of industry expertise, we deliver high-quality 
-                construction solutions that stand the test of time. Whether it's residential, 
-                commercial, or industrial projects, our skilled team ensures every detail is 
-                executed flawlessly.
+                SAMLORIDEN ENGINEERING AND CONSULTANCY LTD combines advanced civil engineering 
+                expertise with comprehensive real estate solutions across Nigeria. With 25+ years 
+                of experience, our team of qualified engineers and property specialists delivers 
+                structurally superior projects that maximize both safety and investment value.
               </p>
             </div>
 
             <div className=" text-white p-6 rounded-2xl shadow-xl my-4 relative md:absolute md:-left-24 xl:-left-32 md:w-[calc(100%+6rem)] xl:w-[calc(100%+8rem)] md:top-65 md:mt-10 z-20" data-aos="fade-up" style={{ background: 'var(--color-primary-alt)' }}>
-              <h6 className="text-lg lg:text-xl font-bold mb-3 text-white">
-                Building Timeless Structures with Innovation & Excellence.
-              </h6>
+              <h4 className="text-lg lg:text-xl font-bold mb-3 text-white">
+                Where Civil Engineering Meets Real Estate Investment Success
+              </h4>
               <p className="text-sm lg:text-base text-yellow-100">
-                SAMLORIDEN creates timeless, high-quality structures that combine innovative design, 
-                sustainable practices, and unmatched craftsmanship, shaping spaces built to last.
+                Our integrated approach leverages structural engineering, geotechnical analysis, 
+                and construction management expertise to create properties that deliver superior 
+                performance, durability, and return on investment across Nigerian markets.
               </p>
             </div>
          
 
             <div className="px-0 py-6 rounded-2xl md:mt-50">
               <p className="text-gray-700 leading-relaxed">
-                Whether it's residential, commercial, or industrial projects, our skilled team 
-                ensures every detail is executed flawlessly. We prioritize safety, efficiency, 
-                and sustainability, transforming visions into reality with.
+                From infrastructure development and structural design to property management and 
+                real estate consulting, our multidisciplinary team ensures every project benefits 
+                from rigorous engineering standards, sustainable construction practices, and strategic 
+                market positioning throughout Nigeria's growing urban centers.
               </p>
             </div>
 
