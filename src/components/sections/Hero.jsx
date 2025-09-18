@@ -274,11 +274,11 @@ const SamloridensHeroBanner = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8" data-aos="fade-up">
-                <Link to="/contact">
+                {/* <Link to="/contact">
                   <Button className="bg-[var(--color-secondary)] hover:bg-[var(--color-secondary)]/90 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105">
                     Get Engineering Consultation
                   </Button>
-                </Link>
+                </Link> */}
 
                 <Link to="/projects">
                   <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-all duration-200">

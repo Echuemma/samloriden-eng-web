@@ -53,9 +53,9 @@ const HowItWorksSection = () => {
               </div>
 
               <div className="text-center">
-                <h3 className="text-xl  text-on-dark font-bold mb-4 tracking-wide">
+                <h5 className="text-xl  text-on-dark font-bold mb-4 tracking-wide">
                   {step.title}
-                </h3>
+                </h5>
                 <p className="text-gray-300 leading-relaxed text-sm text-justify">
                   {step.description}
                 </p>
