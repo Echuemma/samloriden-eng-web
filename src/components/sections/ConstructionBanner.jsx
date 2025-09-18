@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Add this import
 import { MapPin, Calendar, ArrowRight } from 'lucide-react';
 import useAOS from '../../hooks/useAOS';
-import { projects } from '../../data/projects-data'; // Import external data
+import { projects } from '../../data/projects-data';
 
 export default function SamloridensProjectsBanner() {
     useAOS({ duration: 1000, once: true });
+    
+    const navigate = useNavigate(); // Add this line
 
     const [projectsData, setProjectsData] = useState([]);
     const [loading, setLoading] = useState(true);
-
-    // Import projects data from external file
-    // const projects = []; // Remove hard-coded data
 
     useEffect(() => {
         const fetchProjects = async () => {
@@ -28,9 +28,8 @@ export default function SamloridensProjectsBanner() {
         fetchProjects();
     }, []);
 
-    const handleViewMore = (project) => {
-        // Navigate to project details - implement navigation logic as needed
-        console.log('View more details for:', project.title);
+    const handleViewMore = (project) => { // Changed parameter name from 'projects' to 'project' for clarity
+        navigate(`/project/${project.slug}`);
     };
 
     if (loading) {
@@ -119,7 +118,6 @@ export default function SamloridensProjectsBanner() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
                     <div className="space-y-4 lg:space-y-6" data-aos="fade-right">
                         <div className="inline-flex items-center bg-yellow-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
-                            {/* <span className="mr-2">🏗️</span> */}
                             Engineering Portfolio
                         </div>
 
@@ -136,9 +134,9 @@ export default function SamloridensProjectsBanner() {
             </section>
 
             <div className="py-4 lg:py-8 px-4 lg:px-8 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-8">
                     {projectsData.map((project) => (
-                        <div key={project.id} className="rounded-lg overflow-hidden group duration-300" data-aos="fade-up">
+                        <div key={project.id} className="rounded-lg overflow-hidden group duration-300 flex flex-col h-full" data-aos="fade-up">
                             <div className="relative h-64 overflow-hidden">
                                 <img
                                     src={project.image}
@@ -149,11 +147,6 @@ export default function SamloridensProjectsBanner() {
                                         clipPath: "polygon(20% 0%, 100% 0%, 100% 82%, 82% 100%, 0% 100%, 0% 20%)"
                                     }}
                                 />
-                                {/* <div className="absolute top-4 left-4">
-                                    <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
-                                        {project.category}
-                                    </span>
-                                </div> */}
                                 <div className="absolute bottom-4 left-4 right-4">
                                     <div className="flex space-x-2">
                                         <div className="w-8 h-8 bg-yellow-600 rounded-full flex items-center justify-center shadow-lg">
@@ -166,12 +159,12 @@ export default function SamloridensProjectsBanner() {
                                 </div>
                             </div>
 
-                            <div className="p-1" data-aos="fade-up">
+                            <div className="p-1 flex flex-col flex-grow" data-aos="fade-up">
                                 <h5 className="text-lg lg:text-xl font-bold text-gray-900 mb-2 mt-2 group-hover:text-blue-600 transition-colors duration-300">
                                     {project.title}
                                 </h5>
 
-                                <p className="text-gray-600 mb-3 lg:mb-4 text-sm leading-relaxed">
+                                <p className="text-gray-600 mb-3 lg:mb-4 text-sm leading-relaxed flex-grow">
                                     {project.description}
                                 </p>
 
@@ -194,7 +187,7 @@ export default function SamloridensProjectsBanner() {
                                         color: 'var(--color-primary-alt)',
                                     }}
                                 >
-                                    View Engineering Details
+                                    View Details
                                     <ArrowRight className="w-4 h-4 ml-2 transform group-hover/btn:translate-x-1 transition-transform duration-300" />
                                 </button>
                             </div>
@@ -202,25 +195,6 @@ export default function SamloridensProjectsBanner() {
                     ))}
                 </div>
             </div>
-
-            {/* <div className="bg-white p-8 rounded-lg shadow-md text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    Ready to Start Your Engineering Project?
-                </h3>
-                <p className="text-gray-600 mb-6">
-                    From civil engineering design to real estate development, SAMLORIDEN combines technical expertise, 
-                    sustainable practices, and comprehensive project management to deliver exceptional results. 
-                    Partner with Nigeria's leading engineering consultancy for your next project.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition">
-                        Get Engineering Consultation
-                    </button>
-                    <button className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
-                        View Our Services
-                    </button>
-                </div>
-            </div> */}
         </div>
     );
 }

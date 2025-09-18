@@ -8,7 +8,6 @@ const News = () => {
       <div className="max-w-6xl mx-auto px-4 py-16">
         <h3 className="text-4xl font-bold text-gray-800 mb-10">News & Insights</h3>
         
-        {/* Changed grid to single column on mobile */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {newsData.map((item) => (
             <Link to={`/news/${item.slug}`} key={item.id}>

@@ -133,10 +133,9 @@ export default function ProjectDetail() {
                             <p className="text-gray-600 text-base sm:text-lg lg:text-xl leading-relaxed" data-aos="fade-up">
                                 {project.fullDescription}
                             </p>
-
                             <div className="flex flex-col sm:flex-row gap-4" data-aos="fade-up">
                                 <Link to="/contact" className="w-full sm:w-auto">
-                                    <Button className="w-full sm:w-auto bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold text-base lg:text-lg transition-colors duration-300">
+                                    <Button className="w-full sm:w-auto bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-semibold text-base lg:text-lg transition-colors duration-300 flex items-center justify-center">
                                         Contact Us
                                     </Button>
                                 </Link>
@@ -255,15 +254,11 @@ export default function ProjectDetail() {
                 </div>
             </div>
 
-
-
-
             {relatedProjects.length > 0 && (
                 <div className="py-10 lg:py-20 bg-gray-50" >
                     <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
                         <div className="text-center mb-8 lg:mb-10" data-aos="fade-up">
                             <div className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-400 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg mb-4">
-                                <span className="mr-2">🔍</span>
                                 Related Projects
                             </div>
                             <h5 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight px-4">
