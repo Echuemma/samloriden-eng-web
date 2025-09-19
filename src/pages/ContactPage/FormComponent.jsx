@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { getInputClassName, getSubmitButtonClassName } from "./formStyles";
-import { formValidation } from './formValidation';
-import { createFormHandlers } from './formHandlers';
 
 const Button = ({ children, onClick, className, disabled, type = "button" }) => (
   <button onClick={onClick} className={className} disabled={disabled} type={type}>
@@ -11,28 +10,63 @@ const Button = ({ children, onClick, className, disabled, type = "button" }) => 
 );
 
 const FormComponent = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-    newsletter: false,
-  });
-
-  const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  const { handleInputChange, handleSubmit } = createFormHandlers(
-    formData,
-    setFormData,
-    errors,
-    setErrors,
-    setIsSubmitting,
-    setSubmitStatus
-  );
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+    watch
+  } = useForm({
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: "",
+      newsletter: false,
+    },
+    mode: "onChange"
+  });
 
+  // Watch form values for styling purposes (if getInputClassName needs form data)
+  const formData = watch();
+
+  const onSubmit = async (data) => {
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // Simulate form submission - replace with your actual submission logic
+      const formSubmissionData = new FormData();
+      Object.keys(data).forEach(key => {
+        formSubmissionData.append(key, data[key]);
+      });
+      formSubmissionData.append('form-name', 'contact');
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formSubmissionData).toString()
+      });
+
+      if (response.ok) {
+        toast.success("Message sent successfully!");
+        setSubmitStatus('success');
+        reset(); // Reset form on successful submission
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      toast.error("Failed to send message. Please try again.");
+      setSubmitStatus('error');
+      console.error('Form submission error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div
@@ -53,7 +87,7 @@ const FormComponent = () => {
         </div>
 
         <form
-          onSubmit={handleSubmit}
+          onSubmit={handleSubmit(onSubmit)}
           className="space-y-4 lg:space-y-4 xl:space-y-5"
           name="contact"
           method="POST"
@@ -67,29 +101,37 @@ const FormComponent = () => {
             <div>
               <input
                 type="text"
-                name="firstName"
                 placeholder="First Name"
-                value={formData.firstName}
-                onChange={handleInputChange}
+                {...register("firstName", {
+                  required: "First name is required",
+                  minLength: {
+                    value: 2,
+                    message: "First name must be at least 2 characters"
+                  }
+                })}
                 className={getInputClassName("firstName", errors)}
                 disabled={isSubmitting}
               />
               {errors.firstName && (
-                <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>
+                <p className="text-red-500 text-xs mt-1">{errors.firstName.message}</p>
               )}
             </div>
             <div>
               <input
                 type="text"
-                name="lastName"
                 placeholder="Last Name"
-                value={formData.lastName}
-                onChange={handleInputChange}
+                {...register("lastName", {
+                  required: "Last name is required",
+                  minLength: {
+                    value: 2,
+                    message: "Last name must be at least 2 characters"
+                  }
+                })}
                 className={getInputClassName("lastName", errors)}
                 disabled={isSubmitting}
               />
               {errors.lastName && (
-                <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>
+                <p className="text-red-500 text-xs mt-1">{errors.lastName.message}</p>
               )}
             </div>
           </div>
@@ -97,40 +139,52 @@ const FormComponent = () => {
           <div>
             <input
               type="email"
-              name="email"
               placeholder="Email Address"
-              value={formData.email}
-              onChange={handleInputChange}
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: "Invalid email address"
+                }
+              })}
               className={getInputClassName("email", errors)}
               disabled={isSubmitting}
             />
             {errors.email && (
-              <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+              <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>
             )}
           </div>
 
           <div>
             <input
               type="tel"
-              name="phone"
               placeholder="Phone Number"
-              value={formData.phone}
-              onChange={handleInputChange}
+              {...register("phone", {
+                required: "Phone number is required",
+                pattern: {
+                  value: /^[\+]?[0-9\s\-\(\)]{10,}$/,
+                  message: "Invalid phone number"
+                }
+              })}
               className={getInputClassName("phone", errors)}
               disabled={isSubmitting}
             />
             {errors.phone && (
-              <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+              <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>
             )}
           </div>
 
           <div>
             <textarea
-              name="message"
               placeholder="Message"
               rows="4"
-              value={formData.message}
-              onChange={handleInputChange}
+              {...register("message", {
+                required: "Message is required",
+                minLength: {
+                  value: 10,
+                  message: "Message must be at least 10 characters"
+                }
+              })}
               className={`${getInputClassName(
                 "message",
                 errors
@@ -138,7 +192,7 @@ const FormComponent = () => {
               disabled={isSubmitting}
             />
             {errors.message && (
-              <p className="text-red-500 text-xs mt-1">{errors.message}</p>
+              <p className="text-red-500 text-xs mt-1">{errors.message.message}</p>
             )}
           </div>
 
@@ -146,9 +200,7 @@ const FormComponent = () => {
             <input
               type="checkbox"
               id="newsletter"
-              name="newsletter"
-              checked={formData.newsletter}
-              onChange={handleInputChange}
+              {...register("newsletter")}
               className="w-4 h-4 md:w-5 md:h-5 mt-0.5 md:mt-1 text-blue-600 border-gray-300 rounded focus:ring-blue-500 flex-shrink-0"
               disabled={isSubmitting}
             />
