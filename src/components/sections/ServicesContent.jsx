@@ -1,6 +1,7 @@
 import React from 'react';
 import useAOS from '../../hooks/useAOS';
 import { Link } from 'react-router-dom';
+import Button from '../common/Button';
 
 export default function EngineeringRealEstateServices() {
   useAOS({ duration: 1000, once: true });
@@ -431,13 +432,13 @@ export default function EngineeringRealEstateServices() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/contact">
-          <button className=" text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition" style={{ background: 'var(--color-primary-alt)' }}>
-            Get Engineering Consultation
-          </button>
+          <Button className=" text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition" style={{ background: 'var(--color-primary-alt)' }}>
+            Consultation
+          </Button>
           </Link>
           <Link to="/projects">
           <button className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
-            View Our Projects
+            View Projects
           </button>
           </Link>
         </div>

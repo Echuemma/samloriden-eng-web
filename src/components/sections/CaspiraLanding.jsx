@@ -155,7 +155,7 @@ export default function SamloridensContactHero() {
                   </Link>
                   <Link to="/projects">
                   <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 rounded-lg font-semibold transition-all duration-200">
-                    View Our Projects
+                    View Projects
                   </button>
                   </Link>
                 </div>
