@@ -123,7 +123,7 @@ export default function SamloridensContactHero() {
         />
 
         <div className="relative z-10 min-h-screen">
-                <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
 
           <div className="container mx-auto px-6 py-8 lg:py-16">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[80vh] lg:min-h-[70vh]">
@@ -141,22 +141,21 @@ export default function SamloridensContactHero() {
                 </h1>
 
                 <p className="text-lg lg:text-xl text-blue-100 leading-relaxed max-w-xl">
-                  Ready to transform your engineering and real estate project? SAMLORIDEN 
-                  ENGINEERING AND CONSULTANCY LTD delivers comprehensive civil engineering, 
-                  structural design, and property development solutions across Nigeria. 
+                  Ready to transform your engineering and real estate project? SAMLORIDEN
+                  ENGINEERING AND CONSULTANCY LTD delivers comprehensive civil engineering,
+                  structural design, and property development solutions across Nigeria.
                   Contact our licensed engineers today for expert consultation.
                 </p>
-
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link to="/contact">
-                  <Button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-6 py-3 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105">
-                    Consultation
-                  </Button>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link to="/contact" className="flex-1 sm:flex-none sm:w-auto">
+                    <Button className="w-full text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition flex items-center justify-center" style={{ background: 'var(--color-primary-alt)' }}>
+                      Consultation
+                    </Button>
                   </Link>
-                  <Link to="/projects">
-                  <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 rounded-lg font-semibold transition-all duration-200">
-                    View Projects
-                  </button>
+                  <Link to="/projects" className="flex-1 sm:flex-none sm:w-auto">
+                    <button className=" w-full border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 rounded-lg font-semibold transition-all duration-200">
+                      View Projects
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -175,7 +174,7 @@ export default function SamloridensContactHero() {
                       <div>
                         <h6 className="font-bold text-gray-800 text-sm mb-1">25+ Years Engineering Experience</h6>
                         <p className="text-gray-600 text-xs leading-relaxed">
-                          Proven track record in structural engineering, BIM modeling, geotechnical investigations, 
+                          Proven track record in structural engineering, BIM modeling, geotechnical investigations,
                           and infrastructure development across Nigeria including Abuja, Lagos, Port Harcourt.
                         </p>
                       </div>
@@ -188,7 +187,7 @@ export default function SamloridensContactHero() {
                       <div>
                         <h6 className="font-bold text-gray-800 text-sm mb-1">Licensed Professional Engineers</h6>
                         <p className="text-gray-600 text-xs leading-relaxed">
-                          Certified civil engineers specializing in structural design, construction management, 
+                          Certified civil engineers specializing in structural design, construction management,
                           real estate development, and Nigerian Building Code compliance.
                         </p>
                       </div>
@@ -201,7 +200,7 @@ export default function SamloridensContactHero() {
                       <div>
                         <h6 className="font-bold text-gray-800 text-sm mb-1">Integrated Project Delivery</h6>
                         <p className="text-gray-600 text-xs leading-relaxed">
-                          End-to-end engineering and real estate solutions from site investigation 
+                          End-to-end engineering and real estate solutions from site investigation
                           to construction completion and property management services.
                         </p>
                       </div>
@@ -243,9 +242,9 @@ export default function SamloridensContactHero() {
               Building Nigeria's Infrastructure Through Engineering Innovation
             </h4>
             <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-3xl">
-              At SAMLORIDEN ENGINEERING AND CONSULTANCY LTD, we deliver comprehensive civil engineering 
-              and real estate solutions that combine technical excellence with sustainable development practices. 
-              Our integrated approach covers structural design, BIM modeling, construction management, 
+              At SAMLORIDEN ENGINEERING AND CONSULTANCY LTD, we deliver comprehensive civil engineering
+              and real estate solutions that combine technical excellence with sustainable development practices.
+              Our integrated approach covers structural design, BIM modeling, construction management,
               geotechnical investigations, and property development across Nigeria's major markets.
             </p>
 

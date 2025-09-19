@@ -5,16 +5,16 @@ import Button from '../common/Button';
 
 export default function EngineeringRealEstateServices() {
   useAOS({ duration: 1000, once: true });
-  
+
   return (
     <div className="max-w-6xl mx-auto px-6 py-16 bg-white">
       <div className="text-center mb-16">
         <h4 className="text-4xl font-bold text-gray-900 mb-6" data-aos="fade-down">
-          Civil Engineering & Real Estate Services 
+          Civil Engineering & Real Estate Services
         </h4>
         <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed" data-aos="fade-up">
-          SAMLORIDEN ENGINEERING AND CONSULTANCY LTD combines world-class civil engineering expertise 
-          with comprehensive real estate solutions. Our integrated approach ensures every project is 
+          SAMLORIDEN ENGINEERING AND CONSULTANCY LTD combines world-class civil engineering expertise
+          with comprehensive real estate solutions. Our integrated approach ensures every project is
           built on solid engineering foundations while maximizing property investment potential across Nigeria.
         </p>
       </div>
@@ -44,9 +44,9 @@ export default function EngineeringRealEstateServices() {
               Site Assessment & Development Planning Nigeria
             </h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Our civil engineers conduct comprehensive site investigations combining geotechnical analysis, 
-              topographical surveys, and market feasibility studies. This engineering-first approach ensures 
-              optimal land acquisition decisions with complete understanding of soil conditions, drainage 
+              Our civil engineers conduct comprehensive site investigations combining geotechnical analysis,
+              topographical surveys, and market feasibility studies. This engineering-first approach ensures
+              optimal land acquisition decisions with complete understanding of soil conditions, drainage
               requirements, and development potential for Nigerian conditions.
             </p>
 
@@ -111,9 +111,9 @@ export default function EngineeringRealEstateServices() {
               Structural Engineering Design & Architecture Nigeria
             </h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Our structural engineers collaborate with architects to create buildings optimized for Nigerian 
-              climate conditions, seismic requirements, and market demands. We integrate Building Information 
-              Modeling (BIM) with sustainable design principles to deliver structures that maximize both 
+              Our structural engineers collaborate with architects to create buildings optimized for Nigerian
+              climate conditions, seismic requirements, and market demands. We integrate Building Information
+              Modeling (BIM) with sustainable design principles to deliver structures that maximize both
               safety and real estate value.
             </p>
 
@@ -178,9 +178,9 @@ export default function EngineeringRealEstateServices() {
               Construction Management & Quality Control Nigeria
             </h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Our experienced construction managers oversee every aspect of building delivery, ensuring 
-              adherence to engineering specifications, safety protocols, and quality standards. We coordinate 
-              skilled professionals, manage material procurement, and maintain strict timeline and budget 
+              Our experienced construction managers oversee every aspect of building delivery, ensuring
+              adherence to engineering specifications, safety protocols, and quality standards. We coordinate
+              skilled professionals, manage material procurement, and maintain strict timeline and budget
               control for optimal project outcomes and long-term property performance.
             </p>
 
@@ -245,9 +245,9 @@ export default function EngineeringRealEstateServices() {
               Engineering-Backed Property Marketing Nigeria
             </h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Our marketing approach leverages our engineering credibility to showcase technical superiority 
-              and build buyer confidence. We create compelling campaigns that highlight structural quality, 
-              sustainable features, and engineering innovations that differentiate properties in the Nigerian 
+              Our marketing approach leverages our engineering credibility to showcase technical superiority
+              and build buyer confidence. We create compelling campaigns that highlight structural quality,
+              sustainable features, and engineering innovations that differentiate properties in the Nigerian
               real estate market.
             </p>
 
@@ -312,9 +312,9 @@ export default function EngineeringRealEstateServices() {
               Sales & Technical Consultation Nigeria
             </h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Our sales team includes qualified engineers who provide technical expertise throughout the 
-              sales process. Clients receive detailed explanations of structural systems, material quality, 
-              and long-term performance expectations, building confidence through engineering transparency 
+              Our sales team includes qualified engineers who provide technical expertise throughout the
+              sales process. Clients receive detailed explanations of structural systems, material quality,
+              and long-term performance expectations, building confidence through engineering transparency
               and professional expertise.
             </p>
 
@@ -379,9 +379,9 @@ export default function EngineeringRealEstateServices() {
               Engineering Support & Property Management Nigeria
             </h5>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Our post-completion services leverage engineering expertise to maintain optimal property 
-              performance. We provide technical maintenance guidance, structural monitoring, and engineering 
-              support that protects your investment while ensuring long-term structural integrity and 
+              Our post-completion services leverage engineering expertise to maintain optimal property
+              performance. We provide technical maintenance guidance, structural monitoring, and engineering
+              support that protects your investment while ensuring long-term structural integrity and
               operational efficiency.
             </p>
 
@@ -421,25 +421,24 @@ export default function EngineeringRealEstateServices() {
         </div>
       </div>
 
-      {/* Call-to-Action Section */}
-      <div className="bg-gray-50 p-8 rounded-lg text-center" data-aos="fade-up">
+      <div className="bg-gray-50 p-2 rounded-lg text-center" data-aos="fade-up">
         <h5 className="text-2xl font-bold text-gray-900 mb-4">
           Ready to Start Your Engineering-Backed Real Estate Project?
         </h5>
         <p className="text-gray-600 mb-6 max-w-3xl mx-auto">
-          Contact SAMLORIDEN ENGINEERING for comprehensive civil engineering and real estate solutions 
+          Contact SAMLORIDEN ENGINEERING for comprehensive civil engineering and real estate solutions
           that combine technical excellence with market insight across Nigeria.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/contact">
-          <Button className=" text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition" style={{ background: 'var(--color-primary-alt)' }}>
-            Consultation
-          </Button>
+          <Link to="/contact" className="flex-1 sm:flex-none sm:w-auto">
+            <Button className="w-full text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition flex items-center justify-center" style={{ background: 'var(--color-primary-alt)' }}>
+              Consultation
+            </Button>
           </Link>
-          <Link to="/projects">
-          <button className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
-            View Projects
-          </button>
+          <Link to="/projects" className="flex-1 sm:flex-none sm:w-auto">
+            <button className="w-full border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
+              View Projects
+            </button>
           </Link>
         </div>
       </div>
