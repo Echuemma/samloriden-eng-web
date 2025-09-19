@@ -13,7 +13,7 @@ useAOS({ duration: 1000, once: true });
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: `url('/images/news/construction-building.jpg')`,
+              backgroundImage: `url('/images/blog/blog-post.jpeg')`,
             }}
           />
           <div className="absolute inset-0 bg-black/40"></div>

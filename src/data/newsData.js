@@ -5,7 +5,7 @@ const newsData = [
     date: '2025-07-01',
     title: 'SAMLORIDEN Engineering Secures Major Road Infrastructure Project in Abuja',
     description: 'Our civil engineering team partners with FCT authorities for transformative road infrastructure development.',
-    image: '/images/news/construction-building.jpg',
+    image: '/images/blog/road-construction.jpeg',
     content: `
 <strong>SAMLORIDEN ENGINEERING AND CONSULTANCY LTD is proud to announce our strategic partnership with the Federal Capital Territory (FCT) authorities on a major road infrastructure project that will transform transportation networks in Abuja. This landmark civil engineering initiative combines our expertise in infrastructure design with sustainable urban development principles.</strong>
 
