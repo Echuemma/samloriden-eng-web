@@ -13,28 +13,29 @@ export default function SamloridensTestimonialsSection() {
       text: "SAMLORIDEN's integrated approach to civil engineering and real estate development exceeded our expectations. Their geotechnical investigation was thorough, and the structural design perfectly matched our commercial development needs in Lagos. The property management services have maintained excellent tenant satisfaction.",
       name: "Adebayo Okonkwo",
       role: "Property Developer, Lagos State",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+      avatar: "images/team/profile_one.jpeg"
     },
     {
       id: 2,
       text: "Working with SAMLORIDEN Engineering on our residential project in Abuja was exceptional. Their BIM modeling and sustainable design solutions reduced construction costs by 20% while ensuring full Nigerian Building Code compliance. The engineering team's expertise is unmatched.",
       name: "Dr. Fatima Ibrahim",
       role: "Real Estate Investor, FCT Abuja",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616c6a96db1?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+      avatar: "images/team/profile_four.jpeg"
     },
     {
       id: 3,
       text: "SAMLORIDEN's road infrastructure engineering project transformed our commercial district. Their drainage systems prevented flooding during the rainy season, and property values increased by 25%. Their technical expertise and project management were outstanding throughout.",
       name: "Engr. Chinedu Okorie",
       role: "Municipal Infrastructure Coordinator",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+      avatar: "images/team/profile_three.jpeg"
     },
     {
       id: 4,
       text: "The property management services from SAMLORIDEN have been excellent. Their engineering background ensures technical issues are resolved quickly, and their market knowledge helps optimize rental yields. Our portfolio performance has improved significantly since partnering with them.",
       name: "Mrs. Grace Adeola",
       role: "Commercial Property Owner, Port Harcourt",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+      avatar: "images/team/profile_two.jpeg"
+
     },
     {
       id: 5,
@@ -75,8 +76,8 @@ export default function SamloridensTestimonialsSection() {
               </h5>
 
               <p className="text-lg text-gray-300 leading-relaxed mt-6">
-                Discover how SAMLORIDEN's integrated civil engineering and real estate solutions 
-                have delivered exceptional results for property developers, investors, and 
+                Discover how SAMLORIDEN's integrated civil engineering and real estate solutions
+                have delivered exceptional results for property developers, investors, and
                 infrastructure projects across Nigeria. Real experiences from satisfied clients.
               </p>
             </div>
@@ -139,11 +140,10 @@ export default function SamloridensTestimonialsSection() {
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentTestimonial
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentTestimonial
                         ? 'bg-yellow-400 w-1'
                         : 'bg-gray-300 hover:bg-gray-400'
-                    }`}
+                      }`}
                     aria-label={`Go to testimonial ${index + 1}`}
                   />
                 ))}

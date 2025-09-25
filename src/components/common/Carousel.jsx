@@ -19,9 +19,8 @@ export default function Carousel({ items, autoPlay = true, interval = 5000 }) {
       {items.map((item, index) => (
         <div
           key={item.id}
-          className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
         >
           <img
             src={item.image}
@@ -37,20 +36,18 @@ export default function Carousel({ items, autoPlay = true, interval = 5000 }) {
         </div>
       ))}
 
-      {/* Dots */}
- <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-  {items.map((_, index) => (
-    <button
-      key={index}
-      onClick={() => goToSlide(index)}
-      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-        index === currentSlide
-          ? "bg-[var(--color-primary-alt)] scale-125"
-          : "bg-white/40 hover:bg-white/60"
-      }`}
-    />
-  ))}
-</div>
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        {items.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
+                ? "bg-[var(--color-primary-alt)] scale-125"
+                : "bg-white/40 hover:bg-white/60"
+              }`}
+          />
+        ))}
+      </div>
 
     </div>
   );

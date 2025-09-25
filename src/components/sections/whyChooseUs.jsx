@@ -43,7 +43,9 @@ const WhyChooseUs = () => {
           <div className="space-y-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-4" data-aos="fade-up">
-                <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center"
+                style={{ background: 'var(--color-primary-alt)' }}
+                >
                   {benefit.icon}
                 </div>
 
@@ -114,7 +116,9 @@ const WhyChooseUs = () => {
             {/* SEO-focused testimonial or certification badge */}
             <div className="absolute top-4 left-4 bg-white p-3 rounded-lg shadow-md" data-aos="zoom-in">
               <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600">25+</div>
+                <div className="text-2xl font-bold"
+                style={{ color: 'var(--color-primary-alt)' }}
+                >25+</div>
                 <div className="text-xs text-gray-600">Engineering Projects</div>
                 <div className="text-xs text-gray-600">Completed 2024</div>
               </div>

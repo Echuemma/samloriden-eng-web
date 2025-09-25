@@ -31,7 +31,6 @@ const FormComponent = () => {
     mode: "onChange"
   });
 
-  // Watch form values for styling purposes (if getInputClassName needs form data)
   const formData = watch();
 
   const onSubmit = async (data) => {
@@ -39,7 +38,6 @@ const FormComponent = () => {
     setSubmitStatus(null);
 
     try {
-      // Simulate form submission - replace with your actual submission logic
       const formSubmissionData = new FormData();
       Object.keys(data).forEach(key => {
         formSubmissionData.append(key, data[key]);
@@ -55,7 +53,7 @@ const FormComponent = () => {
       if (response.ok) {
         toast.success("Message sent successfully!");
         setSubmitStatus('success');
-        reset(); // Reset form on successful submission
+        reset(); 
       } else {
         throw new Error('Form submission failed');
       }
