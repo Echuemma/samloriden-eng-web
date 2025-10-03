@@ -147,7 +147,7 @@ export const projects = [
         category: "Consultation",
         client: "Municipal Water Authority",
         area: "Watershed area of 120 sq km",
-        image: "https://images.unsplash.com/photo-1581092160562-40aa4082da6d?w=400&h=300&fit=crop&crop=water",
+        image: "/images/projects/water-resource.jpeg",
         gallery: [
             "https://images.unsplash.com/photo-1581092160562-40aa4082da6d?w=800&h=600&fit=crop&crop=water",
             "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop&crop=building",
