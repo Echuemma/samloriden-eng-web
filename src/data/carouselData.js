@@ -6,7 +6,7 @@ export const projects = [
     id: 1,
     title: "Metropolitan Bridge Construction",
     description: "A 2.5km suspension bridge connecting two major districts",
-    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop"
+    image: "images/about/bridge.jpg"
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ export const projects = [
     id: 3,
     title: "Highway Infrastructure Project",
     description: "120km highway with smart traffic management systems",
-    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop"
+    image: "images/blog/road-construction.jpeg"
   },
   {
     id: 4,
@@ -30,7 +30,7 @@ export const projects = [
     id: 5,
     title: "Industrial Facility",
     description: "State-of-the-art manufacturing plant with green technology",
-    image: "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&h=600&fit=crop"
+    image: "images/about/over-head.jpg"
   }
 ];
 

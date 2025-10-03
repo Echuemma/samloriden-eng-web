@@ -1,4 +1,3 @@
-// Carousel.js
 import { useState, useEffect } from "react";
 
 export default function Carousel({ items, autoPlay = true, interval = 5000 }) {
