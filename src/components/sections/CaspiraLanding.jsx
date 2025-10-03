@@ -168,8 +168,8 @@ export default function SamloridensContactHero() {
 
                   <div className="space-y-6">
                     <div className="flex items-start space-x-3">
-                      <div className="bg-yellow-100 p-2 rounded-lg flex-shrink-0">
-                        <Award className="w-5 h-5 text-yellow-600" />
+                      <div className="bg-blue-100 p-2 rounded-lg flex-shrink-0">
+                        <Award className="w-5 h-5 text-blue-600" />
                       </div>
                       <div>
                         <h6 className="font-bold text-gray-800 text-sm mb-1">25+ Years Engineering Experience</h6>
@@ -181,7 +181,8 @@ export default function SamloridensContactHero() {
                     </div>
 
                     <div className="flex items-start space-x-3">
-                      <div className="bg-blue-100 p-2 rounded-lg flex-shrink-0">
+                      <div className="bg-blue-100 p-2 rounded-lg flex-shrink-0"
+                      >
                         <Users className="w-5 h-5 text-blue-600" />
                       </div>
                       <div>
@@ -194,8 +195,8 @@ export default function SamloridensContactHero() {
                     </div>
 
                     <div className="flex items-start space-x-3">
-                      <div className="bg-green-100 p-2 rounded-lg flex-shrink-0">
-                        <Clock className="w-5 h-5 text-green-600" />
+                      <div className="bg-blue-100 p-2 rounded-lg flex-shrink-0">
+                        <Clock className="w-5 h-5 text-blue-600" />
                       </div>
                       <div>
                         <h6 className="font-bold text-gray-800 text-sm mb-1">Integrated Project Delivery</h6>
@@ -211,15 +212,21 @@ export default function SamloridensContactHero() {
                   <div className="mt-6 pt-4 border-t border-gray-200">
                     <div className="grid grid-cols-3 gap-4 text-center">
                       <div>
-                        <div className="text-lg font-bold text-blue-600">150+</div>
+                        <div className="text-lg font-bold "
+                        style={{color: 'var(--color-bg-dark)'}}
+                        >150+</div>
                         <div className="text-xs text-gray-600">Projects Complete</div>
                       </div>
                       <div>
-                        <div className="text-lg font-bold text-green-600">98%</div>
+                        <div className="text-lg font-bold text-green-600"
+                        style={{color: 'var(--color-bg-dark)'}}
+                        >98%</div>
                         <div className="text-xs text-gray-600">Client Satisfaction</div>
                       </div>
                       <div>
-                        <div className="text-lg font-bold text-yellow-600">24/7</div>
+                        <div className="text-lg font-bold text-yellow-600"
+                        style={{color: 'var(--color-bg-dark)'}}
+                        >24/7</div>
                         <div className="text-xs text-gray-600">Engineering Support</div>
                       </div>
                     </div>

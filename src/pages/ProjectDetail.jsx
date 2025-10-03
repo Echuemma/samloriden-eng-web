@@ -197,7 +197,9 @@ export default function ProjectDetail() {
                                 <div className="grid sm:grid-cols-2 gap-3 lg:gap-4">
                                     {project.features.map((feature, index) => (
                                         <div key={index} className="flex items-start space-x-3" data-aos="fade-up">
-                                            <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                            <CheckCircle className="w-5 h-5  flex-shrink-0 mt-0.5" 
+                                            style={{color: 'var(--color-primary-alt)'}}
+                                            />
                                             <span className="text-gray-700 text-sm lg:text-base leading-relaxed">{feature}</span>
                                         </div>
                                     ))}
