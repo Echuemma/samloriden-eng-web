@@ -12,11 +12,11 @@ export const projects = [
         category: "Residential",
         client: "Urban Development Corp",
         area: "15,000 sq ft",
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop&crop=building",
+        image: "/images/about/urban_one.jpeg",
         gallery: [
-            "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&crop=building",
-            "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop&crop=building",
-            "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop&crop=building"
+            "/images/about/urban_two.jpeg",
+            "/images/about/urban_one.jpeg",
+            "/images/about/urban_three.jpeg",
         ],
         features: [
             "Smart home automation systems",
@@ -56,24 +56,24 @@ export const projects = [
     },
     {
         id: 3,
-        title: "Downtown Office Tower Build",
+        title: "Downtown Office Complex Build",
         slug: 'Downtown-Office-Tower-Build',
-        description: "A high-rise commercial tower designed for modern businesses, with efficient space planning.",
-        fullDescription: "Our downtown office tower project showcases cutting-edge commercial architecture designed to meet the evolving needs of modern businesses. This high-rise development features flexible floor plans, advanced building systems, and premium finishes that create an inspiring work environment. The tower incorporates state-of-the-art technology infrastructure and sustainable design principles.",
+        description: "A commercial complex designed for modern businesses, with efficient space planning.",
+        fullDescription: "Our downtown office complex project showcases cutting-edge commercial architecture designed to meet the evolving needs of modern businesses. This high-rise development features flexible floor plans, advanced building systems, and premium finishes that create an inspiring work environment. The tower incorporates state-of-the-art technology infrastructure and sustainable design principles.",
         location: "Victoria Island, Lagos State, Nigeria",
         date: "12-2024 / 4-2025",
         status: "Planning Phase",
         category: "Commercial",
         client: "Business District Holdings",
         area: "45,000 sq ft",
-        image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=300&fit=crop&crop=building",
+        image: "/images/about/office_one.jpeg",
         gallery: [
-            "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop&crop=building",
-            "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&crop=building",
-            "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop&crop=building"
+            "/images/about/office_two.jpeg",
+            "/images/about/office_three.jpeg",
+            "/images/about/office_one.jpeg",
         ],
         features: [
-            "25-story high-rise structure",
+            "5-story high-rise structure",
             "Premium office spaces",
             "Advanced elevator systems",
             "Sky lounge and conference facilities",
@@ -120,10 +120,10 @@ export const projects = [
         category: "Infrastructure",
         client: "Dept of Transportation",
         area: "2.5 km span",
-        image: "/images/about/construction-building.jpg",
+        image: "/images/about/bridge_one.jpeg",
         gallery: [
-            "/images/about/construction-building.jpg",
-            "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&crop=building",
+           "/images/about/bridge_one.jpeg",
+           "/images/about/bridge_two.jpeg",
             "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop&crop=building"
         ],
         features: [
@@ -149,9 +149,9 @@ export const projects = [
         area: "Watershed area of 120 sq km",
         image: "/images/projects/water-resource.jpeg",
         gallery: [
-            "https://images.unsplash.com/photo-1581092160562-40aa4082da6d?w=800&h=600&fit=crop&crop=water",
-            "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop&crop=building",
-            "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&crop=building"
+            "/images/about/water_one.jpeg",
+            "/images/about/water_two.jpeg",
+            "/images/about/water_three.jpeg",
         ],
         features: [
             "Hydrological modeling and analysis",
@@ -174,11 +174,11 @@ export const projects = [
         category: "Residential",
         client: "Urban Living Solutions",
         area: "18,500 sq ft",
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop&crop=building",
+        image: "/images/about/phase_two_one.jpeg",
         gallery: [
-            "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&crop=building",
-            "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop&crop=building",
-            "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop&crop=building"
+            "/images/about/phase_two_two.jpeg",
+            "/images/about/phase_two_one.jpeg",
+            "/images/about/phase_two_three.jpeg",
         ],
         features: [
             "Phase 2 residential development",
@@ -282,11 +282,11 @@ export const projects = [
         category: "Infrastructure",
         client: "Regional Development Authority",
         area: "1.8 km span",
-        image: "/images/about/construction-building.jpg",
+        image: "/images/about/bridge_two_one.jpeg",
         gallery: [
-            "/images/about/construction-building.jpg",
-            "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop&crop=building",
-            "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop&crop=building"
+            "/images/about/bridge_two_one.jpeg",
+            "/images/about/bridge_two_two.jpeg",
+            "/images/about/bridge_two_three.jpeg",
         ],
         features: [
             "Phase 2 bridge construction",
@@ -309,11 +309,11 @@ export const projects = [
         category: "Consultation",
         client: "Emergency Management Agency",
         area: "Regional coverage of 300 sq km",
-        image: "https://images.unsplash.com/photo-1586854961649-ed837b98cc55?w=400&h=300&fit=crop&crop=disaster",
+        image: "/images/about/disaster_one.jpeg",
         gallery: [
-            "https://images.unsplash.com/photo-1586854961649-ed837b98cc55?w=800&h=600&fit=crop&crop=disaster",
-            "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop&crop=building",
-            "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=600&fit=crop&crop=building"
+            "/images/about/disaster_two.jpeg",
+            "/images/about/disaster_three.jpeg",
+            "/images/about/disaster_one.jpeg",
         ],
         features: [
             "Seismic vulnerability assessments",

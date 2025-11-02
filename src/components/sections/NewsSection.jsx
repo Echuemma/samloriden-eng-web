@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import newsData from '../../data/newsData';
-import useAOS from '../../hooks/useAOS'; 
+import useAOS from '../../hooks/useAOS';
 const News = () => {
-useAOS({ duration: 1000, once: true }); 
+  useAOS({ duration: 1000, once: true });
 
   return (
     <div className="min-h-screen bg-white pt-10 pb-16">
@@ -28,12 +28,16 @@ useAOS({ duration: 1000, once: true });
             <h3 className="text-4xl md:text-5xl lg:text-6xl text-on-dark font-bold mb-6 leading-tight">
               #TogetherWeEngineer
             </h3>
-            <button className="inline-flex items-center text-white border border-[var(--color-primary-alt)] px-6 py-3 rounded-full text-sm font-medium hover:bg-[var(--color-primary-alt)] hover:text-black transition-colors duration-200 w-fit mt-4">
+            <Link
+              to="/news/together-we-engineer-2025"
+              className="inline-flex items-center text-white border border-[var(--color-primary-alt)] px-6 py-3 rounded-full text-sm font-medium hover:bg-[var(--color-primary-alt)] hover:text-black transition-colors duration-200 w-fit mt-4"
+            >
               Read more
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </button>
+            </Link>
+
           </div>
         </div>
 

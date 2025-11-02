@@ -574,7 +574,34 @@ The next decade will see accelerated adoption of these technologies across Niger
 Our integrated expertise positions us uniquely to help property owners and developers navigate technological change while maximizing investment returns. Contact our team to discuss how emerging technologies can enhance your next project or property portfolio.
   `,
     author: 'Prof. Musa Ibrahim - Technology Innovation Director, SAMLORIDEN',
-  }
+  },
+
+{
+  id: 99,
+  slug: "together-we-engineer-2025",
+  date: "2025-06-23",
+  title: "#TogetherWeEngineer",
+  description: "Celebrating International Women in Engineering Day 2025 — empowering women to build the future of engineering.",
+  image: "/images/blog/blog-post.jpeg",
+  content: `
+    <p><strong>In celebration of International Women in Engineering Day 2025</strong>, SEAC proudly recognizes the outstanding achievements of women who continue to break barriers, challenge norms, and inspire the next generation of engineers. This year’s theme, <strong>#TogetherWeEngineer</strong>, highlights the power of collaboration, inclusion, and shared progress in shaping a better, more sustainable future for all.</p>
+
+    <p>Engineering has always been about problem-solving, creativity, and innovation. Yet, for too long, the field has been perceived as male-dominated. Today, that narrative is changing — and SEAC is proud to be part of the movement driving that transformation. Through mentorship programs, inclusive hiring practices, and a culture that values every voice, we are building a company where women engineers can thrive and lead with confidence.</p>
+
+    <p>At SEAC, we recognize that diversity is not just a moral imperative but a business advantage. Diverse teams bring richer perspectives, drive better decision-making, and foster more innovative solutions. Our women engineers are actively contributing to key projects across infrastructure development, renewable energy, and urban planning — ensuring that the work we do has lasting, positive impact on communities across Africa and beyond.</p>
+
+    <p>Beyond professional development, SEAC is also committed to outreach and education. Through school engagement initiatives, technical workshops, and partnerships with universities, we are inspiring young girls to see engineering as a viable and exciting career path. By equipping them with mentorship and resources early on, we hope to close the gender gap and build a stronger pipeline of female talent for the future.</p>
+
+    <p>As we celebrate this year’s International Women in Engineering Day, we extend our appreciation to every woman who has contributed — past, present, and future — to the growth of our industry. Your resilience, creativity, and leadership continue to push boundaries and redefine what is possible.</p>
+
+    <p><strong>#TogetherWeEngineer</strong> is more than a hashtag. It is a movement — a reminder that progress happens when we work together, when we empower one another, and when we stand united for equity, excellence, and innovation in engineering.</p>
+
+    <p>To all women engineers: we see you, we celebrate you, and we’re building the future with you. Here’s to many more years of progress, partnership, and purpose — together, we engineer a better tomorrow.</p>
+  `,
+  author: "SEAC Communications Team"
+}
+
+
 ];
 
 export default newsData;
