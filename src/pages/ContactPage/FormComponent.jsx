@@ -60,7 +60,7 @@ const FormComponent = () => {
     } catch (error) {
       toast.error("Failed to send message. Please try again.");
       setSubmitStatus('error');
-      console.error('Form submission error:', error);
+      // console.error('Form submission error:', error);
     } finally {
       setIsSubmitting(false);
     }

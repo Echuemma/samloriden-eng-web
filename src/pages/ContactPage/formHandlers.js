@@ -77,12 +77,12 @@ export const createFormHandlers = (
         toast.success('Thank you! Your message has been sent successfully.');
       } else {
         const errorText = await response.text();
-        console.error('Form submission failed:', errorText);
+        // console.error('Form submission failed:', errorText);
         setSubmitStatus('error');
         toast.error('Sorry, there was an error sending your message. Please try again.');
       }
     } catch (error) {
-      console.error('Form submission error:', error);
+      // console.error('Form submission error:', error);
       setSubmitStatus('error');
       toast.error('Sorry, there was an error sending your message. Please try again.');
     } finally {

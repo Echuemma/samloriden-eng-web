@@ -19,7 +19,7 @@ export default function SamloridensProjectsBanner() {
                 await new Promise(resolve => setTimeout(resolve, 500));
                 setProjectsData(projects);
             } catch (error) {
-                console.error('Error fetching projects:', error);
+                // console.error('Error fetching projects:', error);
             } finally {
                 setLoading(false);
             }
@@ -28,7 +28,7 @@ export default function SamloridensProjectsBanner() {
         fetchProjects();
     }, []);
 
-    const handleViewMore = (project) => { // Changed parameter name from 'projects' to 'project' for clarity
+    const handleViewMore = (project) => { 
         navigate(`/project/${project.slug}`);
     };
 

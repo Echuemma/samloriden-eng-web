@@ -20,12 +20,12 @@ const ProjectsLandingSection = () => {
         await new Promise(resolve => setTimeout(resolve, 300));
         
         // Debug: Log the imported projects data
-        console.log('Imported projects:', projects);
-        console.log('Projects slice(0,6):', projects.slice(0, 6));
+        // console.log('Imported projects:', projects);
+        // console.log('Projects slice(0,6):', projects.slice(0, 6));
         
         setProjectsData(projects.slice(0, 6));
       } catch (error) {
-        console.error('Error fetching projects:', error);
+        // console.error('Error fetching projects:', error);
       } finally {
         setLoading(false);
       }
@@ -35,13 +35,13 @@ const ProjectsLandingSection = () => {
   }, []);
 
   const handleProjectClick = (project) => {
-    console.log('Clicking project:', project); 
+    // console.log('Clicking project:', project); 
     navigate(`/project/${project.slug}`); 
   };
 
   // Debug: Log current state
-  console.log('Current projectsData:', projectsData);
-  console.log('Loading state:', loading);
+  // console.log('Current projectsData:', projectsData);
+  // console.log('Loading state:', loading);
 
   if (loading) {
     return (
@@ -60,7 +60,7 @@ const ProjectsLandingSection = () => {
       <div className="min-h-screen bg-gray-50 relative overflow-hidden flex items-center justify-center">
         <div className="text-center">
           <p className="text-red-600">No projects data available</p>
-          <p className="text-sm text-gray-500 mt-2">Check console for debugging info</p>
+          {/* <p className="text-sm text-gray-500 mt-2">Check console for debugging info</p> */}
         </div>
       </div>
     );
@@ -142,7 +142,7 @@ const ProjectsLandingSection = () => {
                     alt={project.title || 'Project'}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     onError={(e) => {
-                      console.log('Image failed to load:', project.image);
+                      // console.log('Image failed to load:', project.image);
                       e.target.src = '/placeholder.jpg'; 
                     }}
                   />

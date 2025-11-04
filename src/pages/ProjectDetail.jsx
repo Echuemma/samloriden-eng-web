@@ -33,7 +33,7 @@ export default function ProjectDetail() {
                 setRelatedProjects(related);
                 setSelectedImage(0);
             } catch (error) {
-                console.error('Error fetching project:', error);
+                // console.error('Error fetching project:', error);
                 navigate('/404');
             } finally {
                 setLoading(false);
